@@ -44,6 +44,7 @@ export default async function Home() {
     <>
       <HeroPage/>
     <Intro/>
+    
     <ServiceList/>
 
 {/* <Gallery/> */}
@@ -65,7 +66,7 @@ export default async function Home() {
         those annoying permission dialogs.
       </Testimonial>
 
-      <Services />
+      {/* <Services /> */}
 
       <ContactSection />
     </>
