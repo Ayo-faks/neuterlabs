@@ -22,6 +22,9 @@ import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import Collection from '@/components/collection_wide'
 import Gallery from '@/components/gallery'
+import HeroPage from '@/components/heropage'
+import Intro from '@/components/intro'
+import ServiceList from '@/components/servicelist'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -39,36 +42,15 @@ export default async function Home() {
 
   return (
     <>
-  <div className="home -mt-24">
-  <video muted loop autoPlay playsInline className="gray">
-        <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4"/>
-      </video>
-      <div className="home-content">
-        <br></br>
-        <h1>Digital Art & Restoration</h1>
-        <p>Specializing in Photography & Fine Art Printing</p>
-
-        <button>EXPLORE THE WORLD</button>
-      </div>
-    </div>
-      <Container className="mt-24 sm:mt-32 md:mt-36">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            50+ years of award-winning experience.
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
-          </p>
-        </FadeIn>
-      </Container>
+      <HeroPage/>
+    <Intro/>
+    <ServiceList/>
 
 {/* <Gallery/> */}
 
       {/* <Collection/> */}
 
-      <CaseStudies caseStudies={caseStudies} />
+      {/* <CaseStudies caseStudies={caseStudies} /> */}
 
       <Clients />
 
