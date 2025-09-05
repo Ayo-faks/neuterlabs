@@ -1,6 +1,6 @@
-# Studio
+# Neuter Labs
 
-Studio is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+Neuter Labs is an AI research and development company focused on building safe, ethical, and transparent artificial intelligence systems. This website is built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
 ## Getting started
 

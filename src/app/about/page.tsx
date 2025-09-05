@@ -189,31 +189,24 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="About us" title="AI safety through rigorous research">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          We believe AI can transform healthcare, but only when built with unwavering commitment to safety, transparency, and human dignity.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            Neuter Labs was founded by researchers who recognized that healthcare AI requires a fundamentally different approach—one that puts patient safety and privacy above speed to market. We combine deep technical expertise with clinical understanding to build AI systems that healthcare providers can trust.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            Our team includes AI safety researchers, clinical experts, privacy engineers, and ethicists who work together to ensure our AI assistants meet the highest standards of medical practice. We believe that responsible AI development requires interdisciplinary collaboration and transparent research practices.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="500K+" label="Patients safely served" />
+          <StatListItem value="12" label="Clinical partnerships" />
+          <StatListItem value="95%" label="Safety benchmark score" />
         </StatList>
       </Container>
 

@@ -53,7 +53,7 @@ export default async function Home() {
 
       {/* <CaseStudies caseStudies={caseStudies} /> */}
 
-      <Clients />
+      {/* <Clients /> */}
 
     
 
@@ -61,9 +61,7 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Phobia', logo: logoPhobiaDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        Neuter Labs helped us build AI safety protocols for our mental health platform. Their rigorous bias testing and privacy-preserving methods gave us confidence to deploy responsibly while maintaining the highest standards of patient care.
       </Testimonial>
 
       {/* <Services /> */}
@@ -79,7 +77,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            Trusted by healthcare organizations and research institutions
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>

@@ -1,0 +1,321 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: neuterlabs-marketing
+  labels:
+    app: marketing-site
+    environment: production
+    project: neuterlabs
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: neuterlabs-marketing-config
+  namespace: neuterlabs-marketing
+  labels:
+    app: neuterlabs-marketing
+    component: config
+data:
+  NODE_ENV: "production"
+  PORT: "3000"
+  NEXT_TELEMETRY_DISABLED: "1"
+  # Add any other non-sensitive environment variables here
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neuterlabs-marketing
+  namespace: neuterlabs-marketing
+  labels:
+    app: neuterlabs-marketing
+    version: v1.0.0
+    tier: frontend
+    component: web
+spec:
+  replicas: 2
+  revisionHistoryLimit: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: neuterlabs-marketing
+  template:
+    metadata:
+      labels:
+        app: neuterlabs-marketing
+        version: v1.0.0
+        tier: frontend
+        component: web
+      annotations:
+        # Update this when ConfigMap changes to trigger rolling update
+        checksum/config: "{{ configmap-hash }}"
+    spec:
+      securityContext:
+        fsGroup: 1001
+        runAsNonRoot: true
+        runAsUser: 1001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: neuterlabs-marketing
+          # Update with your actual container registry and image tag
+          image: wuloacr.azurecr.io/neuterlabs-marketing:v1.0.0@sha256:309df2e1a308a8cce6c1e709fa40add9fe83abd57bb4f3db9225b41e2db42390
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: neuterlabs-marketing-config
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+          resources:
+            requests:
+              cpu: 250m
+              memory: 256Mi
+              ephemeral-storage: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+              ephemeral-storage: 1Gi
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+              scheme: HTTP
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 3
+            successThreshold: 1
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+              scheme: HTTP
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
+          startupProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+              scheme: HTTP
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 30
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            runAsUser: 1001
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+            - name: nextjs-cache
+              mountPath: /app/.next/cache
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sh", "-c", "sleep 5"]
+      volumes:
+        - name: tmp
+          emptyDir: {}
+        - name: nextjs-cache
+          emptyDir: {}
+      terminationGracePeriodSeconds: 30
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: neuterlabs-marketing
+                topologyKey: kubernetes.io/hostname
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector:
+            matchLabels:
+              app: neuterlabs-marketing
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: neuterlabs-marketing
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: neuterlabs-marketing-service
+  namespace: neuterlabs-marketing
+  labels:
+    app: neuterlabs-marketing
+    component: service
+spec:
+  type: ClusterIP
+  selector:
+    app: neuterlabs-marketing
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
+      protocol: TCP
+      appProtocol: http
+  sessionAffinity: None
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: neuterlabs-marketing-hpa
+  namespace: neuterlabs-marketing
+  labels:
+    app: neuterlabs-marketing
+    component: autoscaler
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: neuterlabs-marketing
+  minReplicas: 2
+  maxReplicas: 10
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 80
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 60
+      policies:
+        - type: Percent
+          value: 100
+          periodSeconds: 60
+    scaleDown:
+      stabilizationWindowSeconds: 300
+      policies:
+        - type: Percent
+          value: 50
+          periodSeconds: 60
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: neuterlabs-marketing-pdb
+  namespace: neuterlabs-marketing
+  labels:
+    app: neuterlabs-marketing
+    component: disruption-budget
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: neuterlabs-marketing
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: neuterlabs-marketing-ingress
+  namespace: neuterlabs-marketing
+  labels:
+    app: neuterlabs-marketing
+    component: ingress
+  annotations:
+    # Azure Web App Routing (NGINX-based)
+    kubernetes.azure.com/ingress.class: webapprouting.kubernetes.azure.com/nginx
+    
+    # Cloudflare Integration - SSL/TLS handled by Cloudflare
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
+    nginx.ingress.kubernetes.io/proxy-real-ip-from: "0.0.0.0/0"
+    # Trust Cloudflare IPs for real client IP
+    nginx.ingress.kubernetes.io/whitelist-source-range: "173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22,2400:cb00::/32,2606:4700::/32,2803:f800::/32,2405:b500::/32,2405:8100::/32,2a06:98c0::/29,2c0f:f248::/32"
+    
+    # Security Headers (some handled by Cloudflare, but keeping for redundancy)
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header X-Frame-Options "SAMEORIGIN" always;
+      add_header X-Content-Type-Options "nosniff" always;
+      add_header X-XSS-Protection "1; mode=block" always;
+      add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+      # Remove HSTS as Cloudflare handles this
+      add_header X-Powered-By "NeuterLabs" always;
+    
+    # CORS Configuration (adjusted for Cloudflare)
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "https://neuterlabs.com,https://www.neuterlabs.com"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET,HEAD,POST,OPTIONS"
+    nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization,CF-Ray,CF-Connecting-IP"
+    nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
+    nginx.ingress.kubernetes.io/cors-max-age: "86400"
+    
+    # Rate Limiting (Cloudflare also provides this, but keeping for backend protection)
+    nginx.ingress.kubernetes.io/rate-limit: "200"
+    nginx.ingress.kubernetes.io/rate-limit-window: "1m"
+    nginx.ingress.kubernetes.io/rate-limit-connections: "20"
+    
+    # Performance (optimized for Cloudflare)
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "15"
+    
+    # No cert-manager needed as Cloudflare handles SSL/TLS
+spec:
+  ingressClassName: webapprouting.kubernetes.azure.com
+  rules:
+    - host: neuterlabs.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: neuterlabs-marketing-service
+                port:
+                  number: 80
+    - host: www.neuterlabs.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: neuterlabs-marketing-service
+                port:
+                  number: 80
+  # No TLS section needed - Cloudflare handles SSL/TLS termination
+  # Traffic flow: Client -> Cloudflare (HTTPS) -> AKS Ingress (HTTP) -> Pods

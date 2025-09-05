@@ -56,7 +56,7 @@ function ContactForm() {
     <FadeIn className="lg:order-last">
       <form>
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Work inquiries
+          Research & Partnership Inquiries
         </h2>
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
           <TextInput label="Name" name="name" autoComplete="name" />
@@ -77,10 +77,10 @@ function ContactForm() {
             <fieldset>
               <legend className="text-base/6 text-neutral-500">Budget</legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="$25K – $50K" name="budget" value="25" />
-                <RadioInput label="$50K – $100K" name="budget" value="50" />
-                <RadioInput label="$100K – $150K" name="budget" value="100" />
-                <RadioInput label="More than $150K" name="budget" value="150" />
+                <RadioInput label="£25K – £50K" name="budget" value="25" />
+                <RadioInput label="£50K – £100K" name="budget" value="50" />
+                <RadioInput label="£100K – £150K" name="budget" value="100" />
+                <RadioInput label="More than £150K" name="budget" value="150" />
               </div>
             </fieldset>
           </div>
@@ -100,8 +100,7 @@ function ContactDetails() {
         Our offices
       </h2>
       <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person? We don’t but we have to list our
-        addresses here for legal reasons.
+        We operate remotely with team members distributed globally, allowing us to collaborate with healthcare institutions and researchers worldwide while maintaining the highest standards of data security.
       </p>
 
       <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
@@ -112,8 +111,7 @@ function ContactDetails() {
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
-            ['Careers', 'careers@studioagency.com'],
-            ['Press', 'press@studioagency.com'],
+            ['General', 'ayoola@neuterlabs.com'],
           ].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
@@ -148,8 +146,8 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
+      <PageIntro eyebrow="Contact us" title="Partner with us on safe healthcare AI">
+        <p>We collaborate with healthcare organizations, research institutions, and technology companies to advance the field of responsible AI in medicine.</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
