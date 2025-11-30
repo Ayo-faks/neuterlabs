@@ -1,4 +1,4 @@
-import { type Metadata } from 'next'
+import type { Metadata } from 'next'
 
 import { Blockquote } from '@/components/Blockquote'
 import { ContactSection } from '@/components/ContactSection'
@@ -58,19 +58,21 @@ function Discover() {
     <Section title="Research & Discovery" image={{ src: imageWhiteboard }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          We begin by conducting extensive literature reviews and stakeholder interviews to understand the specific{' '}
-          <strong className="font-semibold text-neutral-950">clinical needs</strong> and
-          regulatory requirements for your healthcare AI application.
+          We begin by conducting comprehensive{' '}
+          <strong className="font-semibold text-neutral-950">carbon footprint assessments</strong> and
+          energy systems analysis to understand your organization&apos;s specific emissions sources and
+          reduction opportunities.
         </p>
         <p>
-          Our interdisciplinary team works with clinicians, patients, and healthcare administrators to identify key safety concerns, potential biases, and{' '}
-          <strong className="font-semibold text-neutral-950">ethical considerations</strong>{' '}
-          that must be addressed throughout the development process.
+          Our interdisciplinary team works with sustainability officers, operations managers, and supply chain
+          experts to identify key emission hotspots, data quality challenges, and{' '}
+          <strong className="font-semibold text-neutral-950">measurement gaps</strong>{' '}
+          that must be addressed throughout the implementation process.
         </p>
         <p>
-          We establish clear success metrics, safety benchmarks, and{' '}
+          We establish clear success metrics, reduction targets, and{' '}
           <strong className="font-semibold text-neutral-950">validation protocols</strong> that
-          align with clinical best practices and regulatory standards.
+          align with international carbon accounting standards like GHG Protocol and ISO 14064.
         </p>
       </div>
 
@@ -78,12 +80,12 @@ function Discover() {
         Included in this phase
       </h3>
       <TagList className="mt-4">
-        <TagListItem>Clinical needs assessment</TagListItem>
-        <TagListItem>Literature review</TagListItem>
-        <TagListItem>Stakeholder interviews</TagListItem>
-        <TagListItem>Bias risk analysis</TagListItem>
-        <TagListItem>Regulatory compliance review</TagListItem>
-        <TagListItem>Ethics evaluation</TagListItem>
+        <TagListItem>Carbon footprint mapping</TagListItem>
+        <TagListItem>Energy systems analysis</TagListItem>
+        <TagListItem>Stakeholder workshops</TagListItem>
+        <TagListItem>Data source identification</TagListItem>
+        <TagListItem>Compliance framework review</TagListItem>
+        <TagListItem>Baseline establishment</TagListItem>
       </TagList>
     </Section>
   )
@@ -91,33 +93,33 @@ function Discover() {
 
 function Build() {
   return (
-    <Section title="Development & Testing" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="Development & Integration" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Our development process follows rigorous safety protocols, implementing
-          multiple layers of testing including adversarial robustness, bias detection,
-          and privacy preservation throughout the model training pipeline.
+          Our development process integrates with your existing systems, implementing
+          automated data collection from IoT sensors, energy management systems,
+          and supply chain platforms to create comprehensive emissions tracking.
         </p>
         <p>
-          Each AI system undergoes continuous{' '}
-          <strong className="font-semibold text-neutral-950">red-team evaluation</strong>{' '}
-          where our safety researchers actively try to identify potential failures,
-          edge cases, and unintended behaviors before clinical deployment.
+          Each carbon calculation undergoes continuous{' '}
+          <strong className="font-semibold text-neutral-950">third-party verification</strong>{' '}
+          where our AI models cross-reference multiple data sources and apply
+          international carbon accounting standards to ensure accuracy and auditability.
         </p>
         <p>
-          We maintain transparent documentation of all model decisions, training data,
-          and validation results to ensure{' '}
-          <strong className="font-semibold text-neutral-950">full auditability</strong>{' '}
-          and clinical interpretability.
+          We maintain transparent documentation of all emission factors, calculation
+          methodologies, and data sources to ensure{' '}
+          <strong className="font-semibold text-neutral-950">full traceability</strong>{' '}
+          and regulatory compliance.
         </p>
       </div>
 
       <Blockquote
-        author={{ name: 'Dr. Sarah Chen', role: 'Chief Medical Officer, HealthTech Innovations' }}
+        author={{ name: 'Sarah Mitchell', role: 'Director of Sustainability, Global Energy Corp' }}
         className="mt-12"
       >
-        Neuter Labs&rsquo; rigorous testing protocols gave us confidence that their AI system 
-        would perform safely and effectively in our clinical environment.
+        WULO&rsquo;s rigorous verification protocols gave us confidence that our carbon
+        reporting would meet the highest standards for investor disclosure and regulatory compliance.
       </Blockquote>
     </Section>
   )
@@ -125,31 +127,31 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="Validation & Deployment" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="Deployment & Optimization" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Before any clinical deployment, we conduct comprehensive{' '}
+          Before full deployment, we conduct comprehensive{' '}
           <strong className="font-semibold text-neutral-950">
-            validation studies
+            pilot programs
           </strong>{' '}
-          to measure real-world performance, safety metrics, and clinical outcomes
-          in controlled environments.
+          to validate carbon calculations against third-party audits, test reduction
+          strategies, and refine our AI recommendations in real operational environments.
         </p>
         <p>
           Our deployment strategy includes gradual rollout with continuous{' '}
           <strong className="font-semibold text-neutral-950">monitoring</strong>{' '}
-          systems that track model performance, detect distribution shifts, and
-          provide early warning of potential safety issues.
+          systems that track emission reductions, identify new optimization opportunities,
+          and provide early warning of data quality issues.
         </p>
         <p>
           We establish robust{' '}
           <strong className="font-semibold text-neutral-950">
-            human oversight
+            sustainability team enablement
           </strong>{' '}
-          protocols and provide comprehensive training to clinical staff on proper
-          AI system usage, limitations, and{' '}
+          and provide comprehensive training on carbon accounting best practices, system
+          usage, and{' '}
           <strong className="font-semibold text-neutral-950">
-            intervention procedures
+            reduction strategy implementation
           </strong>.
         </p>
       </div>
@@ -158,17 +160,17 @@ function Deliver() {
         Included in this phase
       </h3>
       <List className="mt-8">
-        <ListItem title="Clinical Validation">
-          Comprehensive studies measuring safety, efficacy, and real-world performance
-          across diverse patient populations and clinical settings.
+        <ListItem title="Pilot Validation">
+          Comprehensive testing comparing WULO calculations against third-party audits
+          across diverse operational scenarios and emission sources.
         </ListItem>
-        <ListItem title="Monitoring Infrastructure">
-          Real-time systems for tracking model performance, detecting drift, and
-          ensuring continued safety post-deployment.
+        <ListItem title="Continuous Monitoring">
+          Real-time systems for tracking emissions, validating reductions, and
+          ensuring continued accuracy of carbon intelligence.
         </ListItem>
-        <ListItem title="Clinical Training">
-          Comprehensive education programs for healthcare providers on AI system
-          capabilities, limitations, and proper usage protocols.
+        <ListItem title="Team Training">
+          Comprehensive education programs for sustainability teams on carbon accounting
+          methodologies, system capabilities, and optimization strategies.
         </ListItem>
       </List>
     </Section>
@@ -187,39 +189,39 @@ function Values() {
 
       <SectionIntro
         eyebrow="Our values"
-        title="Safety, transparency, and clinical excellence"
+        title="Accuracy, transparency, and environmental impact"
       >
         <p>
-          We are guided by principles that prioritize patient safety, scientific rigor, 
-          and ethical responsibility in every aspect of our AI development process.
+          We are guided by principles that prioritize data accuracy, scientific rigor, 
+          and measurable climate impact in every aspect of our carbon intelligence development.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="Safety First">
-            Patient safety is our highest priority. Every AI system undergoes rigorous
-            testing and validation before deployment in clinical settings.
+          <GridListItem title="Accuracy First">
+            Carbon data accuracy is paramount. Every calculation is verified against international
+            standards and undergoes third-party validation before reporting.
           </GridListItem>
-          <GridListItem title="Transparent">
-            We maintain complete transparency in our methods, providing clear
-            documentation of model decisions and limitations to healthcare providers.
+          <GridListItem title="Transparent Methodology">
+            We maintain complete transparency in our carbon accounting methods, providing clear
+            documentation of emission factors, data sources, and calculation approaches.
           </GridListItem>
-          <GridListItem title="Evidence-Based">
-            Our development process is grounded in clinical evidence and validated
-            through real-world studies with measurable patient outcomes.
+          <GridListItem title="Science-Based">
+            Our development process is grounded in climate science and validated through
+            peer-reviewed research and alignment with IPCC guidelines.
           </GridListItem>
-          <GridListItem title="Ethical">
-            We actively address bias, ensure fairness across patient populations,
-            and respect privacy through privacy-preserving techniques.
+          <GridListItem title="Auditable">
+            We ensure complete traceability of all carbon data, enabling external audits
+            and regulatory compliance through blockchain-backed verification.
           </GridListItem>
           <GridListItem title="Collaborative">
-            We work closely with clinicians, researchers, and patient advocates
-            to ensure our AI systems truly serve healthcare needs.
+            We work closely with sustainability teams, carbon auditors, and industry experts
+            to ensure our systems meet real-world operational needs.
           </GridListItem>
-          <GridListItem title="Responsible">
-            We take full responsibility for our AI systems&rsquo; performance and maintain
-            ongoing monitoring and support throughout their clinical lifecycle.
+          <GridListItem title="Impact-Driven">
+            We take responsibility for delivering measurable emission reductions and maintain
+            ongoing monitoring to validate environmental impact.
           </GridListItem>
         </GridList>
       </Container>
@@ -230,15 +232,15 @@ function Values() {
 export const metadata: Metadata = {
   title: 'Our Process',
   description:
-    'Our research-driven approach ensures that every AI system we build meets the highest standards of safety, efficacy, and clinical validation.',
+    'Our research-driven approach ensures that every carbon intelligence system we build meets the highest standards of accuracy, transparency, and environmental impact measurement.',
 }
 
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we develop safe healthcare AI">
+      <PageIntro eyebrow="Our process" title="How we develop carbon intelligence systems">
         <p>
-          Our research-driven approach ensures that every AI system we build meets the highest standards of safety, efficacy, and clinical validation before deployment in healthcare settings.
+          Our research-driven approach ensures that every carbon intelligence system we build meets the highest standards of accuracy, transparency, and verifiable impact before deployment in sustainability operations.
         </p>
       </PageIntro>
 

@@ -181,7 +181,7 @@ function Team() {
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'NeuterLabs combines AI research and climate technology to build intelligent systems that accelerate the transition to renewable energy and sustainable operations.',
 }
 
 export default async function About() {
@@ -189,24 +189,24 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="AI safety through rigorous research">
+      <PageIntro eyebrow="About us" title="Building AI for a sustainable future">
         <p>
-          We believe AI can transform healthcare, but only when built with unwavering commitment to safety, transparency, and human dignity.
+          We believe AI can accelerate the global transition to renewable energy, but only when built with safety, transparency, and environmental responsibility at its core.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Neuter Labs was founded by researchers who recognized that healthcare AI requires a fundamentally different approach—one that puts patient safety and privacy above speed to market. We combine deep technical expertise with clinical understanding to build AI systems that healthcare providers can trust.
+            NeuterLabs was founded by researchers and climate tech pioneers who recognized that solving the climate crisis requires intelligent systems that can process vast amounts of data and optimize complex sustainability challenges. We combine cutting-edge AI research with deep domain expertise in renewable energy and carbon management.
           </p>
           <p>
-            Our team includes AI safety researchers, clinical experts, privacy engineers, and ethicists who work together to ensure our AI assistants meet the highest standards of medical practice. We believe that responsible AI development requires interdisciplinary collaboration and transparent research practices.
+            Our team includes AI safety researchers, climate scientists, energy systems experts, and sustainability engineers who collaborate to build products like WULO—our flagship carbon intelligence platform. We believe that responsible AI development for climate solutions requires rigorous testing, transparent methodologies, and measurable environmental impact.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="500K+" label="Patients safely served" />
-          <StatListItem value="12" label="Clinical partnerships" />
-          <StatListItem value="95%" label="Safety benchmark score" />
+          <StatListItem value="10M+" label="Tonnes CO₂ tracked" />
+          <StatListItem value="500+" label="Organizations using WULO" />
+          <StatListItem value="40%" label="Average emissions reduction" />
         </StatList>
       </Container>
 

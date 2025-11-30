@@ -28,8 +28,8 @@ export function SectionIntro({
             <>
               <span
                 className={clsx(
-                  'mb-6 block font-display text-base font-semibold',
-                  invert ? 'text-white' : 'text-neutral-950',
+                  'mb-6 block font-display text-sm font-semibold tracking-widest uppercase',
+                  invert ? 'text-white/80' : 'text-neutral-600',
                 )}
               >
                 {eyebrow}
@@ -52,7 +52,7 @@ export function SectionIntro({
         {children && (
           <div
             className={clsx(
-              'mt-6 text-xl',
+              'mt-6 text-xl leading-relaxed',
               invert ? 'text-neutral-300' : 'text-neutral-600',
             )}
           >

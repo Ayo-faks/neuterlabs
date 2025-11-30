@@ -1,0 +1,114 @@
+import logo from '@/images/clients/family-fund/logomark-dark.svg'
+import imageHero from './hero.jpg'
+import imageDebraFiscal from './debra-fiscal.jpg'
+
+export const caseStudy = {
+  client: 'Pacific Logistics Network',
+  title: 'Transforming freight emissions through AI-powered route optimization',
+  description:
+    'How WULO enabled a regional logistics provider to cut transportation emissions by 28% while improving delivery times and reducing fuel costs.',
+  summary: [
+    'Pacific Logistics Network operates a fleet of 850 vehicles across the Western United States, facing pressure to decarbonize while maintaining competitive delivery times and pricing.',
+    'We deployed WULO\'s transportation intelligence module, combining real-time carbon tracking with AI-optimized routing that simultaneously reduced emissions, fuel costs, and delivery times.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2023-06',
+  service: 'Transportation Carbon Intelligence',
+  testimonial: {
+    author: { name: 'David Fischer', role: 'VP of Operations' },
+    content:
+      'We were skeptical that reducing emissions would improve our bottom line, but WULO proved that carbon intelligence and operational efficiency go hand in hand. We\'re saving $3.2M annually in fuel costs alone.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+Pacific Logistics Network faced a classic sustainability challenge: major customers were demanding verifiable emissions reductions, but the company feared that decarbonization would increase costs and slow delivery times in their competitive market.
+
+Their existing approach to transportation emissions relied on industry-standard emission factors applied to fuel purchases—a method that provided annual totals but no actionable insights for optimization. With transportation representing 98% of their carbon footprint, they needed granular visibility and real-time optimization capabilities.
+
+## The Transportation Emissions Challenge
+
+Logistics companies face unique decarbonization challenges:
+
+- **Dynamic optimization**: Routes change daily based on customer demand, traffic, weather, and vehicle availability
+- **Trade-off complexity**: Faster routes often consume more fuel; consolidation improves efficiency but may extend delivery times
+- **Measurement difficulty**: Emission factors vary by vehicle age, load weight, terrain, driving style, and fuel type
+- **Customer expectations**: Delivery speed and reliability cannot be compromised for sustainability goals
+- **Driver buy-in**: Route optimizations only work if drivers actually follow them
+
+## Our Approach
+
+We implemented WULO's transportation intelligence module across their entire fleet in a 4-month phased rollout:
+
+### Telematics Integration
+We connected WULO to their existing fleet telematics systems (GPS, fuel sensors, engine diagnostics), creating real-time carbon tracking at the vehicle and route level. This revealed significant variations in emissions intensity even for similar routes.
+
+### AI-Powered Route Optimization
+Our ML models learned from millions of historical trips to identify optimal routes that minimize carbon intensity while respecting delivery time windows. The system considers:
+
+- Real-time traffic conditions and predicted congestion
+- Elevation profiles and terrain characteristics
+- Vehicle-specific fuel efficiency curves under different loads
+- Weather impacts on fuel consumption
+- Dynamic load consolidation opportunities
+
+### Driver Engagement Platform
+We developed a mobile app that gamifies emissions reduction, showing drivers their carbon performance and rewarding efficient driving behaviors. This created cultural change that amplified the impact of route optimization.
+
+### Customer Carbon Reporting
+WULO automatically generates shipment-level carbon footprint reports for customers, differentiating Pacific Logistics in competitive bids and enabling customers to meet their own Scope 3 reporting requirements.
+
+## What we did
+
+<TagList>
+  <TagListItem>Fleet Telematics Integration</TagListItem>
+  <TagListItem>AI Route Optimization</TagListItem>
+  <TagListItem>Driver Engagement App</TagListItem>
+  <TagListItem>Customer Carbon Reporting</TagListItem>
+  <TagListItem>Modal Shift Analysis</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'David Fischer', role: 'VP of Operations' }}
+  image={{ src: imageDebraFiscal }}
+>
+  We were skeptical that reducing emissions would improve our bottom line, but
+  WULO proved that carbon intelligence and operational efficiency go hand in
+  hand. We're saving $3.2M annually in fuel costs alone.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="28%" label="Emissions reduction" />
+  <StatListItem value="$3.2M" label="Annual fuel savings" />
+  <StatListItem value="12%" label="Faster average delivery" />
+  <StatListItem value="94%" label="Driver adoption rate" />
+</StatList>
+
+## Results
+
+The impact exceeded expectations across all dimensions:
+
+**Carbon Performance**: Fleet emissions intensity dropped from 847g CO2/ton-km to 610g CO2/ton-km, a 28% improvement that positioned them as the lowest-carbon option in their regional market.
+
+**Operational Efficiency**: Optimized routes and load consolidation reduced total miles driven by 15%, cutting fuel costs by \$3.2M annually. Average delivery times actually improved by 12% due to better traffic avoidance.
+
+**Driver Engagement**: The gamified driver app achieved 94% adoption. Drivers reported enjoying the system, and turnover rates decreased by 18%—an unexpected but significant benefit in a tight labor market.
+
+**Competitive Advantage**: Three major customers expanded their contracts specifically citing verified low-carbon logistics. The company won six competitive bids where carbon performance was a deciding factor.
+
+**Modal Shift Opportunities**: WULO's analysis identified 120 lane-pairs where rail intermodal would reduce emissions by 65% with minimal cost or time impact. Pacific Logistics is now piloting an intermodal offering.
+
+## Industry Recognition
+
+Pacific Logistics Network was named "Logistics Provider of the Year" by the Sustainable Transportation Association, with judges citing their systematic approach to carbon intelligence as a model for the industry.
+
+The company has since joined the SmartWay Transport Partnership and published their methodology, encouraging industry-wide adoption of carbon intelligence approaches to freight decarbonization.
+
+Their success demonstrates that transportation emissions reduction and operational efficiency are not trade-offs but complementary goals when approached with sophisticated carbon intelligence platforms.

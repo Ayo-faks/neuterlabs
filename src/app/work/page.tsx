@@ -1,4 +1,4 @@
-import { type Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -19,7 +19,8 @@ import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg
 import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
 import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
-import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import type { CaseStudy, MDXEntry } from '@/lib/mdx'
+import { loadCaseStudies } from '@/lib/mdx'
 
 function CaseStudies({
   caseStudies,
@@ -112,7 +113,7 @@ function Clients() {
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          You’re in good company
+          Trusted by organizations worldwide
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
@@ -164,8 +165,8 @@ export default async function Work() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
+        Working with <em>NeuterLabs</em> transformed our approach to carbon management. 
+        Their WULO platform helped us achieve a 35% reduction in emissions in just 18 months.
       </Testimonial>
 
       <Clients />

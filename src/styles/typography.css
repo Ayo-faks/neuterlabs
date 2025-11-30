@@ -26,6 +26,7 @@
     font-variation-settings: theme(fontFamily.display[1].fontVariationSettings);
     font-size: theme(fontSize.2xl);
     line-height: theme(fontSize.2xl[1].lineHeight);
+    letter-spacing: -0.015em;
     margin-top: theme(spacing.16);
   }
 
@@ -35,6 +36,7 @@
     font-variation-settings: theme(fontFamily.display[1].fontVariationSettings);
     font-size: theme(fontSize.xl);
     line-height: theme(fontSize.xl[1].lineHeight);
+    letter-spacing: -0.01em;
     margin-top: theme(spacing.10);
   }
 
@@ -61,7 +63,7 @@
   }
 
   :where(li)::marker {
-    color: theme(colors.neutral.500);
+    color: theme(colors.neutral.400);
   }
 
   :where(li > *),
@@ -88,14 +90,14 @@
 
   :where(thead th) {
     padding-bottom: theme(spacing.6);
-    border-bottom: 1px solid theme(colors.neutral.950);
+    border-bottom: 1px solid theme(colors.neutral.200);
   }
 
   :where(td) {
     vertical-align: top;
     padding-top: theme(spacing.6);
     padding-bottom: theme(spacing.6);
-    border-bottom: 1px solid theme(colors.neutral.950 / 0.1);
+    border-bottom: 1px solid theme(colors.neutral.100);
   }
 
   :where(:is(th, td):not(:last-child)) {
@@ -133,7 +135,7 @@
 
   /* <hr> */
   :where(hr) {
-    border-color: theme(colors.neutral.950 / 0.1);
+    border-color: theme(colors.neutral.200);
     margin-top: theme(spacing.24);
     margin-bottom: theme(spacing.24);
   }
@@ -145,6 +147,11 @@
     text-underline-offset: 0.15em;
     text-decoration-skip-ink: none;
     font-weight: theme(fontWeight.semibold);
+    transition: color 0.3s ease;
+  }
+
+  :where(a:hover) {
+    color: theme(colors.neutral.600);
   }
 
   :where(strong) {

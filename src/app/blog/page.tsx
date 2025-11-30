@@ -1,4 +1,4 @@
-import { type Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -14,7 +14,7 @@ import { loadArticles } from '@/lib/mdx'
 export const metadata: Metadata = {
   title: 'Research & Insights',
   description:
-    'Explore our latest research in healthcare AI, ethical considerations, and advances in diabetes and depression management technologies.',
+    'Explore our latest research in carbon intelligence, climate technology, renewable energy optimization, and sustainable business transformation.',
 }
 
 export default async function Blog() {
@@ -22,10 +22,10 @@ export default async function Blog() {
 
   return (
     <>
-      <PageIntro eyebrow="Research & Insights" title="Advancing healthcare through responsible AI">
+      <PageIntro eyebrow="Research & Insights" title="Advancing sustainability through intelligent carbon management">
         <p>
-          Discover our latest research findings, ethical frameworks, and breakthrough insights 
-          in healthcare AI, with a focus on diabetes and depression management.
+          Discover our latest research findings, carbon accounting innovations, and breakthrough insights 
+          in climate technology, with a focus on carbon intelligence and renewable energy optimization.
         </p>
       </PageIntro>
 

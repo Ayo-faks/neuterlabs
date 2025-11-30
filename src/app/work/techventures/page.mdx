@@ -1,0 +1,128 @@
+import logo from '@/images/clients/unseal/logomark-dark.svg'
+import imageHero from './hero.jpg'
+import imageEmilySelman from './emily-selman.jpg'
+
+export const caseStudy = {
+  client: 'TechVentures Data Centers',
+  title: 'Carbon-intelligent cooling: 45% energy reduction for hyperscale infrastructure',
+  description:
+    'How WULO\'s AI-powered optimization reduced data center cooling energy by 45% while maintaining uptime and expanding capacity.',
+  summary: [
+    'TechVentures operates 12 hyperscale data centers across North America, consuming 850 GWh annually with cooling systems representing 42% of total energy use.',
+    'We deployed WULO\'s infrastructure intelligence module, using reinforcement learning to dynamically optimize cooling systems, resulting in massive energy savings without compromising reliability.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2023-09',
+  service: 'Infrastructure Carbon Intelligence',
+  testimonial: {
+    author: { name: 'Emily Sanderson', role: 'VP of Infrastructure Engineering' },
+    content:
+      'WULO achieved what our facilities team thought was impossible—massive energy reductions without compromising uptime or temperature safety margins. The AI understands our cooling systems better than we do.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+TechVentures Data Centers faced exponential growth in compute demand while simultaneously committing to 100% renewable energy by 2025. Their existing data center cooling systems, while reliable, were optimized for maximum safety margins rather than energy efficiency.
+
+With cooling representing 42% of their total energy consumption (357 GWh annually), even small efficiency improvements would translate to massive carbon and cost savings. However, any optimization had to maintain their industry-leading 99.999% uptime guarantee.
+
+## The Data Center Energy Challenge
+
+Hyperscale data centers present unique optimization challenges:
+
+- **Dynamic loads**: Compute workloads fluctuate hourly, changing cooling requirements constantly
+- **Microclimate variations**: Hot spots can develop quickly; overcooling elsewhere compensates
+- **Equipment diversity**: Servers have different thermal profiles; cooling must adapt to the mix
+- **Safety margins**: Operators traditionally over-cool to ensure no equipment reaches thermal limits
+- **Weather dependency**: Outside air temperature and humidity affect cooling efficiency significantly
+
+## Our Approach
+
+We implemented WULO's infrastructure intelligence module using a cautious phased approach that prioritized uptime above all else:
+
+### Comprehensive Sensor Integration
+We deployed 15,000 additional temperature, humidity, and airflow sensors across their 12 facilities, creating granular thermal mapping at the rack level. This revealed significant over-cooling in specific zones.
+
+### Digital Twin Development
+We built physics-based digital twins of each facility's cooling system, enabling simulation and testing of optimization strategies without risking production systems. This accelerated learning and built confidence in the AI recommendations.
+
+### Reinforcement Learning Optimization
+Our RL agents learned optimal cooling strategies through millions of simulated scenarios, discovering non-obvious patterns such as:
+
+- Thermal time-lags that enable predictive cooling adjustments
+- Airflow patterns that create cooling efficiency through strategic fan positioning
+- Weather-based cooling strategies that exploit favorable outdoor conditions
+- Compute workload scheduling that clusters heat-intensive tasks to minimize cooling complexity
+
+### Renewable Energy Matching
+WULO integrated local grid carbon intensity forecasts, automatically shifting discretionary workloads to hours when renewable energy availability is highest, reducing carbon intensity by 23% beyond the energy savings.
+
+## What we did
+
+<TagList>
+  <TagListItem>IoT Sensor Infrastructure</TagListItem>
+  <TagListItem>Digital Twin Modeling</TagListItem>
+  <TagListItem>Reinforcement Learning</TagListItem>
+  <TagListItem>Renewable Energy Integration</TagListItem>
+  <TagListItem>Predictive Thermal Management</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Emily Sanderson', role: 'VP of Infrastructure Engineering' }}
+  image={{ src: imageEmilySelman }}
+>
+  WULO achieved what our facilities team thought was impossible—massive energy
+  reductions without compromising uptime or temperature safety margins. The AI
+  understands our cooling systems better than we do.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="45%" label="Cooling energy reduction" />
+  <StatListItem value="$24M" label="Annual energy savings" />
+  <StatListItem value="99.999%" label="Maintained uptime" />
+  <StatListItem value="160 GWh" label="Annual energy avoided" />
+</StatList>
+
+## Results
+
+The impact transformed TechVentures' sustainability and financial position:
+
+**Energy Performance**: Cooling energy dropped from 357 GWh to 197 GWh annually—a 45% reduction representing 160 GWh of avoided consumption. This is equivalent to the annual electricity use of 15,000 homes.
+
+**Cost Savings**: At an average electricity cost of $0.15/kWh, the energy reduction delivered \$24M in annual savings. The WULO deployment achieved ROI in just 8 months.
+
+**Carbon Impact**: The energy reduction, combined with renewable energy matching, cut facility carbon emissions by 68% year-over-year, accelerating their path to 100% renewable energy.
+
+**Uptime Maintained**: Throughout the entire optimization process, TechVentures maintained their 99.999% uptime SLA. Temperature excursions actually decreased by 34% as the AI provided more precise thermal management.
+
+**Capacity Expansion**: Improved cooling efficiency enabled 12% more compute density in existing facilities, deferring the need for new facility construction and the associated capital expenditure and embodied carbon.
+
+## Technical Innovation
+
+The reinforcement learning approach uncovered cooling strategies that human operators had never considered:
+
+**Thermal Inertia Management**: The AI learned to exploit the thermal mass of buildings and equipment, making proactive cooling adjustments 15-45 minutes before demand changes, smoothing energy consumption and reducing peak loads.
+
+**Asymmetric Cooling**: Rather than uniform cooling, the system creates intentional thermal gradients that guide hot air flows toward exhaust points, improving overall efficiency by 18%.
+
+**Weather Prediction Integration**: By incorporating 72-hour weather forecasts, the system preemptively adjusts cooling strategies, maximizing efficiency during favorable conditions and building thermal buffers before heat waves.
+
+## Industry Leadership
+
+TechVentures' success has established new benchmarks for data center energy efficiency. The company has:
+
+- Published their methodology in partnership with the Green Grid consortium
+- Presented at the Data Center World conference to an audience of 4,000+ industry professionals
+- Partnered with Lawrence Berkeley National Laboratory to extend the research
+- Licensed WULO to three competing data center operators, demonstrating commitment to industry-wide sustainability
+
+Their Chief Sustainability Officer notes: "We competed on uptime and cost. Now we also compete on carbon intensity, and our customers increasingly select us based on the verifiable sustainability of our infrastructure."
+
+The TechVentures case study demonstrates that even in energy-intensive industries with strict reliability requirements, intelligent carbon management can deliver breakthrough efficiency improvements that benefit both the environment and the bottom line.
