@@ -138,24 +138,32 @@ function Clients() {
 }
 
 export const metadata: Metadata = {
-  title: 'Our Work',
+  title: 'Case Studies | AI-Powered Sustainability Solutions',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'Discover how organizations achieve measurable sustainability goals with WULO carbon intelligence. Real-world case studies in emissions reduction, renewable energy optimization, and net-zero transformation.',
+  keywords: [
+    'carbon intelligence case studies',
+    'emissions reduction results',
+    'sustainability AI success stories',
+    'WULO implementations',
+    'net zero transformation',
+    'decarbonization results',
+  ],
 }
 
 export default async function Work() {
-  let caseStudies = await loadCaseStudies()
+  const caseStudies = await loadCaseStudies()
 
   return (
     <>
       <PageIntro
-        eyebrow="Our work"
-        title="Proven solutions for real-world problems."
+        eyebrow="Case Studies"
+        title="Measurable impact through AI-powered sustainability"
       >
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          Organizations worldwide are achieving their sustainability goals through
+          intelligent carbon management. Explore how WULO helps enterprises track,
+          reduce, and verify their environmental impact.
         </p>
       </PageIntro>
 

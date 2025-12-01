@@ -12,13 +12,22 @@ import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '@/lib/mdx'
 
 export const metadata: Metadata = {
-  title: 'Research & Insights',
+  title: 'Research & Insights | AI for Climate & Sustainability',
   description:
-    'Explore our latest research in carbon intelligence, climate technology, renewable energy optimization, and sustainable business transformation.',
+    'Explore cutting-edge AI research in carbon intelligence, emissions forecasting, renewable energy optimization, and sustainable technology. Peer-reviewed insights from NeuterLabs researchers.',
+  keywords: [
+    'AI research papers',
+    'carbon intelligence research',
+    'sustainability AI insights',
+    'climate tech research',
+    'emissions forecasting',
+    'renewable energy AI',
+    'machine learning sustainability',
+  ],
 }
 
 export default async function Blog() {
-  let articles = await loadArticles()
+  const articles = await loadArticles()
 
   return (
     <>

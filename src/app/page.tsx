@@ -75,11 +75,12 @@ export default async function Home() {
 }
 
 export const metadata: Metadata = {
+  title: 'NeuterLabs - AI Research for Climate & Sustainability',
   description:
-    'AI research and products that put safety at the frontier. NeuterLabs is dedicated to securing AI benefits and mitigating risks through responsible innovation.',
+    'NeuterLabs is an AI research company building intelligent systems for climate action. Our flagship product WULO delivers enterprise carbon intelligence for emissions tracking, renewable energy optimization, and sustainable operations.',
   openGraph: {
-    title: 'NeuterLabs - AI Research and Products That Put Safety at the Frontier',
-    description: 'AI will have a vast impact on the world. NeuterLabs is dedicated to securing its benefits and mitigating its risks.',
+    title: 'NeuterLabs - AI Research for Climate & Sustainability',
+    description: 'Building intelligent systems for climate action. Enterprise carbon intelligence powered by responsible AI research.',
     type: 'website',
     url: 'https://neuterlabs.com',
     images: [
@@ -87,10 +88,20 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'NeuterLabs - AI Safety Research',
+        alt: 'NeuterLabs - AI Research for Climate & Sustainability',
       },
     ],
   },
+  keywords: [
+    'AI research company',
+    'carbon intelligence',
+    'WULO',
+    'sustainability AI',
+    'climate tech startup',
+    'emissions tracking AI',
+    'renewable energy optimization',
+    'responsible AI',
+  ],
 }
 
 

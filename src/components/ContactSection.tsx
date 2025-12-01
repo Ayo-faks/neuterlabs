@@ -13,7 +13,7 @@ export function ContactSection() {
               Ready to accelerate your decarbonization?
             </h2>
             <p className="mt-4 text-neutral-400 leading-relaxed">
-              Let's discuss how our carbon intelligence solutions can help you achieve your sustainability goals.
+              Let&apos;s discuss how our carbon intelligence solutions can help you achieve your sustainability goals.
             </p>
             <div className="mt-8 flex">
               <Button href="/contact" invert>

@@ -29,7 +29,7 @@ export function Testimonial({
         <FadeIn>
           <figure className="mx-auto max-w-4xl">
             <blockquote className="relative font-display text-2xl font-medium tracking-tight text-neutral-950 sm:text-3xl md:text-4xl leading-relaxed">
-              <span className="absolute -left-6 top-0 text-neutral-300 text-6xl font-serif hidden sm:block">"</span>
+              <span className="absolute -left-6 top-0 text-neutral-300 text-6xl font-serif hidden sm:block">&ldquo;</span>
               <p>
                 {children}
               </p>

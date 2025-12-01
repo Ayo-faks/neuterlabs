@@ -1,7 +1,4 @@
-#!/bin/# Configuration
-REGISTRY_NAME="wuloacr"  # Using existing ACR
-IMAGE_NAME="neuterlabs-marketing"
-NAMESPACE="neuterlabs-marketing"
+#!/bin/bash
 
 # NeuterLabs Marketing Site - Deployment Script
 # This script builds the Docker image and deploys to AKS

@@ -69,7 +69,7 @@ function ContactForm() {
             Thank you for reaching out!
           </h2>
           <p className="text-neutral-300 leading-relaxed">
-            We've received your partnership inquiry and will get back to you within 24 hours.
+            We&apos;ve received your partnership inquiry and will get back to you within 24 hours.
           </p>
         </div>
       </FadeIn>
@@ -83,7 +83,7 @@ function ContactForm() {
           Carbon Intelligence Partnership Inquiry
         </h2>
         <p className="mt-2 text-sm text-neutral-600">
-          Share your sustainability goals and we'll help you achieve them.
+          Share your sustainability goals and we&apos;ll help you achieve them.
         </p>
         <div className="isolate mt-8 -space-y-px rounded-3xl bg-white/60 backdrop-blur-sm shadow-premium-md ring-1 ring-neutral-950/5">
           <TextInput label="Name" name="name" autoComplete="name" required />

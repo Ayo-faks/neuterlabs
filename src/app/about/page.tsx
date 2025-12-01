@@ -10,45 +10,34 @@ import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
+import imageAyoolaFakoya from '@/images/ayoola_fakoya.jpg'
 import { loadArticles } from '@/lib/mdx'
 
 function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow="Our values"
+        title="Building AI with purpose and responsibility."
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          We are driven by the belief that AI can accelerate climate action when developed responsibly.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Climate First" invert>
+            Every decision we make is evaluated through the lens of
+            environmental impact and sustainability outcomes.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Scientific Rigor" invert>
+            Our carbon intelligence systems are built on peer-reviewed methodologies and
+            validated against international standards.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Radical Transparency" invert>
+            We believe in open communication about our AI systems capabilities, limitations,
+            and environmental footprint.
           </GridListItem>
         </GridList>
       </Container>
@@ -58,72 +47,12 @@ function Culture() {
 
 const team = [
   {
-    title: 'Leadership',
+    title: 'Founder',
     people: [
       {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
-      },
-      {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
-      },
-      {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
-      },
-    ],
-  },
-  {
-    title: 'Team',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
-      },
-      {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
+        name: 'Ayoola Fakoya',
+        role: 'Founder',
+        image: { src: imageAyoolaFakoya },
       },
     ],
   },
@@ -179,13 +108,21 @@ function Team() {
 }
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'About | AI Research for Sustainability',
   description:
-    'NeuterLabs combines AI research and climate technology to build intelligent systems that accelerate the transition to renewable energy and sustainable operations.',
+    'NeuterLabs is an AI research company combining machine learning expertise with climate science to build intelligent systems that accelerate the global transition to sustainable operations and renewable energy.',
+  keywords: [
+    'AI research company',
+    'sustainability AI team',
+    'climate tech founders',
+    'carbon intelligence experts',
+    'responsible AI development',
+    'WULO team',
+  ],
 }
 
 export default async function About() {
-  let blogArticles = (await loadArticles()).slice(0, 2)
+  const blogArticles = (await loadArticles()).slice(0, 2)
 
   return (
     <>

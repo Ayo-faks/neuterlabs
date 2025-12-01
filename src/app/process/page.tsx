@@ -230,9 +230,17 @@ function Values() {
 }
 
 export const metadata: Metadata = {
-  title: 'Our Process',
+  title: 'Our Process | Research-Driven AI Development',
   description:
-    'Our research-driven approach ensures that every carbon intelligence system we build meets the highest standards of accuracy, transparency, and environmental impact measurement.',
+    'Discover our rigorous AI research methodology for building carbon intelligence systems. From discovery to deployment, we ensure accuracy, transparency, and verifiable environmental impact.',
+  keywords: [
+    'AI development process',
+    'carbon intelligence methodology',
+    'sustainability AI research',
+    'emissions tracking development',
+    'GHG Protocol compliance',
+    'ISO 14064 verification',
+  ],
 }
 
 export default function Process() {
