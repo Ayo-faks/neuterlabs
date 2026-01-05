@@ -14,8 +14,8 @@ export default async function CaseStudyLayout({
   caseStudy: MDXEntry<CaseStudy>
   children: React.ReactNode
 }) {
-  let allCaseStudies = await loadCaseStudies()
-  let moreCaseStudies = allCaseStudies
+  const allCaseStudies = await loadCaseStudies()
+  const moreCaseStudies = allCaseStudies
     .filter(({ metadata }) => metadata !== caseStudy)
     .slice(0, 2)
 
@@ -69,7 +69,9 @@ export default async function CaseStudyLayout({
 
         <Container className="mt-24 sm:mt-32 lg:mt-40">
           <FadeIn>
-            <MDXComponents.wrapper>{children}</MDXComponents.wrapper>
+            <MDXComponents.Typography className="[&>*]:mx-auto [&>*]:max-w-3xl [&>:first-child]:!mt-0 [&>:last-child]:!mb-0">
+              {children}
+            </MDXComponents.Typography>
           </FadeIn>
         </Container>
       </article>

@@ -3,6 +3,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { MDXComponents } from '@/components/MDXComponents'
 import { PageLinks } from '@/components/PageLinks'
+import { TableOfContents } from '@/components/TableOfContents'
 import { formatDate } from '@/lib/formatDate'
 import { type Article, type MDXEntry, loadArticles } from '@/lib/mdx'
 
@@ -13,8 +14,8 @@ export default async function BlogArticleWrapper({
   article: MDXEntry<Article>
   children: React.ReactNode
 }) {
-  let allArticles = await loadArticles()
-  let moreArticles = allArticles
+  const allArticles = await loadArticles()
+  const moreArticles = allArticles
     .filter(({ metadata }) => metadata !== article)
     .slice(0, 2)
 
@@ -31,17 +32,24 @@ export default async function BlogArticleWrapper({
               className="order-first text-sm text-neutral-950"
             >
               {formatDate(article.date)}
+              {article.readingTime ? ` · ${article.readingTime}` : null}
             </time>
             <p className="mt-6 text-sm font-semibold text-neutral-950">
               by {article.author.name}, {article.author.role}
             </p>
           </header>
+
+          {article.toc && article.toc.length > 0 ? (
+            <TableOfContents items={article.toc} />
+          ) : null}
         </FadeIn>
 
         <FadeIn>
-          <MDXComponents.wrapper className="mt-24 sm:mt-32 lg:mt-40">
+          <MDXComponents.Typography
+            className="mt-24 sm:mt-32 lg:mt-40 [&>*]:mx-auto [&>*]:max-w-3xl [&>:first-child]:!mt-0 [&>:last-child]:!mb-0"
+          >
             {children}
-          </MDXComponents.wrapper>
+          </MDXComponents.Typography>
         </FadeIn>
       </Container>
 

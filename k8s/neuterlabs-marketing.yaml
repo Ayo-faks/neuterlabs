@@ -54,6 +54,13 @@ spec:
         # Update this when ConfigMap changes to trigger rolling update
         checksum/config: "{{ configmap-hash }}"
     spec:
+      nodeSelector:
+        kubernetes.io/arch: arm64
+      tolerations:
+        - key: "CriticalAddonsOnly"
+          operator: "Equal"
+          value: "true"
+          effect: "NoSchedule"
       securityContext:
         fsGroup: 1001
         runAsNonRoot: true
@@ -63,7 +70,7 @@ spec:
       containers:
         - name: neuterlabs-marketing
           # Update with your actual container registry and image tag
-          image: wuloacr.azurecr.io/neuterlabs-marketing:v1.0.0@sha256:309df2e1a308a8cce6c1e709fa40add9fe83abd57bb4f3db9225b41e2db42390
+          image: wuloacr.azurecr.io/neuterlabs-marketing:v20251201-024118-011c9ab
           imagePullPolicy: Always
           ports:
             - name: http
