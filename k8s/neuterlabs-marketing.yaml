@@ -70,7 +70,7 @@ spec:
       containers:
         - name: neuterlabs-marketing
           # Update with your actual container registry and image tag
-          image: wuloacr.azurecr.io/neuterlabs-marketing:v20251201-024118-011c9ab
+          image: wuloacr.azurecr.io/neuterlabs-marketing:v20260105-220515-935a858
           imagePullPolicy: Always
           ports:
             - name: http

@@ -1,7 +1,6 @@
-import { article as aiRenewableEnergyOptimization } from './ai-renewable-energy-optimization/page.mdx'
-import { article as carbonTrackingVerification } from './carbon-tracking-verification/page.mdx'
-import { article as emissionsPredictionBreakthrough } from './emissions-prediction-breakthrough/page.mdx'
-import { article as secrComplianceGuide2026 } from './secr-compliance-guide-2026/page.mdx'
+import { article as aiSpeechTherapyChildren } from './ai-speech-therapy-children/page.mdx'
+import { article as voiceAgentsArticulationPractice } from './voice-agents-articulation-practice/page.mdx'
+import { article as phonologyExercisesAiFeedback } from './phonology-exercises-ai-feedback/page.mdx'
 
 import type { StaticImageData } from 'next/image'
 
@@ -37,9 +36,8 @@ function toEntry(article: Article, href: string): MDXEntry<Article> {
 
 export function getArticles(): Array<MDXEntry<Article>> {
   return [
-    toEntry(aiRenewableEnergyOptimization, '/blog/ai-renewable-energy-optimization'),
-    toEntry(carbonTrackingVerification, '/blog/carbon-tracking-verification'),
-    toEntry(emissionsPredictionBreakthrough, '/blog/emissions-prediction-breakthrough'),
-    toEntry(secrComplianceGuide2026, '/blog/secr-compliance-guide-2026'),
+    toEntry(aiSpeechTherapyChildren, '/blog/ai-speech-therapy-children'),
+    toEntry(voiceAgentsArticulationPractice, '/blog/voice-agents-articulation-practice'),
+    toEntry(phonologyExercisesAiFeedback, '/blog/phonology-exercises-ai-feedback'),
   ].sort((a, b) => b.date.localeCompare(a.date))
 }

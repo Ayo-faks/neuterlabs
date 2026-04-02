@@ -49,7 +49,7 @@ export default function AIPrinciples() {
         
         <FadeInStagger className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {principles.map((principle) => (
-            <FadeIn key={principle.title} className="bg-neutral-900 rounded-lg p-8">
+            <FadeIn key={principle.title} className="bg-neutral-900 p-8">
               <div className="text-4xl mb-4">{principle.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-3">
                 {principle.title}

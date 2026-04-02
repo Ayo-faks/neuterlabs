@@ -1,0 +1,102 @@
+import imageMichaelFoster from '@/images/team/michael-foster.jpg'
+
+export const article = {
+  date: '2026-01-10',
+  title: 'Phonology Exercises with Real-Time AI Feedback: What the Research Says',
+  description:
+    'A review of evidence-based phonological therapy approaches and how AI-powered real-time feedback can enhance practice frequency and outcomes for children.',
+  readingTime: '7 min read',
+  toc: [
+    {
+      title: 'Evidence-based approaches',
+      href: '#evidence-based-phonological-therapy',
+    },
+    {
+      title: 'The role of practice frequency',
+      href: '#practice-frequency-and-outcomes',
+    },
+    {
+      title: 'AI feedback in phonology',
+      href: '#how-ai-feedback-maps-to-therapy-methods',
+    },
+    {
+      title: 'What we\'ve learned',
+      href: '#what-weve-learned-building-wulo',
+    },
+  ],
+  author: {
+    name: 'Ayoola Fakoya',
+    role: 'Founder / CEO',
+    image: { src: imageMichaelFoster },
+  },
+}
+
+## Evidence-based phonological therapy
+
+Phonological disorders affect how children organize and use speech sounds in language. Unlike articulation disorders (which involve difficulty producing specific sounds), phonological disorders involve **patterns of sound errors** — for example, a child who consistently deletes final consonants ("ca" for "cat," "do" for "dog") or substitutes one class of sounds for another ("tat" for "cat," fronting velars to alveolars).
+
+Several evidence-based approaches have strong research support for treating phonological disorders:
+
+- **Minimal pairs therapy** — Using word pairs that differ by one phoneme (e.g., "key" vs. "tea") to help children understand that sound differences change meaning. When a child says "tea" but means "key," the communicative breakdown becomes a learning opportunity.
+- **Multiple oppositions** — An extension of minimal pairs where the target sound is contrasted with multiple substitutions simultaneously, efficient for children with highly unintelligible speech.
+- **Cycles approach** — Targeting phonological patterns in cycles rather than drilling one sound to mastery before moving on. Each cycle exposes the child to multiple target patterns, revisiting them over time.
+- **Complexity approach** — Starting with more complex, later-developing sounds rather than simpler ones. Research suggests this can trigger system-wide generalization — gains in complex sounds often lead to improvement in simpler, untreated sounds as well.
+
+Each of these approaches shares a common requirement: **high-frequency, structured exposure and practice with target sounds and patterns.**
+
+## Practice frequency and outcomes
+
+The research on practice frequency in speech therapy is clear. A landmark 2010 study by Baker and McLeod found that treatment intensity — both the number of sessions per week and the number of production trials per session — was a significant predictor of outcomes. More recent meta-analyses have reinforced this:
+
+- Children receiving **3+ sessions per week** showed significantly faster progress than those receiving 1 session per week
+- **Dose** (number of teaching episodes per session) matters as much as **dose frequency** (sessions per week)
+- Home practice between sessions amplifies gains, but only when it's **structured and consistent**
+
+The challenge is obvious: most families can't access 3+ therapy sessions per week. Therapist availability, insurance limits, travel time, and cost all constrain frequency. And unstructured home practice ("just practice your sounds") is minimally effective because parents don't know how to implement the specific techniques their child's therapist uses.
+
+This is where AI-guided practice has the potential to make a meaningful difference.
+
+## How AI feedback maps to therapy methods
+
+Wulo's exercise engine is designed to implement the same evidence-based approaches therapists use, adapted for AI-guided delivery:
+
+### Minimal pairs with real-time feedback
+
+When a child works on minimal pairs in Wulo, the agent presents pairs like "wing" and "ring." The child produces both words, and Wulo evaluates whether the initial phonemes were distinct. If the child produces both as "wing," the agent highlights the contrast: "Those sounded the same! Listen to the difference: **w**ing, **r**ing. The /r/ sound starts with your tongue curled back. Let's try 'ring' again."
+
+This mirrors what a therapist does — but the AI can provide unlimited repetitions with consistent, patient feedback.
+
+### Cycles-based session planning
+
+Wulo's session planner can implement a cycles approach, rotating through a child's target patterns across sessions. Monday might focus on final consonant deletion, Wednesday on cluster reduction, and Friday on fronting. Each pattern gets regular exposure without being drilled to exhaustion.
+
+### Listening discrimination
+
+Before asking a child to produce a sound, it helps for them to *hear* the difference. Wulo includes listening exercises where the child identifies whether they hear the target sound: "Did I say 'rake' or 'lake'? Listen carefully!" This builds the auditory representation that supports accurate production.
+
+### Production at multiple levels
+
+For each target, Wulo structures practice across a hierarchy:
+1. **Isolation** — Just the sound: "Say /s/"
+2. **Syllables** — Sound + vowel: "Say 'sa', 'se', 'si', 'so', 'su'"
+3. **Words** — Target in words: "Say 'sun', 'sock', 'soap'"
+4. **Phrases** — "Say 'I see the sun'"
+5. **Sentences** — "Tell me about something sunny!"
+
+The AI evaluates at each level and only progresses when the child demonstrates consistent accuracy — exactly as a therapist would.
+
+## What we've learned building Wulo
+
+Building AI-guided phonology exercises has taught us several things that weren't obvious at the start:
+
+**Children need more variety than adults.** A 5-year-old won't repeat the same word 20 times the way an adult might in a language learning app. Wulo needed extensive word and prompt variety at every level to maintain engagement.
+
+**Feedback timing matters enormously.** Too fast and the child feels interrupted. Too slow and they lose the connection between their production and the feedback. We target feedback delivery within 1–2 seconds of the child's utterance.
+
+**Error classification drives feedback quality.** Generic "try again" feedback doesn't help. Knowing that a child omitted the /s/ in a cluster vs. substituted /t/ for /k/ leads to completely different therapeutic responses. Investing in fine-grained pronunciation evaluation pays off directly in feedback quality.
+
+**Parent involvement changes outcomes.** Sessions where a parent is present and engaged — even just sitting beside the child, offering encouragement — result in more production attempts and better carry-over than solo sessions. This is why Wulo is designed as a parent-present tool.
+
+---
+
+The evidence base for structured, high-frequency speech therapy practice is strong. The challenge has always been access and consistency. By building AI that can deliver therapist-informed exercises with real-time feedback, we're working to close that gap — one practice session at a time.

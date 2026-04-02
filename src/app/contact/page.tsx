@@ -10,7 +10,6 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
-import { SocialMedia } from '@/components/SocialMedia'
 
 function TextInput({
   label,
@@ -25,7 +24,7 @@ function TextInput({
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full border border-neutral-200 bg-white/80 backdrop-blur-sm px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition-all duration-300 focus:border-neutral-950 focus:bg-white focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-3xl group-last:rounded-b-3xl hover:border-neutral-300"
+        className="peer block w-full border border-neutral-200 bg-white px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition-colors duration-200 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-none group-last:rounded-b-none hover:border-neutral-300"
       />
       <label
         htmlFor={id}
@@ -59,8 +58,8 @@ function ContactForm() {
   if (state.succeeded) {
     return (
       <FadeIn className="lg:order-last">
-        <div className="rounded-4xl bg-gradient-to-br from-neutral-900 to-neutral-950 p-12 text-center shadow-premium-xl">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-6">
+        <div className="bg-neutral-950 p-12 text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 border border-white/20 mb-6">
             <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
@@ -80,12 +79,12 @@ function ContactForm() {
     <FadeIn className="lg:order-last">
       <form onSubmit={handleSubmit}>
         <h2 className="font-display text-base font-semibold text-neutral-950 tracking-wide">
-          Carbon Intelligence Partnership Inquiry
+          Get in Touch
         </h2>
         <p className="mt-2 text-sm text-neutral-600">
-          Share your sustainability goals and we&apos;ll help you achieve them.
+          Tell us about your needs and we&apos;ll get back to you.
         </p>
-        <div className="isolate mt-8 -space-y-px rounded-3xl bg-white/60 backdrop-blur-sm shadow-premium-md ring-1 ring-neutral-950/5">
+        <div className="isolate mt-8 -space-y-px bg-white ring-1 ring-neutral-950/5">
           <TextInput label="Name" name="name" autoComplete="name" required />
           <ValidationError prefix="Name" field="name" errors={state.errors} />
           
@@ -112,14 +111,14 @@ function ContactForm() {
           <TextInput label="Message" name="message" required />
           <ValidationError prefix="Message" field="message" errors={state.errors} />
           
-          <div className="border border-neutral-200 bg-white/80 backdrop-blur-sm px-6 py-8 first:rounded-t-3xl last:rounded-b-3xl">
+          <div className="border border-neutral-200 bg-white px-6 py-8">
             <fieldset>
-              <legend className="text-base/6 text-neutral-600 font-medium">Partnership Interest</legend>
+              <legend className="text-base/6 text-neutral-600 font-medium">I am interested in...</legend>
               <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <RadioInput label="Carbon Tracking & Verification" name="interest" value="tracking" />
-                <RadioInput label="Renewable Energy Optimization" name="interest" value="renewable" />
-                <RadioInput label="Supply Chain Emissions (Scope 3)" name="interest" value="scope3" />
+                <RadioInput label="WULO (Speech Therapy)" name="interest" value="wulo" />
+                <RadioInput label="Clinical Ambient Scribe" name="interest" value="scribe" />
                 <RadioInput label="Research Collaboration" name="interest" value="research" />
+                <RadioInput label="Other" name="interest" value="other" />
               </div>
             </fieldset>
           </div>
@@ -136,10 +135,10 @@ function ContactDetails() {
   return (
     <FadeIn>
       <h2 className="font-display text-base font-semibold text-neutral-950 tracking-wide">
-        Global Carbon Intelligence Network
+        Reach Out
       </h2>
       <p className="mt-6 text-base text-neutral-600 leading-relaxed">
-        We operate with distributed teams across climate-critical regions, enabling us to collaborate with enterprises, research institutions, and sustainability leaders worldwide while maintaining rigorous data verification standards.
+        Whether you&apos;re a clinician, researcher, parent, or organization interested in our products or research — we&apos;d love to hear from you.
       </p>
 
       <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
@@ -166,13 +165,6 @@ function ContactDetails() {
           ))}
         </dl>
       </Border>
-
-      {/* <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Follow us
-        </h2>
-        <SocialMedia className="mt-6" />
-      </Border> */}
     </FadeIn>
   )
 }
@@ -180,8 +172,8 @@ function ContactDetails() {
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Accelerate your decarbonization journey">
-        <p>We partner with forward-thinking organizations to deploy intelligent carbon tracking, renewable energy optimization, and AI-powered sustainability solutions that deliver measurable climate impact.</p>
+      <PageIntro eyebrow="Contact us" title="Let&apos;s talk">
+        <p>We&apos;re building AI for healthcare. If you&apos;re interested in our products, research, or partnerships — reach out.</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">

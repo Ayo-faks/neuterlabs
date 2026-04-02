@@ -25,26 +25,26 @@ export default function HeroPage(){
             <div className="max-w-4xl mx-auto text-center space-y-10">
               {/* Main Headline - Premium Typography */}
               <h1 className="font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05]">
-                AI research and products that put safety at the frontier
+                AI research and products for the future of healthcare
               </h1>
               
               {/* Subheadline */}
               <p className="text-lg sm:text-xl md:text-2xl text-white/80 leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
-                AI will have a vast impact on the world. NeuterLabs is dedicated to securing its benefits and mitigating its risks.
+                We build intelligent systems that solve real problems — from pediatric speech therapy to clinical documentation. Research-driven. Safety-first.
               </p>
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
                 <Link 
-                  href="#wulo" 
-                  className="group px-8 py-4 bg-white text-neutral-950 rounded-full font-semibold tracking-wide hover:bg-neutral-100 transition-all duration-300 shadow-premium-lg hover:shadow-premium-xl hover:scale-[1.02]"
+                  href="#products" 
+                  className="group px-8 py-4 bg-white text-neutral-950 font-semibold tracking-wide hover:bg-neutral-200 transition-colors duration-200"
                 >
-                  Explore WULO
-                  <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  Our Products
+                  <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
                 </Link>
                 <Link 
                   href="#research" 
-                  className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-full text-white font-semibold tracking-wide hover:bg-white/10 hover:border-white/30 transition-all duration-300"
+                  className="px-8 py-4 border border-white/20 text-white font-semibold tracking-wide hover:bg-white/10 hover:border-white/30 transition-colors duration-200"
                 >
                   Our Research
                 </Link>
@@ -52,13 +52,13 @@ export default function HeroPage(){
               
               {/* Product Highlight Badge */}
               <div className="pt-10">
-                <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full shadow-glow">
+                <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-subtle-pulse" />
+                    <div className="w-2 h-2 bg-green-400 animate-subtle-pulse" />
                     <span className="text-white/60 text-sm font-medium tracking-wide">Now Available:</span>
                   </div>
-                  <Link href="https://wulo.ai" target="_blank" className="text-white font-semibold hover:text-white/90 transition-colors duration-300">
-                    WULO Carbon Intelligence System
+                  <Link href="https://wulo.ai" target="_blank" className="text-white font-semibold hover:text-white/90 transition-colors duration-200">
+                    WULO — AI Speech Therapy for Kids
                   </Link>
                 </div>
               </div>

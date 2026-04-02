@@ -1,37 +1,38 @@
 import { Container } from './Container'
 import { FadeIn, FadeInStagger } from './FadeIn'
 import { SectionIntro } from './SectionIntro'
+import { MicrophoneIcon, MagnifyingGlassIcon, CpuChipIcon, ChartBarIcon, ShieldCheckIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline'
 
 const researchAreas = [
   {
-    title: 'AI Alignment',
-    description: 'Developing methods to ensure AI systems pursue goals that are genuinely beneficial to humanity, even as they become more capable.',
-    icon: '🎯',
+    title: 'Speech Recognition',
+    description: 'Building ASR models for underserved populations — children, accented speakers, clinical settings — where off-the-shelf models fall short.',
+    Icon: MicrophoneIcon,
   },
   {
-    title: 'Interpretability',
-    description: 'Making AI decision-making transparent and understandable, enabling meaningful oversight and accountability.',
-    icon: '🔍',
+    title: 'Clinical NLP',
+    description: 'Extracting structured clinical information from unstructured conversations, enabling ambient documentation and decision support.',
+    Icon: MagnifyingGlassIcon,
   },
   {
-    title: 'Robustness & Safety',
-    description: 'Building AI systems that perform reliably across diverse conditions and fail gracefully when encountering edge cases.',
-    icon: '🛡️',
+    title: 'Adaptive Systems',
+    description: 'Creating AI that adjusts in real time to user performance, context, and goals — from therapy exercises to clinical workflows.',
+    Icon: CpuChipIcon,
   },
   {
-    title: 'Bias & Fairness',
-    description: 'Identifying and mitigating algorithmic bias to ensure AI systems serve all communities equitably and justly.',
-    icon: '⚖️',
+    title: 'Evaluation & Scoring',
+    description: 'Real-time pronunciation assessment, clinical note quality scoring, and output validation for high-stakes healthcare applications.',
+    Icon: ChartBarIcon,
   },
   {
-    title: 'Privacy Preservation',
-    description: 'Pioneering federated learning and differential privacy techniques that enable AI innovation while protecting individual data.',
-    icon: '🔒',
+    title: 'Safety & Privacy',
+    description: 'Ensuring AI systems for vulnerable populations meet the highest standards of COPPA, HIPAA, and age-appropriate design.',
+    Icon: ShieldCheckIcon,
   },
   {
-    title: 'Climate & Sustainability',
-    description: 'Applying AI to address climate challenges while minimizing the environmental footprint of AI systems themselves.',
-    icon: '🌱',
+    title: 'Clinical Validation',
+    description: 'Partnering with clinicians to validate AI outputs against established practices and measure real-world outcomes.',
+    Icon: ClipboardDocumentCheckIcon,
   },
 ]
 
@@ -39,32 +40,32 @@ const principles = [
   {
     number: '01',
     title: 'Safety First',
-    description: 'We prioritize safety in every stage of research and development, from initial concept to deployment and beyond.',
+    description: 'Every system we build is designed with safety as the top priority — especially when serving children, patients, and other vulnerable populations.',
   },
   {
     number: '02',
-    title: 'Transparent Operations',
-    description: 'We publish our research, share our methodologies, and engage openly with the broader AI safety community.',
+    title: 'Evidence-Based',
+    description: 'Our products are grounded in peer-reviewed research and validated with practicing clinicians before reaching users.',
   },
   {
     number: '03',
-    title: 'Human Oversight',
-    description: 'AI should augment, not replace, human judgment in critical decisions affecting people\'s lives and wellbeing.',
+    title: 'Augment, Not Replace',
+    description: 'We build AI that makes clinicians and therapists more effective — not tools that try to replace human expertise.',
   },
   {
     number: '04',
-    title: 'Long-Term Thinking',
-    description: 'We consider the long-term implications of our work, not just immediate benefits or market pressures.',
+    title: 'Inclusive Design',
+    description: 'We build for diverse populations, ensuring our systems work across accents, ages, and clinical contexts.',
   },
   {
     number: '05',
-    title: 'Inclusive Development',
-    description: 'We actively seek diverse perspectives and ensure our AI systems serve all communities equitably.',
+    title: 'Privacy by Default',
+    description: 'We process data in real time and minimize storage. We collect only what is necessary and discard the rest.',
   },
   {
     number: '06',
-    title: 'Continuous Evaluation',
-    description: 'We rigorously test, monitor, and update our systems to maintain safety and effectiveness over time.',
+    title: 'Rigorous Evaluation',
+    description: 'We test against diverse data, measure real-world outcomes, and iterate continuously to improve accuracy and fairness.',
   },
 ]
 
@@ -75,12 +76,12 @@ export default function ResearchPrinciples() {
         {/* Research Areas */}
         <SectionIntro
           eyebrow="Our Research"
-          title="Advancing the frontier of AI safety"
+          title="Advancing AI for healthcare"
           invert
         >
           <p className="text-neutral-300">
-            We conduct fundamental research to understand and address the core challenges of building 
-            safe, beneficial AI systems. Our work spans technical, ethical, and governance dimensions.
+            We conduct applied research across speech recognition, clinical NLP, and adaptive systems — 
+            focused on the hardest problems in healthcare AI where accuracy and safety are non-negotiable.
           </p>
         </SectionIntro>
 
@@ -88,8 +89,8 @@ export default function ResearchPrinciples() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {researchAreas.map((area) => (
               <FadeIn key={area.title}>
-                <div className="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-4xl mb-4">{area.icon}</div>
+                <div className="group border border-white/10 bg-white/5 p-8 hover:bg-white/10 transition-colors duration-200">
+                  <area.Icon className="w-6 h-6 text-white mb-4" />
                   <h3 className="font-display text-xl font-semibold text-white mb-3">
                     {area.title}
                   </h3>
@@ -109,11 +110,11 @@ export default function ResearchPrinciples() {
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center mb-16">
             <h2 className="font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              Our AI Safety Principles
+              Our Principles
             </h2>
             <p className="mt-6 text-lg text-neutral-300 leading-relaxed">
-              These principles guide every decision we make, from research priorities to product design. 
-              They represent our commitment to responsible AI development.
+              These principles guide how we build AI — ensuring safety, clinical rigor, 
+              and genuine value in everything we ship.
             </p>
           </div>
         </FadeIn>
@@ -122,7 +123,7 @@ export default function ResearchPrinciples() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {principles.map((principle) => (
               <FadeIn key={principle.number}>
-                <div className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/0 p-8 hover:border-white/20 hover:from-white/10 hover:to-white/5 transition-all duration-300">
+                <div className="group relative border border-white/10 bg-gradient-to-br from-white/5 to-white/0 p-8 hover:border-white/20 hover:from-white/10 hover:to-white/5 transition-colors duration-200">
                   <div className="text-5xl font-display font-bold text-white/10 mb-3">
                     {principle.number}
                   </div>
@@ -142,11 +143,11 @@ export default function ResearchPrinciples() {
         <FadeIn>
           <div className="mt-20 text-center">
             <p className="text-neutral-300 text-lg mb-8">
-              Interested in collaborating on AI safety research?
+              Interested in collaborating on healthcare AI research?
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-base font-semibold text-neutral-950 shadow-lg hover:bg-neutral-100 transition-all duration-200 hover:scale-105"
+              className="inline-flex items-center justify-center bg-white px-8 py-4 text-base font-semibold text-neutral-950 hover:bg-neutral-200 transition-colors duration-200"
             >
               Get in Touch
               <span className="ml-2">→</span>

@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
-import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
   // {
@@ -94,13 +93,13 @@ function NewsletterForm() {
           placeholder="Email address"
           autoComplete="email"
           aria-label="Email address"
-          className="block w-full rounded-2xl border border-neutral-200 bg-white/80 backdrop-blur-sm py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition-all duration-300 placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 hover:border-neutral-300"
+          className="block w-full border border-neutral-200 bg-white py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition-colors duration-200 placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 hover:border-neutral-300"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
           <button
             type="submit"
             aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition-all duration-300 hover:bg-neutral-800 hover:scale-105"
+            className="flex aspect-square h-full items-center justify-center bg-neutral-950 text-white transition-colors duration-200 hover:bg-neutral-800"
           >
             <ArrowIcon className="w-4" />
           </button>

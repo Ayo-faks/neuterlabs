@@ -72,7 +72,7 @@ export default function ServiceList(){
 
                     <div className="mt-16 grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
                         {capabilities.map((capability) => (
-                            <div key={capability.name} className="group relative bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div key={capability.name} className="group relative bg-white border border-neutral-200 hover:border-neutral-300 transition-colors duration-200">
                                 <div className="aspect-w-16 aspect-h-9 overflow-hidden rounded-t-2xl">
                                     <img
                                         src={capability.imageSrc}

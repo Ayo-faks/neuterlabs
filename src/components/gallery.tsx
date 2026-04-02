@@ -21,8 +21,8 @@ const Gallery = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
-          className="p-4 border rounded-lg shadow-lg">
-          <img src={service.image} alt={service.title} className="w-full h-40 object-cover rounded-lg mb-2" />
+          className="p-4 border">
+          <img src={service.image} alt={service.title} className="w-full h-40 object-cover mb-2" />
           <h3 className="text-xl font-semibold">{service.title}</h3>
           <p className="mt-2 text-gray-600">{service.description}</p>
         </motion.div>

@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 
 import { ContactSection } from '@/components/ContactSection'
-import { Testimonial } from '@/components/Testimonial'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import HeroPage from '@/components/heropage'
 import Intro from '@/components/intro'
 import WuloProduct from '@/components/WuloProduct'
@@ -21,7 +19,7 @@ export default async function Home() {
   const researchSchema = generateResearchSchema()
   const wuloSchema = generateProductSchema({
     name: 'WULO',
-    description: 'Advanced AI-powered carbon intelligence system for measuring, managing, and reducing emissions',
+    description: 'Real-time AI-powered speech therapy platform for children. Intelligent voice agents guide kids through structured articulation and phonology exercises.',
     url: 'https://wulo.ai',
     image: 'https://wulo.ai/og-image.jpg',
   })
@@ -52,21 +50,11 @@ export default async function Home() {
       {/* Mission Statement */}
       <Intro/>
       
-      {/* WULO Product Showcase */}
+      {/* Products */}
       <WuloProduct/>
       
       {/* Research & Principles */}
       <ResearchPrinciples/>
-
-      {/* Testimonial */}
-      <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
-      >
-        NeuterLabs sets the gold standard for AI safety in healthcare. Their rigorous approach to bias testing 
-        and privacy-preserving methods gave us confidence to deploy responsibly. More than vendors, they&apos;re 
-        partners in building trustworthy AI that truly serves patients.
-      </Testimonial>
 
       {/* Contact Section */}
       <ContactSection />
@@ -75,12 +63,12 @@ export default async function Home() {
 }
 
 export const metadata: Metadata = {
-  title: 'NeuterLabs - AI Research for Climate & Sustainability',
+  title: 'NeuterLabs - AI Research & Products for Healthcare',
   description:
-    'NeuterLabs is an AI research company building intelligent systems for climate action. Our flagship product WULO delivers enterprise carbon intelligence for emissions tracking, renewable energy optimization, and sustainable operations.',
+    'NeuterLabs is an AI research company building intelligent systems for healthcare — from pediatric speech therapy to clinical documentation.',
   openGraph: {
-    title: 'NeuterLabs - AI Research for Climate & Sustainability',
-    description: 'Building intelligent systems for climate action. Enterprise carbon intelligence powered by responsible AI research.',
+    title: 'NeuterLabs - AI Research & Products for Healthcare',
+    description: 'AI research company building intelligent systems for healthcare. Products include WULO speech therapy and a clinical ambient scribe.',
     type: 'website',
     url: 'https://neuterlabs.com',
     images: [
@@ -88,19 +76,19 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'NeuterLabs - AI Research for Climate & Sustainability',
+        alt: 'NeuterLabs - AI Research & Products for Healthcare',
       },
     ],
   },
   keywords: [
-    'AI research company',
-    'carbon intelligence',
+    'AI research',
+    'healthcare AI',
+    'NeuterLabs',
     'WULO',
-    'sustainability AI',
-    'climate tech startup',
-    'emissions tracking AI',
-    'renewable energy optimization',
-    'responsible AI',
+    'speech therapy AI',
+    'clinical ambient scribe',
+    'medical AI',
+    'speech recognition',
   ],
 }
 

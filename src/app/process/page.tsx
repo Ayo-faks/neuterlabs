@@ -58,21 +58,22 @@ function Discover() {
     <Section title="Research & Discovery" image={{ src: imageWhiteboard }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          We begin by conducting comprehensive{' '}
-          <strong className="font-semibold text-neutral-950">carbon footprint assessments</strong> and
-          energy systems analysis to understand your organization&apos;s specific emissions sources and
-          reduction opportunities.
+          We begin with{' '}
+          <strong className="font-semibold text-neutral-950">deep domain research</strong> —
+          understanding the clinical problem, existing workflows, and where AI can
+          create genuine value.
         </p>
         <p>
-          Our interdisciplinary team works with sustainability officers, operations managers, and supply chain
-          experts to identify key emission hotspots, data quality challenges, and{' '}
-          <strong className="font-semibold text-neutral-950">measurement gaps</strong>{' '}
-          that must be addressed throughout the implementation process.
+          Our team works directly with{' '}
+          <strong className="font-semibold text-neutral-950">clinicians and domain experts</strong>{' '}
+          to identify the specific pain points, edge cases, and safety requirements
+          that will shape the product.
         </p>
         <p>
-          We establish clear success metrics, reduction targets, and{' '}
-          <strong className="font-semibold text-neutral-950">validation protocols</strong> that
-          align with international carbon accounting standards like GHG Protocol and ISO 14064.
+          We establish{' '}
+          <strong className="font-semibold text-neutral-950">evaluation criteria</strong>{' '}
+          before writing a line of code — defining what success looks like in clinical terms,
+          not just technical metrics.
         </p>
       </div>
 
@@ -80,12 +81,12 @@ function Discover() {
         Included in this phase
       </h3>
       <TagList className="mt-4">
-        <TagListItem>Carbon footprint mapping</TagListItem>
-        <TagListItem>Energy systems analysis</TagListItem>
-        <TagListItem>Stakeholder workshops</TagListItem>
-        <TagListItem>Data source identification</TagListItem>
-        <TagListItem>Compliance framework review</TagListItem>
-        <TagListItem>Baseline establishment</TagListItem>
+        <TagListItem>Clinical needs assessment</TagListItem>
+        <TagListItem>Literature review</TagListItem>
+        <TagListItem>Domain expert interviews</TagListItem>
+        <TagListItem>Safety requirement mapping</TagListItem>
+        <TagListItem>Evaluation framework</TagListItem>
+        <TagListItem>Feasibility analysis</TagListItem>
       </TagList>
     </Section>
   )
@@ -93,33 +94,32 @@ function Discover() {
 
 function Build() {
   return (
-    <Section title="Development & Integration" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="Development & Validation" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Our development process integrates with your existing systems, implementing
-          automated data collection from IoT sensors, energy management systems,
-          and supply chain platforms to create comprehensive emissions tracking.
+          We build iteratively, shipping working prototypes to clinicians early and often.
+          Every model is trained on{' '}
+          <strong className="font-semibold text-neutral-950">domain-specific data</strong>{' '}
+          and tested against real-world clinical scenarios.
         </p>
         <p>
-          Each carbon calculation undergoes continuous{' '}
-          <strong className="font-semibold text-neutral-950">third-party verification</strong>{' '}
-          where our AI models cross-reference multiple data sources and apply
-          international carbon accounting standards to ensure accuracy and auditability.
+          Our systems are designed for{' '}
+          <strong className="font-semibold text-neutral-950">real-time performance</strong>{' '}
+          — low-latency inference that feels natural in clinical and consumer contexts.
         </p>
         <p>
-          We maintain transparent documentation of all emission factors, calculation
-          methodologies, and data sources to ensure{' '}
-          <strong className="font-semibold text-neutral-950">full traceability</strong>{' '}
-          and regulatory compliance.
+          Safety and privacy are{' '}
+          <strong className="font-semibold text-neutral-950">built in from the start</strong>,{' '}
+          not bolted on after. We design for HIPAA and COPPA compliance at the architecture level.
         </p>
       </div>
 
       <Blockquote
-        author={{ name: 'Sarah Mitchell', role: 'Director of Sustainability, Global Energy Corp' }}
+        author={{ name: 'Dr. Sarah Chen', role: 'Clinical Advisor' }}
         className="mt-12"
       >
-        WULO&rsquo;s rigorous verification protocols gave us confidence that our carbon
-        reporting would meet the highest standards for investor disclosure and regulatory compliance.
+        What sets NeuterLabs apart is how closely the engineering team works with clinicians.
+        The products reflect a genuine understanding of real clinical workflows.
       </Blockquote>
     </Section>
   )
@@ -127,32 +127,28 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="Deployment & Optimization" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="Deployment & Iteration" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Before full deployment, we conduct comprehensive{' '}
+          We deploy with{' '}
           <strong className="font-semibold text-neutral-950">
-            pilot programs
+            comprehensive monitoring
           </strong>{' '}
-          to validate carbon calculations against third-party audits, test reduction
-          strategies, and refine our AI recommendations in real operational environments.
+          — tracking model accuracy, user outcomes, and edge cases
+          in production.
         </p>
         <p>
-          Our deployment strategy includes gradual rollout with continuous{' '}
-          <strong className="font-semibold text-neutral-950">monitoring</strong>{' '}
-          systems that track emission reductions, identify new optimization opportunities,
-          and provide early warning of data quality issues.
+          Continuous feedback loops with{' '}
+          <strong className="font-semibold text-neutral-950">clinicians and users</strong>{' '}
+          drive rapid iteration. We ship improvements weekly, not quarterly.
         </p>
         <p>
-          We establish robust{' '}
+          Every product includes{' '}
           <strong className="font-semibold text-neutral-950">
-            sustainability team enablement
+            outcome measurement
           </strong>{' '}
-          and provide comprehensive training on carbon accounting best practices, system
-          usage, and{' '}
-          <strong className="font-semibold text-neutral-950">
-            reduction strategy implementation
-          </strong>.
+          — we track whether our AI is actually improving clinical outcomes,
+          not just engagement metrics.
         </p>
       </div>
 
@@ -160,17 +156,17 @@ function Deliver() {
         Included in this phase
       </h3>
       <List className="mt-8">
-        <ListItem title="Pilot Validation">
-          Comprehensive testing comparing WULO calculations against third-party audits
-          across diverse operational scenarios and emission sources.
+        <ListItem title="Production Monitoring">
+          Real-time tracking of model accuracy, latency, and error rates
+          across all deployed systems.
         </ListItem>
-        <ListItem title="Continuous Monitoring">
-          Real-time systems for tracking emissions, validating reductions, and
-          ensuring continued accuracy of carbon intelligence.
+        <ListItem title="Clinical Outcome Tracking">
+          Measuring real-world impact on patient outcomes,
+          clinician efficiency, and user satisfaction.
         </ListItem>
-        <ListItem title="Team Training">
-          Comprehensive education programs for sustainability teams on carbon accounting
-          methodologies, system capabilities, and optimization strategies.
+        <ListItem title="Continuous Improvement">
+          Weekly model updates and feature releases driven by
+          production data and clinician feedback.
         </ListItem>
       </List>
     </Section>
@@ -180,7 +176,7 @@ function Deliver() {
 function Values() {
   return (
     <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
+      <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden bg-gradient-to-b from-neutral-50">
         <GridPattern
           className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
           yOffset={-270}
@@ -189,39 +185,39 @@ function Values() {
 
       <SectionIntro
         eyebrow="Our values"
-        title="Accuracy, transparency, and environmental impact"
+        title="Safety, rigor, and measurable impact"
       >
         <p>
-          We are guided by principles that prioritize data accuracy, scientific rigor, 
-          and measurable climate impact in every aspect of our carbon intelligence development.
+          We are guided by principles that prioritize patient safety, evidence-based development, 
+          and genuine clinical outcomes across all our products.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="Accuracy First">
-            Carbon data accuracy is paramount. Every calculation is verified against international
-            standards and undergoes third-party validation before reporting.
+          <GridListItem title="Patient Safety">
+            Safety is non-negotiable. We design for the most vulnerable users first —
+            children, patients, and those who depend on clinical accuracy.
           </GridListItem>
-          <GridListItem title="Transparent Methodology">
-            We maintain complete transparency in our carbon accounting methods, providing clear
-            documentation of emission factors, data sources, and calculation approaches.
+          <GridListItem title="Evidence-Based">
+            Every product is grounded in peer-reviewed research and validated
+            with practicing clinicians before reaching users.
           </GridListItem>
-          <GridListItem title="Science-Based">
-            Our development process is grounded in climate science and validated through
-            peer-reviewed research and alignment with IPCC guidelines.
+          <GridListItem title="Clinically Validated">
+            Our AI outputs are benchmarked against expert human judgment
+            to ensure accuracy and reliability.
           </GridListItem>
-          <GridListItem title="Auditable">
-            We ensure complete traceability of all carbon data, enabling external audits
-            and regulatory compliance through blockchain-backed verification.
+          <GridListItem title="Privacy by Design">
+            We process data in real time, minimize storage, and build
+            HIPAA and COPPA compliance into every system from day one.
           </GridListItem>
-          <GridListItem title="Collaborative">
-            We work closely with sustainability teams, carbon auditors, and industry experts
-            to ensure our systems meet real-world operational needs.
+          <GridListItem title="Clinician-Aligned">
+            We work alongside practicing clinicians to ensure our products
+            complement established workflows and protocols.
           </GridListItem>
-          <GridListItem title="Impact-Driven">
-            We take responsibility for delivering measurable emission reductions and maintain
-            ongoing monitoring to validate environmental impact.
+          <GridListItem title="Measurable Outcomes">
+            Clear metrics help users and stakeholders track real-world
+            impact and improvement over time.
           </GridListItem>
         </GridList>
       </Container>
@@ -230,25 +226,24 @@ function Values() {
 }
 
 export const metadata: Metadata = {
-  title: 'Our Process | Research-Driven AI Development',
+  title: 'Our Process | NeuterLabs',
   description:
-    'Discover our rigorous AI research methodology for building carbon intelligence systems. From discovery to deployment, we ensure accuracy, transparency, and verifiable environmental impact.',
+    'How NeuterLabs builds AI for healthcare — from research and clinical validation to deployment and ongoing improvement.',
   keywords: [
     'AI development process',
-    'carbon intelligence methodology',
-    'sustainability AI research',
-    'emissions tracking development',
-    'GHG Protocol compliance',
-    'ISO 14064 verification',
+    'healthcare AI methodology',
+    'clinical validation',
+    'AI safety',
+    'responsible AI development',
   ],
 }
 
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we develop carbon intelligence systems">
+      <PageIntro eyebrow="Our process" title="How we build AI for healthcare">
         <p>
-          Our research-driven approach ensures that every carbon intelligence system we build meets the highest standards of accuracy, transparency, and verifiable impact before deployment in sustainability operations.
+          Our research-driven approach ensures that every product is safe, clinically validated, and built to deliver real outcomes.
         </p>
       </PageIntro>
 

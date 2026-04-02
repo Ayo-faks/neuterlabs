@@ -1,0 +1,86 @@
+import imageMichaelFoster from '@/images/team/michael-foster.jpg'
+
+export const article = {
+  date: '2026-02-20',
+  title: 'Building Voice Agents for Pediatric Articulation Practice',
+  description:
+    'A technical look at how we designed Wulo\'s voice agents to evaluate children\'s speech production and deliver real-time, therapist-informed feedback.',
+  readingTime: '8 min read',
+  toc: [
+    {
+      title: 'The challenge of child speech',
+      href: '#the-challenge-of-recognizing-child-speech',
+    },
+    {
+      title: 'Phoneme-level evaluation',
+      href: '#phoneme-level-pronunciation-evaluation',
+    },
+    {
+      title: 'Feedback design',
+      href: '#designing-effective-feedback-for-kids',
+    },
+    {
+      title: 'Adaptive difficulty',
+      href: '#adaptive-difficulty-and-session-flow',
+    },
+  ],
+  author: {
+    name: 'Ayoola Fakoya',
+    role: 'Founder / CEO',
+    image: { src: imageMichaelFoster },
+  },
+}
+
+## The challenge of recognizing child speech
+
+Most automatic speech recognition (ASR) systems are trained on adult speech. Children's voices are fundamentally different — higher pitch, more variable pronunciation, shorter utterances, and frequent disfluencies that are developmentally normal rather than errors by any means. Off-the-shelf ASR models struggle with pediatric speech, and they fail even harder when the child *has* a speech disorder — which is exactly the population we need to serve.
+
+Building Wulo required us to rethink speech recognition from the ground up for this use case. We needed models that could:
+
+- Accurately transcribe children's speech across ages 3–12
+- Distinguish between developmentally appropriate variation and clinically significant errors
+- Evaluate pronunciation at the **phoneme level**, not just word level
+- Operate in real time with low enough latency to feel conversational
+
+We achieved this through a combination of fine-tuned ASR models trained on pediatric speech corpora, custom phoneme alignment pipelines, and pronunciation scoring models calibrated against speech-language pathologist evaluations.
+
+## Phoneme-level pronunciation evaluation
+
+Standard ASR asks: "What word did the person say?" Wulo asks a different question: "How well did the child produce the target sound?"
+
+This requires phoneme-level analysis. When a child attempts the word "rabbit," we don't just check whether the ASR transcribes "rabbit" — we evaluate whether the /r/ phoneme was produced correctly. This is a fundamentally harder problem, because we need to:
+
+1. **Segment the audio** into phoneme-level windows
+2. **Extract acoustic features** relevant to the target sound (formant frequencies, spectral characteristics, duration)
+3. **Score the production** against a model of correct production, accounting for the child's age and developmental stage
+4. **Classify the error type** when production is incorrect (substitution, omission, distortion, addition)
+
+The error classification is what makes Wulo's feedback actionable. Knowing that a child substituted /w/ for /r/ ("wabbit") leads to very different therapeutic guidance than knowing they distorted the /r/ (a partially correct tongue position). Our models can make these distinctions in real time.
+
+## Designing effective feedback for kids
+
+Getting the speech recognition right is only half the challenge. The other half is delivering feedback that actually helps a child improve — without frustrating them or undermining their confidence.
+
+We worked with licensed speech-language pathologists to design Wulo's feedback patterns:
+
+- **Positive reinforcement first** — Every attempt gets acknowledged. "Great try!" or "I heard you working hard on that sound!" before any corrective feedback.
+- **Specific, actionable cues** — Instead of "Try again," Wulo gives placement cues: "Try putting your tongue up behind your top teeth" or "Make the sound longer, like a snake: sssss."
+- **Modeling** — The agent produces the target sound clearly so the child can hear the target before attempting again.
+- **Graduated scaffolding** — If a child struggles, the exercise simplifies: word level → syllable level → isolation. If they succeed, it progresses: isolation → syllable → word → phrase → sentence.
+- **Celebration of progress** — When a child masters a sound at a new level, the agent celebrates genuinely. Small wins matter.
+
+The tone is always warm, patient, and encouraging. The agent never expresses frustration, never rushes, and never makes a child feel like they've failed.
+
+## Adaptive difficulty and session flow
+
+Every child's speech profile is different. Some struggle with /r/ but produce /s/ perfectly. Others have difficulty with entire sound classes (e.g., fricatives). Wulo's session engine adapts in real time:
+
+- **Within a session**: If a child is consistently producing a sound correctly, the agent increases complexity (isolation → words → phrases). If they're struggling, it provides more scaffolding and reduces complexity.
+- **Across sessions**: Wulo tracks which sounds a child has practiced, how they've performed, and what progression level they've reached. Each new session picks up where the last one left off.
+- **Therapist-aligned goals**: When a therapist sets specific targets (e.g., "Focus on /r/ blends in initial position"), Wulo's session planner prioritizes those targets while maintaining engagement through variety.
+
+Sessions are designed to be 10–15 minutes — long enough for meaningful practice, short enough to maintain a young child's attention. The agent uses varied exercise types (sound games, listening challenges, word repetition, sentence completion) to keep the experience engaging.
+
+---
+
+Building voice agents for pediatric articulation is one of the hardest applications of speech AI. The stakes are high — these are children's communication skills and confidence. But done well, it can provide the consistent, structured practice that research shows makes the biggest difference in therapy outcomes.

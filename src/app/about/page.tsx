@@ -15,29 +15,29 @@ import { loadArticles } from '@/lib/mdx'
 
 function Culture() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+    <div className="mt-24 bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
         eyebrow="Our values"
-        title="Building AI with purpose and responsibility."
+        title="Building AI that earns trust."
         invert
       >
         <p>
-          We are driven by the belief that AI can accelerate climate action when developed responsibly.
+          We hold ourselves to a high standard — because the people who use our products depend on it.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Climate First" invert>
-            Every decision we make is evaluated through the lens of
-            environmental impact and sustainability outcomes.
+          <GridListItem title="Safety First" invert>
+            Every decision is evaluated through the lens of patient safety,
+            clinical accuracy, and responsible deployment.
           </GridListItem>
-          <GridListItem title="Scientific Rigor" invert>
-            Our carbon intelligence systems are built on peer-reviewed methodologies and
-            validated against international standards.
+          <GridListItem title="Clinical Rigor" invert>
+            Our systems are designed with clinicians and
+            validated against evidence-based practices.
           </GridListItem>
           <GridListItem title="Radical Transparency" invert>
-            We believe in open communication about our AI systems capabilities, limitations,
-            and environmental footprint.
+            We are open about our AI systems&apos; capabilities, limitations,
+            and how user data is handled.
           </GridListItem>
         </GridList>
       </Container>
@@ -79,7 +79,7 @@ function Team() {
                   {group.people.map((person) => (
                     <li key={person.name}>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
+                        <div className="group relative overflow-hidden bg-neutral-100">
                           <Image
                             alt=""
                             {...person.image}
@@ -108,16 +108,15 @@ function Team() {
 }
 
 export const metadata: Metadata = {
-  title: 'About | AI Research for Sustainability',
+  title: 'About | NeuterLabs',
   description:
-    'NeuterLabs is an AI research company combining machine learning expertise with climate science to build intelligent systems that accelerate the global transition to sustainable operations and renewable energy.',
+    'NeuterLabs is an AI research company building intelligent systems for healthcare — from speech therapy to clinical documentation.',
   keywords: [
     'AI research company',
-    'sustainability AI team',
-    'climate tech founders',
-    'carbon intelligence experts',
-    'responsible AI development',
-    'WULO team',
+    'healthcare AI',
+    'NeuterLabs team',
+    'AI safety',
+    'clinical AI',
   ],
 }
 
@@ -126,24 +125,24 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Building AI for a sustainable future">
+      <PageIntro eyebrow="About us" title="AI research for healthcare">
         <p>
-          We believe AI can accelerate the global transition to renewable energy, but only when built with safety, transparency, and environmental responsibility at its core.
+          We build intelligent systems that solve real problems in healthcare — shipping products that clinicians and families can rely on.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            NeuterLabs was founded by researchers and climate tech pioneers who recognized that solving the climate crisis requires intelligent systems that can process vast amounts of data and optimize complex sustainability challenges. We combine cutting-edge AI research with deep domain expertise in renewable energy and carbon management.
+            NeuterLabs was founded to apply AI research to healthcare&apos;s hardest problems. Our first product, WULO, is a real-time speech therapy platform for children. We&apos;re also building a clinical ambient scribe to reduce documentation burden for providers.
           </p>
           <p>
-            Our team includes AI safety researchers, climate scientists, energy systems experts, and sustainability engineers who collaborate to build products like WULO—our flagship carbon intelligence platform. We believe that responsible AI development for climate solutions requires rigorous testing, transparent methodologies, and measurable environmental impact.
+            Our work spans speech recognition, natural language processing, and real-time voice AI — always grounded in clinical evidence and built with safety as the top priority.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="10M+" label="Tonnes CO₂ tracked" />
-          <StatListItem value="500+" label="Organizations using WULO" />
-          <StatListItem value="40%" label="Average emissions reduction" />
+          <StatListItem value="2" label="Products" />
+          <StatListItem value="6" label="Research areas" />
+          <StatListItem value="2026" label="Founded" />
         </StatList>
       </Container>
 
@@ -154,7 +153,7 @@ export default async function About() {
       <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
         title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
+        intro="Latest thinking on AI, healthcare, and the systems we're building."
         pages={blogArticles}
       />
 

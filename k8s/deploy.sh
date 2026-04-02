@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# NeuterLabs Marketing Site - Deployment Script
+# ⚠️  LEGACY — This script targeted the now-deleted AKS infrastructure.
+# Use `azd up` or `./scripts/build-and-push.sh` for Azure Container Apps deployment.
+#
+# NeuterLabs Marketing Site - Deployment Script (AKS - DEPRECATED)
 # This script builds the Docker image and deploys to AKS
 
 set -e

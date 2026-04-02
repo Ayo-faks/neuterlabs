@@ -138,16 +138,16 @@ function Clients() {
 }
 
 export const metadata: Metadata = {
-  title: 'Case Studies | AI-Powered Sustainability Solutions',
+  title: 'Case Studies | AI Speech Therapy Outcomes',
   description:
-    'Discover how organizations achieve measurable sustainability goals with WULO carbon intelligence. Real-world case studies in emissions reduction, renewable energy optimization, and net-zero transformation.',
+    'Discover how children and families benefit from WULO AI speech therapy. Real-world stories of articulation improvement, phonology progress, and consistent at-home practice.',
   keywords: [
-    'carbon intelligence case studies',
-    'emissions reduction results',
-    'sustainability AI success stories',
-    'WULO implementations',
-    'net zero transformation',
-    'decarbonization results',
+    'speech therapy case studies',
+    'articulation improvement results',
+    'AI speech therapy outcomes',
+    'WULO success stories',
+    'pediatric speech progress',
+    'speech therapy at home',
   ],
 }
 
@@ -158,12 +158,12 @@ export default async function Work() {
     <>
       <PageIntro
         eyebrow="Case Studies"
-        title="Measurable impact through AI-powered sustainability"
+        title="Real progress through consistent practice"
       >
         <p>
-          Organizations worldwide are achieving their sustainability goals through
-          intelligent carbon management. Explore how WULO helps enterprises track,
-          reduce, and verify their environmental impact.
+          Families and therapists are seeing faster speech development when children
+          use WULO for daily practice between therapy sessions. Explore how AI-guided
+          exercises are making a difference.
         </p>
       </PageIntro>
 
@@ -173,8 +173,8 @@ export default async function Work() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
       >
-        Working with <em>NeuterLabs</em> transformed our approach to carbon management. 
-        Their WULO platform helped us achieve a 35% reduction in emissions in just 18 months.
+        As a speech therapist, I recommend <em>WULO</em> to all my families. The kids actually 
+        enjoy doing their exercises, and I can see the difference in their progress between sessions.
       </Testimonial>
 
       <Clients />

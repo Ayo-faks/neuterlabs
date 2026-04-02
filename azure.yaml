@@ -1,0 +1,19 @@
+name: neuterlabs-marketing
+metadata:
+  template: azd-init@1.18.1
+infra:
+  provider: bicep
+  path: infra
+  module: main
+services:
+  web:
+    project: .
+    host: containerapp
+    language: ts
+    docker:
+      path: Dockerfile
+      context: ./
+resources:
+  web:
+    type: host.containerapp
+    port: 3000

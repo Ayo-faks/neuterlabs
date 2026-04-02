@@ -1,148 +1,152 @@
 import { Container } from './Container'
 import { FadeIn, FadeInStagger } from './FadeIn'
 import Link from 'next/link'
+import { MicrophoneIcon, AcademicCapIcon, AdjustmentsHorizontalIcon, SpeakerWaveIcon, DocumentTextIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 
-const features = [
+const wuloFeatures = [
   {
-    icon: '🌍',
-    title: 'Real-Time Carbon Intelligence',
-    description: 'Advanced AI algorithms monitor and analyze carbon emissions across your entire operation in real-time, providing actionable insights for immediate impact.',
+    icon: MicrophoneIcon,
+    title: 'Real-Time Voice Interaction',
+    description: 'Children speak directly to the AI agent, which listens and evaluates pronunciation in real time using speech recognition optimized for young voices.',
   },
   {
-    icon: '📊',
-    title: 'Predictive Analytics',
-    description: 'Machine learning models forecast emission trends and identify optimization opportunities before they become problems, enabling proactive sustainability management.',
+    icon: AcademicCapIcon,
+    title: 'Structured Exercises',
+    description: 'Sound isolation, syllable practice, minimal pairs, and listening discrimination — designed by speech-language pathologists.',
   },
   {
-    icon: '🔒',
-    title: 'Verified & Transparent',
-    description: 'Blockchain-backed verification ensures data integrity and transparency, meeting the highest standards for carbon accounting and regulatory compliance.',
-  },
-  {
-    icon: '🎯',
-    title: 'Goal-Driven Optimization',
-    description: 'Set ambitious decarbonization targets and receive AI-powered recommendations to achieve them efficiently while maintaining operational excellence.',
-  },
-  {
-    icon: '🔄',
-    title: 'Supply Chain Integration',
-    description: 'End-to-end visibility across your supply chain enables comprehensive Scope 3 emissions tracking and collaborative reduction strategies with partners.',
-  },
-  {
-    icon: '📱',
-    title: 'Intuitive Interface',
-    description: 'Beautiful, accessible dashboards make complex carbon data understandable for everyone from executives to sustainability teams to frontline staff.',
+    icon: AdjustmentsHorizontalIcon,
+    title: 'Adaptive Difficulty',
+    description: 'AI adjusts exercise difficulty based on the child\'s performance, ensuring they\'re always challenged at the right level.',
   },
 ]
 
-const metrics = [
-  { value: '40%', label: 'Average Emissions Reduction' },
-  { value: '10M+', label: 'Tonnes CO₂ Tracked' },
-  { value: '500+', label: 'Organizations Using WULO' },
-  { value: '99.9%', label: 'Data Accuracy' },
+const scribeFeatures = [
+  {
+    icon: SpeakerWaveIcon,
+    title: 'Ambient Listening',
+    description: 'Passively captures clinician-patient conversations during appointments — no manual input required from the provider.',
+  },
+  {
+    icon: DocumentTextIcon,
+    title: 'Structured Note Generation',
+    description: 'Automatically generates clinical notes in standard formats (SOAP, HPI, assessment/plan) from the conversation.',
+  },
+  {
+    icon: LockClosedIcon,
+    title: 'Privacy & Compliance',
+    description: 'Built with HIPAA compliance at its core. Audio is processed in real time and discarded — never stored.',
+  },
 ]
 
-export default function WuloProduct() {
+export default function Products() {
   return (
-    <section id="wulo" className="relative bg-gradient-to-b from-neutral-50/50 to-white py-28 sm:py-36">
+    <section id="products" className="relative bg-gradient-to-b from-neutral-50/50 to-white py-28 sm:py-36">
       <Container>
-        {/* Product Header */}
+        {/* Section Header */}
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-green-50 px-5 py-2.5 text-sm font-semibold text-green-700 mb-8 ring-1 ring-green-200/50">
-              <div className="h-2 w-2 rounded-full bg-green-500 animate-subtle-pulse" />
-              Featured Product
-            </div>
             <h2 className="font-display text-4xl font-semibold tracking-tight text-neutral-950 sm:text-5xl lg:text-6xl leading-[1.1]">
-              WULO: Carbon Intelligence System
+              Our Products
             </h2>
             <p className="mt-8 text-xl text-neutral-600 leading-relaxed">
-              The world&apos;s most advanced AI-powered platform for measuring, managing, and reducing carbon emissions. 
-              Built with safety and transparency at its core.
+              We turn our research into products that solve real problems in healthcare — 
+              shipping AI systems that clinicians and families can rely on.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="https://wulo.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-8 py-4 text-base font-semibold text-white shadow-premium-lg hover:bg-neutral-800 transition-all duration-300 hover:scale-[1.02] hover:shadow-premium-xl"
-              >
-                Visit WULO.ai
-                <span className="ml-2">↗</span>
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full border-2 border-neutral-200 bg-white px-8 py-4 text-base font-semibold text-neutral-950 hover:border-neutral-300 hover:bg-neutral-50 transition-all duration-300"
-              >
-                Request Demo
-              </Link>
+          </div>
+        </FadeIn>
+
+        {/* Product 1: WULO */}
+        <FadeIn>
+          <div className="mt-24 border border-neutral-200 bg-white p-10 sm:p-14">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
+              <div className="lg:max-w-xl">
+                <div className="inline-flex items-center gap-2 bg-green-50 px-4 py-2 text-sm font-semibold text-green-700 mb-6 border border-green-200">
+                  <div className="h-2 w-2 bg-green-500 animate-subtle-pulse" />
+                  Available Now
+                </div>
+                <h3 className="font-display text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">
+                  WULO
+                </h3>
+                <p className="mt-2 text-lg text-neutral-500 font-medium">AI-Powered Speech Therapy for Children</p>
+                <p className="mt-6 text-neutral-600 leading-relaxed text-base">
+                  A real-time voice agent that guides children through structured articulation and phonology exercises — 
+                  sound isolation, vowel blending, minimal pairs, and listening tasks. Built to supplement therapist sessions 
+                  so kids get consistent practice at home with a parent present.
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">COPPA Compliant</span>
+                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">HIPAA Ready</span>
+                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">Ages 3–12</span>
+                </div>
+                <div className="mt-8">
+                  <Link
+                    href="https://wulo.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-neutral-950 px-7 py-3.5 text-sm font-semibold text-white hover:bg-neutral-800 transition-colors duration-200"
+                  >
+                    Try WULO <span className="ml-2">↗</span>
+                  </Link>
+                </div>
+              </div>
+              <div className="grid gap-5 sm:grid-cols-1 lg:max-w-sm">
+                {wuloFeatures.map((f) => (
+                  <div key={f.title} className="flex gap-4">
+                    <f.icon className="w-5 h-5 flex-none text-neutral-950 mt-0.5" />
+                    <div>
+                      <h4 className="font-display text-sm font-semibold text-neutral-950">{f.title}</h4>
+                      <p className="mt-1 text-sm text-neutral-600 leading-relaxed">{f.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </FadeIn>
 
-        {/* Metrics Bar */}
+        {/* Product 2: Clinical Ambient Scribe */}
         <FadeIn>
-          <div className="mt-24 grid grid-cols-2 gap-8 border-y border-neutral-200/80 py-14 sm:grid-cols-4">
-            {metrics.map((metric) => (
-              <div key={metric.label} className="text-center">
-                <div className="font-display text-4xl font-semibold text-neutral-950 sm:text-5xl tracking-tight">
-                  {metric.value}
+          <div className="mt-10 border border-neutral-200 bg-white p-10 sm:p-14">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
+              <div className="lg:max-w-xl">
+                <div className="inline-flex items-center gap-2 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700 mb-6 border border-amber-200">
+                  <div className="h-2 w-2 bg-amber-500" />
+                  In Development
                 </div>
-                <div className="mt-3 text-sm text-neutral-600 font-medium">{metric.label}</div>
+                <h3 className="font-display text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">
+                  Clinical Ambient Scribe
+                </h3>
+                <p className="mt-2 text-lg text-neutral-500 font-medium">AI-Powered Clinical Documentation</p>
+                <p className="mt-6 text-neutral-600 leading-relaxed text-base">
+                  An ambient AI scribe that listens to clinician-patient conversations and automatically generates 
+                  structured clinical notes. Designed to reduce documentation burden so providers can focus on patient care — 
+                  not paperwork.
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">HIPAA Compliant</span>
+                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">EHR Integration</span>
+                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">SOAP / HPI / A&P</span>
+                </div>
+                <div className="mt-8">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center border border-neutral-200 bg-white px-7 py-3.5 text-sm font-semibold text-neutral-950 hover:border-neutral-300 hover:bg-neutral-50 transition-colors duration-200"
+                  >
+                    Join the Waitlist
+                  </Link>
+                </div>
               </div>
-            ))}
-          </div>
-        </FadeIn>
-
-        {/* Features Grid */}
-        <FadeInStagger className="mt-28" faster>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature) => (
-              <FadeIn key={feature.title}>
-                <div className="group relative rounded-3xl border border-neutral-200/80 bg-white p-8 shadow-premium hover:shadow-premium-md transition-all duration-300 hover:border-neutral-300 hover:-translate-y-1">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-neutral-100 text-2xl mb-5 group-hover:bg-neutral-950 group-hover:scale-105 transition-all duration-300">
-                    <span className="group-hover:invert transition-all duration-300">{feature.icon}</span>
+              <div className="grid gap-5 sm:grid-cols-1 lg:max-w-sm">
+                {scribeFeatures.map((f) => (
+                  <div key={f.title} className="flex gap-4">
+                    <f.icon className="w-5 h-5 flex-none text-neutral-950 mt-0.5" />
+                    <div>
+                      <h4 className="font-display text-sm font-semibold text-neutral-950">{f.title}</h4>
+                      <p className="mt-1 text-sm text-neutral-600 leading-relaxed">{f.description}</p>
+                    </div>
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-neutral-950 mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-neutral-600 leading-relaxed text-base">
-                    {feature.description}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </FadeInStagger>
-
-        {/* Safety & Ethics Callout */}
-        <FadeIn>
-          <div className="mt-28 rounded-4xl bg-gradient-to-br from-neutral-900 to-neutral-950 p-12 sm:p-16 text-center shadow-premium-xl">
-            <div className="mx-auto max-w-2xl">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 text-3xl mb-6">
-                🛡️
-              </div>
-              <h3 className="font-display text-3xl font-semibold text-white mb-6 tracking-tight">
-                Built on AI Safety Principles
-              </h3>
-              <p className="text-lg text-neutral-300 leading-relaxed">
-                WULO embodies our commitment to responsible AI development. Every algorithm is rigorously 
-                tested for bias, transparency, and accuracy. Our carbon intelligence system is designed to 
-                serve humanity&apos;s climate goals without compromising data privacy or ethical standards.
-              </p>
-              <div className="mt-10 flex flex-wrap gap-3 justify-center">
-                <span className="rounded-full bg-white/5 px-5 py-2.5 text-sm font-medium text-white/90 border border-white/10 backdrop-blur-sm">
-                  Privacy-First Architecture
-                </span>
-                <span className="rounded-full bg-white/5 px-5 py-2.5 text-sm font-medium text-white/90 border border-white/10 backdrop-blur-sm">
-                  Auditable AI Models
-                </span>
-                <span className="rounded-full bg-white/5 px-5 py-2.5 text-sm font-medium text-white/90 border border-white/10 backdrop-blur-sm">
-                  ISO 14064 Compliant
-                </span>
-                <span className="rounded-full bg-white/5 px-5 py-2.5 text-sm font-medium text-white/90 border border-white/10 backdrop-blur-sm">
-                  Open Methodology
-                </span>
+                ))}
               </div>
             </div>
           </div>
