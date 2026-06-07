@@ -18,8 +18,8 @@ export default async function Home() {
   const websiteSchema = generateWebsiteSchema()
   const researchSchema = generateResearchSchema()
   const wuloSchema = generateProductSchema({
-    name: 'WULO',
-    description: 'Real-time AI-powered speech therapy platform for children. Intelligent voice agents guide kids through structured articulation and phonology exercises.',
+    name: 'WULO Academy',
+    description: 'An always-available AI tutor and guidance counsellor. WULO Academy uses adaptive multiple-choice diagnostics to pinpoint each learner\'s strengths and gaps, then guides personalised practice for WAEC, NECO and JSSCE and offers subject and career counselling.',
     url: 'https://wulo.ai',
     image: 'https://wulo.ai/og-image.jpg',
   })
@@ -63,12 +63,12 @@ export default async function Home() {
 }
 
 export const metadata: Metadata = {
-  title: 'NeuterLabs - AI Research & Products for Healthcare',
+  title: 'NeuterLabs - AI Research & Products for the Future of Humanity',
   description:
-    'NeuterLabs is an AI research company building intelligent systems for healthcare — from pediatric speech therapy to clinical documentation.',
+    'NeuterLabs is an AI research company building intelligent systems that expand human potential. Our flagship product, WULO Academy, is an AI tutor and guidance counsellor for every learner.',
   openGraph: {
-    title: 'NeuterLabs - AI Research & Products for Healthcare',
-    description: 'AI research company building intelligent systems for healthcare. Products include WULO speech therapy and a clinical ambient scribe.',
+    title: 'NeuterLabs - AI Research & Products for the Future of Humanity',
+    description: 'AI research company building intelligent systems that expand human potential. Flagship product WULO Academy is an AI tutor and guidance counsellor.',
     type: 'website',
     url: 'https://neuterlabs.com',
     images: [
@@ -76,19 +76,19 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'NeuterLabs - AI Research & Products for Healthcare',
+        alt: 'NeuterLabs - AI Research & Products for the Future of Humanity',
       },
     ],
   },
   keywords: [
     'AI research',
-    'healthcare AI',
+    'AI for humanity',
     'NeuterLabs',
-    'WULO',
-    'speech therapy AI',
-    'clinical ambient scribe',
-    'medical AI',
-    'speech recognition',
+    'WULO Academy',
+    'AI tutor',
+    'AI guidance counsellor',
+    'WAEC NECO JSSCE',
+    'adaptive learning AI',
   ],
 }
 

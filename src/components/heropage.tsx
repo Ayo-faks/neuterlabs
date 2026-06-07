@@ -25,12 +25,12 @@ export default function HeroPage(){
             <div className="max-w-4xl mx-auto text-center space-y-10">
               {/* Main Headline - Premium Typography */}
               <h1 className="font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05]">
-                AI research and products for the future of healthcare
+                AI research and products for the future of humanity
               </h1>
               
               {/* Subheadline */}
               <p className="text-lg sm:text-xl md:text-2xl text-white/80 leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
-                We build intelligent systems that solve real problems — from pediatric speech therapy to clinical documentation. Research-driven. Safety-first.
+                We build intelligent systems that expand human potential — starting with WULO Academy, an AI tutor and guidance counsellor putting world-class learning within every student&apos;s reach. Research-driven. Safety-first.
               </p>
               
               {/* CTA Buttons */}
@@ -55,10 +55,10 @@ export default function HeroPage(){
                 <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-400 animate-subtle-pulse" />
-                    <span className="text-white/60 text-sm font-medium tracking-wide">Now Available:</span>
+                    <span className="text-white/60 text-sm font-medium tracking-wide">Flagship Product:</span>
                   </div>
                   <Link href="https://wulo.ai" target="_blank" className="text-white font-semibold hover:text-white/90 transition-colors duration-200">
-                    WULO — AI Speech Therapy for Kids
+                    WULO Academy — Your AI Tutor &amp; Guidance Counsellor
                   </Link>
                 </div>
               </div>

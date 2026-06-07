@@ -16,22 +16,22 @@ const researchAreas = [
   },
   {
     title: 'Adaptive Systems',
-    description: 'Creating AI that adjusts in real time to user performance, context, and goals — from therapy exercises to clinical workflows.',
+    description: 'Creating AI that adjusts in real time to user performance, context, and goals — from learning paths to clinical workflows.',
     Icon: CpuChipIcon,
   },
   {
     title: 'Evaluation & Scoring',
-    description: 'Real-time pronunciation assessment, clinical note quality scoring, and output validation for high-stakes healthcare applications.',
+    description: 'Real-time diagnostic assessment, output quality scoring, and validation for high-stakes learning and healthcare applications.',
     Icon: ChartBarIcon,
   },
   {
     title: 'Safety & Privacy',
-    description: 'Ensuring AI systems for vulnerable populations meet the highest standards of COPPA, HIPAA, and age-appropriate design.',
+    description: 'Ensuring AI systems for vulnerable populations meet the highest standards of safeguarding, privacy, and age-appropriate design.',
     Icon: ShieldCheckIcon,
   },
   {
-    title: 'Clinical Validation',
-    description: 'Partnering with clinicians to validate AI outputs against established practices and measure real-world outcomes.',
+    title: 'Validation & Outcomes',
+    description: 'Partnering with educators and clinicians to validate AI outputs against established practices and measure real-world outcomes.',
     Icon: ClipboardDocumentCheckIcon,
   },
 ]
@@ -50,12 +50,12 @@ const principles = [
   {
     number: '03',
     title: 'Augment, Not Replace',
-    description: 'We build AI that makes clinicians and therapists more effective — not tools that try to replace human expertise.',
+    description: 'We build AI that makes teachers, counsellors, and clinicians more effective — not tools that try to replace human expertise.',
   },
   {
     number: '04',
     title: 'Inclusive Design',
-    description: 'We build for diverse populations, ensuring our systems work across accents, ages, and clinical contexts.',
+    description: 'We build for diverse populations, ensuring our systems work across accents, ages, languages, and learning contexts.',
   },
   {
     number: '05',
@@ -76,12 +76,12 @@ export default function ResearchPrinciples() {
         {/* Research Areas */}
         <SectionIntro
           eyebrow="Our Research"
-          title="Advancing AI for healthcare"
+          title="Advancing AI for the future of humanity"
           invert
         >
           <p className="text-neutral-300">
-            We conduct applied research across speech recognition, clinical NLP, and adaptive systems — 
-            focused on the hardest problems in healthcare AI where accuracy and safety are non-negotiable.
+            We conduct applied research across speech recognition, natural language understanding, and adaptive systems — 
+            focused on the hardest problems where accuracy and safety are non-negotiable.
           </p>
         </SectionIntro>
 

@@ -28,11 +28,11 @@ function Culture() {
       <Container className="mt-16">
         <GridList>
           <GridListItem title="Safety First" invert>
-            Every decision is evaluated through the lens of patient safety,
-            clinical accuracy, and responsible deployment.
+            Every decision is evaluated through the lens of user safety,
+            accuracy, and responsible deployment.
           </GridListItem>
-          <GridListItem title="Clinical Rigor" invert>
-            Our systems are designed with clinicians and
+          <GridListItem title="Evidence-Based" invert>
+            Our systems are designed with domain experts and
             validated against evidence-based practices.
           </GridListItem>
           <GridListItem title="Radical Transparency" invert>
@@ -110,13 +110,13 @@ function Team() {
 export const metadata: Metadata = {
   title: 'About | NeuterLabs',
   description:
-    'NeuterLabs is an AI research company building intelligent systems for healthcare — from speech therapy to clinical documentation.',
+    'NeuterLabs is an AI research company building intelligent systems for the future of humanity — led by WULO Academy, an AI tutor and guidance counsellor.',
   keywords: [
     'AI research company',
-    'healthcare AI',
+    'AI for humanity',
     'NeuterLabs team',
     'AI safety',
-    'clinical AI',
+    'WULO Academy',
   ],
 }
 
@@ -125,16 +125,16 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="AI research for healthcare">
+      <PageIntro eyebrow="About us" title="AI research for the future of humanity">
         <p>
-          We build intelligent systems that solve real problems in healthcare — shipping products that clinicians and families can rely on.
+          We build intelligent systems that expand human potential — shipping products that learners, families, and clinicians can rely on.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            NeuterLabs was founded to apply AI research to healthcare&apos;s hardest problems. Our first product, WULO, is a real-time speech therapy platform for children. We&apos;re also building a clinical ambient scribe to reduce documentation burden for providers.
+            NeuterLabs was founded to apply AI research to humanity&apos;s hardest problems. Our flagship product, WULO Academy, is an always-available AI tutor and guidance counsellor that helps every learner diagnose their gaps, study smarter, and choose the right path. We&apos;re also building AI for healthcare, including a clinical ambient scribe.
           </p>
           <p>
-            Our work spans speech recognition, natural language processing, and real-time voice AI — always grounded in clinical evidence and built with safety as the top priority.
+            Our work spans speech recognition, natural language processing, and adaptive learning — always grounded in evidence and built with safety as the top priority.
           </p>
         </div>
       </PageIntro>
@@ -153,7 +153,7 @@ export default async function About() {
       <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
         title="From the blog"
-        intro="Latest thinking on AI, healthcare, and the systems we're building."
+        intro="Latest thinking on AI, learning, and the systems we're building."
         pages={blogArticles}
       />
 

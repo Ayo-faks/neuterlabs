@@ -9,15 +9,15 @@ export default function Intro(){
                 <FadeIn>
                     <div className="mx-auto max-w-4xl text-center">
                         <h2 className="font-display text-4xl font-semibold tracking-tight text-neutral-950 sm:text-5xl lg:text-6xl leading-[1.1]">
-                            Building AI that makes a real difference
+                            Building AI for the future of humanity
                         </h2>
                         <p className="mt-10 text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto">
-                            NeuterLabs is an AI research company focused on healthcare. We develop intelligent systems 
-                            grounded in rigorous research and deploy them as products that solve real clinical problems.
+                            NeuterLabs is an AI research company building intelligent systems that expand human potential. 
+                            We ground our work in rigorous research and ship it as products that make a real difference in people&apos;s lives.
                         </p>
                         <p className="mt-6 text-lg text-neutral-500 leading-relaxed max-w-3xl mx-auto">
-                            Our work spans speech recognition, natural language understanding, and real-time voice AI — 
-                            applied to domains where accuracy and safety matter most.
+                            Our flagship product, WULO Academy, is an always-available AI tutor and guidance counsellor — 
+                            built on our research in speech recognition, natural language understanding, and adaptive learning.
                         </p>
                     </div>
                     
@@ -39,10 +39,10 @@ export default function Intro(){
                                 <BuildingOffice2Icon className="w-6 h-6 text-neutral-950" />
                             </div>
                             <h3 className="font-display text-xl font-semibold text-neutral-950 mb-3">
-                                Healthcare Focus
+                                Human Impact
                             </h3>
                             <p className="text-neutral-600 text-base leading-relaxed">
-                                We apply AI where it can have the greatest clinical impact — from pediatric speech therapy to clinical documentation.
+                                We apply AI where it can do the most good for people — from education and learning to healthcare and beyond.
                             </p>
                         </div>
                         <div className="text-center group">
@@ -53,7 +53,7 @@ export default function Intro(){
                                 Safety First
                             </h3>
                             <p className="text-neutral-600 text-base leading-relaxed">
-                                We build AI systems with safety, privacy, and clinical rigor at their core — especially when they serve vulnerable populations.
+                                We build AI systems with safety, privacy, and rigor at their core — especially when they serve children and other vulnerable populations.
                             </p>
                         </div>
                     </div>
