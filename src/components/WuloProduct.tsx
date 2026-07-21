@@ -1,7 +1,7 @@
 import { Container } from './Container'
 import { FadeIn, FadeInStagger } from './FadeIn'
 import Link from 'next/link'
-import { MicrophoneIcon, AcademicCapIcon, AdjustmentsHorizontalIcon, SpeakerWaveIcon, DocumentTextIcon, LockClosedIcon, SparklesIcon, ChartBarSquareIcon, MapIcon } from '@heroicons/react/24/outline'
+import { ArrowPathIcon, CalendarDaysIcon, ChartBarSquareIcon, ChatBubbleLeftRightIcon, MapIcon, ShieldCheckIcon, SparklesIcon } from '@heroicons/react/24/outline'
 
 const academyFeatures = [
   {
@@ -21,39 +21,21 @@ const academyFeatures = [
   },
 ]
 
-const wuloFeatures = [
+const wuloXFeatures = [
   {
-    icon: MicrophoneIcon,
-    title: 'Real-Time Voice Interaction',
-    description: 'Children speak directly to the AI agent, which listens and evaluates pronunciation in real time using speech recognition optimized for young voices.',
+    icon: ChatBubbleLeftRightIcon,
+    title: 'Multi-Channel Agents',
+    description: 'Coordinate patient conversations across voice, SMS, WhatsApp, and email from one AI-native operating layer.',
   },
   {
-    icon: AcademicCapIcon,
-    title: 'Structured Exercises',
-    description: 'Sound isolation, syllable practice, minimal pairs, and listening discrimination — designed by speech-language pathologists.',
+    icon: CalendarDaysIcon,
+    title: 'Appointment Logistics',
+    description: 'Automate confirmations, rescheduling, preparation reminders, and handoffs so teams spend less time chasing admin.',
   },
   {
-    icon: AdjustmentsHorizontalIcon,
-    title: 'Adaptive Difficulty',
-    description: 'AI adjusts exercise difficulty based on the child\'s performance, ensuring they\'re always challenged at the right level.',
-  },
-]
-
-const scribeFeatures = [
-  {
-    icon: SpeakerWaveIcon,
-    title: 'Ambient Listening',
-    description: 'Passively captures clinician-patient conversations during appointments — no manual input required from the provider.',
-  },
-  {
-    icon: DocumentTextIcon,
-    title: 'Structured Note Generation',
-    description: 'Automatically generates clinical notes in standard formats (SOAP, HPI, assessment/plan) from the conversation.',
-  },
-  {
-    icon: LockClosedIcon,
-    title: 'Privacy & Compliance',
-    description: 'Built with HIPAA compliance at its core. Audio is processed in real time and discarded — never stored.',
+    icon: ArrowPathIcon,
+    title: 'Patient Recall Workflows',
+    description: 'Trigger recall journeys for overdue reviews, follow-ups, and preventive care with safe escalation paths for staff.',
   },
 ]
 
@@ -131,89 +113,40 @@ export default function Products() {
           </div>
         </FadeIn>
 
-        {/* Product 2: WULO Speech */}
+        {/* Product 2: Wulo-X */}
         <FadeIn>
           <div className="mt-10 border border-neutral-200 bg-white p-10 sm:p-14">
             <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
               <div className="lg:max-w-xl">
-                <div className="inline-flex items-center gap-2 bg-green-50 px-4 py-2 text-sm font-semibold text-green-700 mb-6 border border-green-200">
-                  <div className="h-2 w-2 bg-green-500 animate-subtle-pulse" />
-                  Available Now
+                <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 mb-6 border border-blue-200">
+                  <ShieldCheckIcon className="h-4 w-4" />
+                  Safe Healthcare Communication
                 </div>
                 <h3 className="font-display text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">
-                  WULO Speech
+                  Wulo-X
                 </h3>
-                <p className="mt-2 text-lg text-neutral-500 font-medium">AI-Powered Speech Therapy for Children</p>
+                <p className="mt-2 text-lg text-neutral-500 font-medium">AI-native communication operating system for healthcare</p>
                 <p className="mt-6 text-neutral-600 leading-relaxed text-base">
-                  A real-time voice agent that guides children through structured articulation and phonology exercises — 
-                  sound isolation, vowel blending, minimal pairs, and listening tasks. Built to supplement therapist sessions 
-                  so kids get consistent practice at home with a parent present.
+                  Wulo-X is a safe, AI-native communication operating system for healthcare, powered by workflow automation 
+                  and multi-channel agents across voice, SMS, WhatsApp, and email to streamline appointment logistics and 
+                  patient recall.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">COPPA Compliant</span>
-                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">HIPAA Ready</span>
-                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">Ages 3–12</span>
-                </div>
-                <div className="mt-8">
-                  <Link
-                    href="https://wulo.ai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-neutral-950 px-7 py-3.5 text-sm font-semibold text-white hover:bg-neutral-800 transition-colors duration-200"
-                  >
-                    Try WULO <span className="ml-2">↗</span>
-                  </Link>
-                </div>
-              </div>
-              <div className="grid gap-5 sm:grid-cols-1 lg:max-w-sm">
-                {wuloFeatures.map((f) => (
-                  <div key={f.title} className="flex gap-4">
-                    <f.icon className="w-5 h-5 flex-none text-neutral-950 mt-0.5" />
-                    <div>
-                      <h4 className="font-display text-sm font-semibold text-neutral-950">{f.title}</h4>
-                      <p className="mt-1 text-sm text-neutral-600 leading-relaxed">{f.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </FadeIn>
-
-        {/* Product 2: Clinical Ambient Scribe */}
-        <FadeIn>
-          <div className="mt-10 border border-neutral-200 bg-white p-10 sm:p-14">
-            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
-              <div className="lg:max-w-xl">
-                <div className="inline-flex items-center gap-2 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700 mb-6 border border-amber-200">
-                  <div className="h-2 w-2 bg-amber-500" />
-                  In Development
-                </div>
-                <h3 className="font-display text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">
-                  Clinical Ambient Scribe
-                </h3>
-                <p className="mt-2 text-lg text-neutral-500 font-medium">AI-Powered Clinical Documentation</p>
-                <p className="mt-6 text-neutral-600 leading-relaxed text-base">
-                  An ambient AI scribe that listens to clinician-patient conversations and automatically generates 
-                  structured clinical notes. Designed to reduce documentation burden so providers can focus on patient care — 
-                  not paperwork.
-                </p>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">HIPAA Compliant</span>
-                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">EHR Integration</span>
-                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">SOAP / HPI / A&P</span>
+                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">Voice / SMS / WhatsApp / Email</span>
+                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">Workflow Automation</span>
+                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">Appointment Recall</span>
                 </div>
                 <div className="mt-8">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center border border-neutral-200 bg-white px-7 py-3.5 text-sm font-semibold text-neutral-950 hover:border-neutral-300 hover:bg-neutral-50 transition-colors duration-200"
+                    className="inline-flex items-center justify-center bg-neutral-950 px-7 py-3.5 text-sm font-semibold text-white hover:bg-neutral-800 transition-colors duration-200"
                   >
-                    Join the Waitlist
+                    Talk to us about Wulo-X
                   </Link>
                 </div>
               </div>
               <div className="grid gap-5 sm:grid-cols-1 lg:max-w-sm">
-                {scribeFeatures.map((f) => (
+                {wuloXFeatures.map((f) => (
                   <div key={f.title} className="flex gap-4">
                     <f.icon className="w-5 h-5 flex-none text-neutral-950 mt-0.5" />
                     <div>

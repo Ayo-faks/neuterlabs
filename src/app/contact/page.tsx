@@ -115,8 +115,7 @@ function ContactForm() {
             <fieldset>
               <legend className="text-base/6 text-neutral-600 font-medium">I am interested in...</legend>
               <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <RadioInput label="WULO (Speech Therapy)" name="interest" value="wulo" />
-                <RadioInput label="Clinical Ambient Scribe" name="interest" value="scribe" />
+                <RadioInput label="Wulo-X" name="interest" value="wulo-x" />
                 <RadioInput label="Research Collaboration" name="interest" value="research" />
                 <RadioInput label="Other" name="interest" value="other" />
               </div>

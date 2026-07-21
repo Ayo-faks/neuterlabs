@@ -131,7 +131,7 @@ export default async function About() {
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            NeuterLabs was founded to apply AI research to humanity&apos;s hardest problems. Our flagship product, WULO Academy, is an always-available AI tutor and guidance counsellor that helps every learner diagnose their gaps, study smarter, and choose the right path. We&apos;re also building AI for healthcare, including a clinical ambient scribe.
+            NeuterLabs was founded to apply AI research to humanity&apos;s hardest problems. Our flagship product, WULO Academy, is an always-available AI tutor and guidance counsellor that helps every learner diagnose their gaps, study smarter, and choose the right path. We&apos;re also building Wulo-X, an AI-native communication operating system for healthcare.
           </p>
           <p>
             Our work spans speech recognition, natural language processing, and adaptive learning — always grounded in evidence and built with safety as the top priority.
