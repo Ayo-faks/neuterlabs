@@ -1,4 +1,4 @@
-import { type Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default {
@@ -10,15 +10,17 @@ export default {
       base: ['1rem', { lineHeight: '1.75rem', letterSpacing: '0.01em' }],
       lg: ['1.125rem', { lineHeight: '1.875rem', letterSpacing: '0.005em' }],
       xl: ['1.25rem', { lineHeight: '2rem', letterSpacing: '0' }],
-      '2xl': ['1.5rem', { lineHeight: '2.25rem', letterSpacing: '-0.01em' }],
-      '3xl': ['1.875rem', { lineHeight: '2.375rem', letterSpacing: '-0.015em' }],
-      '4xl': ['2.25rem', { lineHeight: '2.75rem', letterSpacing: '-0.02em' }],
-      '5xl': ['3rem', { lineHeight: '3.5rem', letterSpacing: '-0.025em' }],
-      '6xl': ['3.75rem', { lineHeight: '4.25rem', letterSpacing: '-0.03em' }],
-      '7xl': ['4.5rem', { lineHeight: '5rem', letterSpacing: '-0.035em' }],
+      '2xl': ['1.5rem', { lineHeight: '2.25rem', letterSpacing: '0' }],
+      '3xl': ['1.875rem', { lineHeight: '2.375rem', letterSpacing: '0' }],
+      '4xl': ['2.25rem', { lineHeight: '2.75rem', letterSpacing: '0' }],
+      '5xl': ['3rem', { lineHeight: '3.5rem', letterSpacing: '0' }],
+      '6xl': ['3.75rem', { lineHeight: '4.25rem', letterSpacing: '0' }],
+      '7xl': ['4.5rem', { lineHeight: '5rem', letterSpacing: '0' }],
     },
     extend: {
       colors: {
+        black: '#070706',
+        white: '#fbf7ea',
         // Premium neutral palette with warmer undertones
         neutral: {
           50: '#fafaf9',
@@ -33,18 +35,18 @@ export default {
           900: '#1c1917',
           950: '#0c0a09',
         },
-        // Premium accent colors
-        accent: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#16a34a',
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
+        gold: {
+          50: '#fbf7ea',
+          100: '#f3e8c1',
+          200: '#e7d28a',
+          300: '#d9b95b',
+          400: '#c9a227',
+          500: '#b88a14',
+          600: '#956b0c',
+          700: '#765009',
+          800: '#4d3407',
+          900: '#2a1c05',
+          950: '#140d02',
         },
       },
       borderRadius: {
@@ -65,7 +67,7 @@ export default {
         'premium-lg': '0 20px 25px -5px rgb(0 0 0 / 0.06), 0 8px 10px -6px rgb(0 0 0 / 0.04), 0 0 0 1px rgb(0 0 0 / 0.02)',
         'premium-xl': '0 25px 50px -12px rgb(0 0 0 / 0.15), 0 0 0 1px rgb(0 0 0 / 0.02)',
         'glow': '0 0 20px rgb(0 0 0 / 0.1)',
-        'glow-accent': '0 0 30px rgb(34 197 94 / 0.15)',
+        'glow-accent': '0 0 40px rgb(201 162 39 / 0.2)',
         'inner-premium': 'inset 0 1px 2px 0 rgb(0 0 0 / 0.03)',
       },
       backgroundImage: {

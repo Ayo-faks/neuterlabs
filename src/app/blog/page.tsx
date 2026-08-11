@@ -12,17 +12,17 @@ import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '@/lib/mdx'
 
 export const metadata: Metadata = {
-  title: 'Research & Insights | AI for Climate & Sustainability',
+  title: 'Insights | Applied AI, Agents & Production Engineering',
   description:
-    'Explore cutting-edge AI research in carbon intelligence, emissions forecasting, renewable energy optimization, and sustainable technology. Peer-reviewed insights from NeuterLabs researchers.',
+    'Practical thinking on AI strategy, agentic systems, and production engineering — field notes from the NeuterLabs build log.',
   keywords: [
-    'AI research papers',
-    'carbon intelligence research',
-    'sustainability AI insights',
-    'climate tech research',
-    'emissions forecasting',
-    'renewable energy AI',
-    'machine learning sustainability',
+    'AI agency blog',
+    'AI strategy insights',
+    'agentic systems',
+    'AI engineering best practices',
+    'production AI',
+    'AI agents',
+    'machine learning deployment',
   ],
 }
 
@@ -31,10 +31,11 @@ export default async function Blog() {
 
   return (
     <>
-      <PageIntro eyebrow="Research & Insights" title="Advancing sustainability through intelligent carbon management">
+      <PageIntro eyebrow="Insights" title="Field notes from building AI that ships">
         <p>
-          Discover our latest research findings, carbon accounting innovations, and breakthrough insights 
-          in climate technology, with a focus on carbon intelligence and renewable energy optimization.
+          Practical thinking on AI strategy, agents, and production engineering —
+          what we&apos;re learning from running real AI systems, written for the
+          teams building them.
         </p>
       </PageIntro>
 
@@ -58,13 +59,15 @@ export default async function Blog() {
                         </dd>
                         <dt className="sr-only">Author</dt>
                         <dd className="mt-6 flex gap-x-4">
-                          <div className="flex-none overflow-hidden bg-neutral-100">
-                            <Image
-                              alt=""
-                              {...article.author.image}
-                              className="h-12 w-12 object-cover grayscale"
-                            />
-                          </div>
+                          {article.author.image ? (
+                            <div className="flex-none overflow-hidden bg-neutral-100">
+                              <Image
+                                alt=""
+                                {...article.author.image}
+                                className="h-12 w-12 object-cover grayscale"
+                              />
+                            </div>
+                          ) : null}
                           <div className="text-sm text-neutral-950">
                             <div className="font-semibold">
                               {article.author.name}

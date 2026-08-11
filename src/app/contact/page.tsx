@@ -115,8 +115,10 @@ function ContactForm() {
             <fieldset>
               <legend className="text-base/6 text-neutral-600 font-medium">I am interested in...</legend>
               <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <RadioInput label="AI Strategy" name="interest" value="strategy" />
+                <RadioInput label="Agents & Automation" name="interest" value="agents" />
+                <RadioInput label="AI Product Engineering" name="interest" value="engineering" />
                 <RadioInput label="Wulo-X" name="interest" value="wulo-x" />
-                <RadioInput label="Research Collaboration" name="interest" value="research" />
                 <RadioInput label="Other" name="interest" value="other" />
               </div>
             </fieldset>
@@ -137,7 +139,7 @@ function ContactDetails() {
         Reach Out
       </h2>
       <p className="mt-6 text-base text-neutral-600 leading-relaxed">
-        Whether you&apos;re a clinician, researcher, parent, or organization interested in our products or research — we&apos;d love to hear from you.
+        Whether you need an AI strategy sprint, a production build, or an embedded team — we&apos;d love to hear from you.
       </p>
 
       <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
@@ -172,7 +174,7 @@ export default function Contact() {
   return (
     <>
       <PageIntro eyebrow="Contact us" title="Let&apos;s talk">
-        <p>We&apos;re building AI for healthcare. If you&apos;re interested in our products, research, or partnerships — reach out.</p>
+        <p>Tell us about the workflow, product, or mandate you want AI to transform — we&apos;ll reply within one business day.</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">

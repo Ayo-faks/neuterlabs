@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="optimizeLegibility">
+  <title id="title">Use Case Filter</title>
+  <desc id="desc">A monochrome decision framework that filters agentic AI use cases by value, risk, data readiness, repeatability, and human oversight.</desc>
+  <defs>
+    <style>
+      .font { font-family: Manrope, Arial, sans-serif; }
+      .title { fill: #f5f5f7; font-size: 50px; font-weight: 800; }
+      .subtitle { fill: #9a9aa3; font-size: 22px; font-weight: 500; }
+      .eyebrow { fill: #8d8d94; font-size: 15px; font-weight: 800; letter-spacing: 3px; }
+      .label { fill: #f5f5f7; font-size: 22px; font-weight: 800; }
+      .small { fill: #a6a6ad; font-size: 15px; font-weight: 500; }
+      .line { fill: none; stroke: #f5f5f7; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030303"/>
+      <stop offset="1" stop-color="#141415"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-18%" width="124%" height="136%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#f5f5f7"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g class="font">
+    <text x="112" y="108" class="title">Use Case Filter</text>
+    <text x="112" y="150" class="subtitle">A disciplined path from promising idea to production-worthy agentic workflow.</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="100" y="228" width="1400" height="500" rx="8" fill="#0d0d0e" stroke="#ffffff" stroke-opacity="0.12"/>
+  </g>
+  <g class="font" text-anchor="middle">
+    <rect x="138" y="402" width="190" height="152" rx="8" fill="#181819" stroke="#ffffff" stroke-opacity="0.14"/>
+    <text x="233" y="454" class="label">Candidate</text>
+    <text x="233" y="486" class="small">workflow</text>
+    <text x="233" y="518" class="small">hypothesis</text>
+    <path d="M328 478 H382" class="line" stroke-width="2" stroke-opacity="0.5" marker-end="url(#arrow)"/>
+  </g>
+  <g class="font" text-anchor="middle">
+    <g transform="translate(392 322)">
+      <rect x="0" y="0" width="164" height="312" rx="8" fill="#151516" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="82" y="48" class="eyebrow">01</text>
+      <text x="82" y="92" class="label">Value</text>
+      <text x="82" y="128" class="small">measurable</text>
+      <text x="82" y="154" class="small">business lift</text>
+      <rect x="34" y="228" width="96" height="8" rx="4" fill="#f5f5f7"/>
+      <rect x="34" y="252" width="72" height="8" rx="4" fill="#8e8e96"/>
+    </g>
+    <g transform="translate(584 322)">
+      <rect x="0" y="0" width="164" height="312" rx="8" fill="#151516" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="82" y="48" class="eyebrow">02</text>
+      <text x="82" y="92" class="label">Risk</text>
+      <text x="82" y="128" class="small">bounded</text>
+      <text x="82" y="154" class="small">failure modes</text>
+      <rect x="34" y="228" width="64" height="8" rx="4" fill="#f5f5f7"/>
+      <rect x="34" y="252" width="118" height="8" rx="4" fill="#8e8e96"/>
+    </g>
+    <g transform="translate(776 322)">
+      <rect x="0" y="0" width="164" height="312" rx="8" fill="#151516" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="82" y="48" class="eyebrow">03</text>
+      <text x="82" y="92" class="label">Data</text>
+      <text x="82" y="128" class="small">fresh, owned,</text>
+      <text x="82" y="154" class="small">permissioned</text>
+      <rect x="34" y="228" width="110" height="8" rx="4" fill="#f5f5f7"/>
+      <rect x="34" y="252" width="86" height="8" rx="4" fill="#8e8e96"/>
+    </g>
+    <g transform="translate(968 322)">
+      <rect x="0" y="0" width="164" height="312" rx="8" fill="#151516" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="82" y="48" class="eyebrow">04</text>
+      <text x="82" y="92" class="label">Repeat</text>
+      <text x="82" y="128" class="small">workflow has</text>
+      <text x="82" y="154" class="small">stable demand</text>
+      <rect x="34" y="228" width="120" height="8" rx="4" fill="#f5f5f7"/>
+      <rect x="34" y="252" width="78" height="8" rx="4" fill="#8e8e96"/>
+    </g>
+    <g transform="translate(1160 322)">
+      <rect x="0" y="0" width="164" height="312" rx="8" fill="#f5f5f7"/>
+      <text x="82" y="48" fill="#606067" font-size="15" font-weight="800" letter-spacing="3">05</text>
+      <text x="82" y="92" fill="#0b0b0c" font-size="22" font-weight="800">Oversight</text>
+      <text x="82" y="128" fill="#5f5f66" font-size="15" font-weight="500">approval</text>
+      <text x="82" y="154" fill="#5f5f66" font-size="15" font-weight="500">path exists</text>
+      <rect x="34" y="228" width="118" height="8" rx="4" fill="#0b0b0c"/>
+      <rect x="34" y="252" width="94" height="8" rx="4" fill="#77777f"/>
+    </g>
+  </g>
+  <g class="line" stroke-width="2" stroke-opacity="0.5" marker-end="url(#arrow)">
+    <path d="M556 478 H584"/>
+    <path d="M748 478 H776"/>
+    <path d="M940 478 H968"/>
+    <path d="M1132 478 H1160"/>
+    <path d="M1324 478 H1374"/>
+  </g>
+  <g class="font" text-anchor="middle">
+    <rect x="1374" y="402" width="90" height="152" rx="8" fill="#f5f5f7"/>
+    <text x="1419" y="470" fill="#0b0b0c" font-size="18" font-weight="800">Pilot</text>
+    <text x="1419" y="500" fill="#5f5f66" font-size="14" font-weight="500">ready</text>
+  </g>
+  <g class="font">
+    <text x="140" y="676" class="eyebrow">DECISION RULE</text>
+    <text x="310" y="676" class="small">Advance only when value is explicit, risk is bounded, data is usable, work repeats, and humans can intervene.</text>
+  </g>
+</svg>

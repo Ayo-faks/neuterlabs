@@ -142,14 +142,14 @@ function NavigationItem({
 
 function Navigation() {
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+    <nav className="mt-px font-display text-4xl font-medium text-gold-50 sm:text-5xl">
       <NavigationRow>
-        <NavigationItem href="/work">About Us</NavigationItem>
-        <NavigationItem href="/about">What We Do</NavigationItem>
+        <NavigationItem href="/work">Work</NavigationItem>
+        <NavigationItem href="/#services">Services</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Gallery</NavigationItem>
-        <NavigationItem href="/blog">Contact Us</NavigationItem>
+        <NavigationItem href="/about">About</NavigationItem>
+        <NavigationItem href="/blog">Insights</NavigationItem>
       </NavigationRow>
     </nav>
   )
@@ -207,12 +207,12 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           layout
           id={panelId}
           style={{ height: expanded ? 'auto' : '0.5rem' }}
-          className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
+          className="relative z-50 overflow-hidden bg-gold-400 pt-2"
           aria-hidden={expanded ? undefined : 'true'}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? undefined : 'true'}
         >
-          <motion.div layout className="bg-neutral-800">
+          <motion.div layout className="bg-gold-400">
             <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
               <Header
                 invert
@@ -251,7 +251,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
       <motion.div
         layout
         style={{ borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
-        className="relative flex flex-auto overflow-hidden bg-white pt-14"
+        className="relative flex flex-auto overflow-hidden bg-gold-50 pt-14"
       >
         <motion.div
           layout

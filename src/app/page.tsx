@@ -44,16 +44,16 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(wuloSchema) }}
       />
       
-      {/* Hero Section - Anthropic-style with WULO highlight */}
+      {/* Hero — AI agency positioning */}
       <HeroPage/>
       
-      {/* Mission Statement */}
+      {/* Services */}
       <Intro/>
       
-      {/* Products */}
+      {/* Portfolio */}
       <WuloProduct/>
       
-      {/* Research & Principles */}
+      {/* Engagement model & principles */}
       <ResearchPrinciples/>
 
       {/* Contact Section */}
@@ -63,12 +63,12 @@ export default async function Home() {
 }
 
 export const metadata: Metadata = {
-  title: 'NeuterLabs - AI Research & Products for the Future of Humanity',
+  title: 'NeuterLabs — AI Service Agency for Strategy, Agents & Product Engineering',
   description:
-    'NeuterLabs is an AI research company building intelligent systems that expand human potential. Our flagship product, WULO Academy, is an AI tutor and guidance counsellor for every learner.',
+    'NeuterLabs is an applied AI studio. We help ambitious teams find the right AI opportunity, build agents and automation, and take products safely into production — proven by our own live products like WULO Academy.',
   openGraph: {
-    title: 'NeuterLabs - AI Research & Products for the Future of Humanity',
-    description: 'AI research company building intelligent systems that expand human potential. Flagship product WULO Academy is an AI tutor and guidance counsellor.',
+    title: 'NeuterLabs — AI Service Agency for Strategy, Agents & Product Engineering',
+    description: 'Applied AI studio for strategy, agentic systems, and production engineering — proven by live products like WULO Academy and Wulo-X.',
     type: 'website',
     url: 'https://neuterlabs.com',
     images: [
@@ -76,19 +76,20 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'NeuterLabs - AI Research & Products for the Future of Humanity',
+        alt: 'NeuterLabs — Applied AI Studio',
       },
     ],
   },
   keywords: [
-    'AI research',
-    'AI for humanity',
+    'AI agency',
+    'AI consultancy',
+    'AI service agency',
+    'agentic systems',
+    'AI product engineering',
     'NeuterLabs',
     'WULO Academy',
-    'AI tutor',
-    'AI guidance counsellor',
-    'WAEC NECO JSSCE',
-    'adaptive learning AI',
+    'Wulo-X',
+    'AI strategy',
   ],
 }
 

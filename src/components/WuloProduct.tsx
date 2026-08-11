@@ -1,162 +1,162 @@
+import Link from 'next/link'
+import { ArrowUpRightIcon } from '@heroicons/react/24/outline'
+
 import { Container } from './Container'
 import { FadeIn, FadeInStagger } from './FadeIn'
-import Link from 'next/link'
-import { ArrowPathIcon, CalendarDaysIcon, ChartBarSquareIcon, ChatBubbleLeftRightIcon, MapIcon, ShieldCheckIcon, SparklesIcon } from '@heroicons/react/24/outline'
 
-const academyFeatures = [
+type PortfolioAction = {
+  label: string
+  href: string
+  external?: boolean
+  primary?: boolean
+}
+
+type PortfolioEntry = {
+  number: string
+  name: string
+  sector: string
+  status: string
+  headline: string
+  description: string
+  scope: string[]
+  actions: PortfolioAction[]
+}
+
+const portfolio: PortfolioEntry[] = [
   {
-    icon: ChartBarSquareIcon,
-    title: 'Adaptive Diagnostics',
-    description: 'A short, adaptive set of multiple-choice questions pinpoints exactly what each learner understands — mapped to the WAEC, NECO and JSSCE syllabus.',
+    number: '01',
+    name: 'WULO Academy',
+    sector: 'Education · Consumer AI',
+    status: 'Live product',
+    headline: 'An always-available AI tutor and guidance counsellor.',
+    description:
+      'WULO Academy turns minutes of adaptive multiple-choice diagnostics into a precise picture of what each learner knows, then guides practice for WAEC, NECO and JSSCE and grounds career counselling in real performance data. Designed, engineered, and operated end to end by NeuterLabs.',
+    scope: [
+      'Product strategy',
+      'Adaptive learning engine',
+      'Full-stack engineering',
+      'Safeguarding & evaluation',
+    ],
+    actions: [
+      {
+        label: 'Visit WULO Academy',
+        href: 'https://academy.wulo.ai',
+        external: true,
+        primary: true,
+      },
+      { label: 'About WULO', href: 'https://wulo.ai', external: true },
+    ],
   },
   {
-    icon: SparklesIcon,
-    title: 'Socratic Tutoring',
-    description: 'Like a great tutor, WULO guides learners to the answer with step-by-step hints and worked reasoning — it never just hands over the solution.',
-  },
-  {
-    icon: MapIcon,
-    title: 'Career Counselling',
-    description: 'Grounded in real performance data, WULO suggests subject combinations and career pathways that fit each learner\'s strengths and interests.',
+    number: '02',
+    name: 'Wulo-X',
+    sector: 'Healthcare · Agentic automation',
+    status: 'Private deployments',
+    headline: 'A safe, AI-native communication OS for healthcare.',
+    description:
+      'Wulo-X coordinates patient conversations across voice, SMS, WhatsApp, and email — automating appointment logistics and recall while every sensitive moment escalates to staff. It is the blueprint for how we build dependable agents inside regulated workflows.',
+    scope: [
+      'Voice & chat agents',
+      'Workflow orchestration',
+      'Multi-channel delivery',
+      'Clinical safety controls',
+    ],
+    actions: [{ label: 'Discuss Wulo-X', href: '/contact', primary: true }],
   },
 ]
 
-const wuloXFeatures = [
-  {
-    icon: ChatBubbleLeftRightIcon,
-    title: 'Multi-Channel Agents',
-    description: 'Coordinate patient conversations across voice, SMS, WhatsApp, and email from one AI-native operating layer.',
-  },
-  {
-    icon: CalendarDaysIcon,
-    title: 'Appointment Logistics',
-    description: 'Automate confirmations, rescheduling, preparation reminders, and handoffs so teams spend less time chasing admin.',
-  },
-  {
-    icon: ArrowPathIcon,
-    title: 'Patient Recall Workflows',
-    description: 'Trigger recall journeys for overdue reviews, follow-ups, and preventive care with safe escalation paths for staff.',
-  },
-]
-
-export default function Products() {
+export default function Portfolio() {
   return (
-    <section id="products" className="relative bg-gradient-to-b from-neutral-50/50 to-white py-28 sm:py-36">
+    <section id="portfolio" className="bg-black py-24 text-gold-50 sm:py-32 lg:py-40">
       <Container>
-        {/* Section Header */}
-        <FadeIn>
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-display text-4xl font-semibold tracking-tight text-neutral-950 sm:text-5xl lg:text-6xl leading-[1.1]">
-              Our Products
-            </h2>
-            <p className="mt-8 text-xl text-neutral-600 leading-relaxed">
-              We turn our research into products that expand human potential — 
-              shipping AI systems that learners, families, and clinicians can rely on.
+        <FadeIn className="grid gap-10 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-7">
+            <p className="text-sm font-semibold uppercase text-gold-300">
+              Portfolio
             </p>
+            <h2 className="mt-5 font-display text-4xl font-medium leading-tight sm:text-5xl lg:text-6xl">
+              Our proof runs in production.
+            </h2>
           </div>
+          <p className="max-w-xl text-lg leading-8 text-gold-100/70 lg:col-span-5 lg:justify-self-end">
+            We hold client engagements to the same bar as our own products —
+            systems with real users, real stakes, and real uptime.
+          </p>
         </FadeIn>
 
-        {/* Flagship Product: WULO Academy */}
-        <FadeIn>
-          <div className="mt-24 border-2 border-neutral-950 bg-neutral-950 p-10 sm:p-14">
-            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
-              <div className="lg:max-w-xl">
-                <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 text-sm font-semibold text-white mb-6 border border-white/20">
-                  <div className="h-2 w-2 bg-green-400 animate-subtle-pulse" />
-                  Flagship Product — Available Now
-                </div>
-                <h3 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                  WULO Academy
-                </h3>
-                <p className="mt-2 text-lg text-white/60 font-medium">Your always-available AI tutor &amp; guidance counsellor</p>
-                <p className="mt-6 text-white/80 leading-relaxed text-base">
-                  WULO Academy turns a few minutes of adaptive multiple-choice answers into an accurate diagnosis, 
-                  a guided study path, and grounded counselling on what to do next. Built to help learners think — 
-                  not skip thinking — it prepares students for WAEC, NECO and JSSCE while keeping teachers and parents in the loop.
-                </p>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <span className="bg-white/10 px-4 py-2 text-sm font-medium text-white/90">WAEC / NECO / JSSCE</span>
-                  <span className="bg-white/10 px-4 py-2 text-sm font-medium text-white/90">For Learners, Teachers &amp; Parents</span>
-                  <span className="bg-white/10 px-4 py-2 text-sm font-medium text-white/90">Diagnose · Tutor · Counsel</span>
-                </div>
-                <div className="mt-8 flex flex-wrap gap-4">
-                  <Link
-                    href="https://academy.wulo.ai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-white px-7 py-3.5 text-sm font-semibold text-neutral-950 hover:bg-neutral-200 transition-colors duration-200"
-                  >
-                    Get Started Free <span className="ml-2">↗</span>
-                  </Link>
-                  <Link
-                    href="https://wulo.ai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center border border-white/20 bg-transparent px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors duration-200"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-              <div className="grid gap-5 sm:grid-cols-1 lg:max-w-sm">
-                {academyFeatures.map((f) => (
-                  <div key={f.title} className="flex gap-4">
-                    <f.icon className="w-5 h-5 flex-none text-white mt-0.5" />
-                    <div>
-                      <h4 className="font-display text-sm font-semibold text-white">{f.title}</h4>
-                      <p className="mt-1 text-sm text-white/70 leading-relaxed">{f.description}</p>
-                    </div>
+        <FadeInStagger className="mt-16 lg:mt-20" faster>
+          {portfolio.map((entry) => (
+            <FadeIn key={entry.name}>
+              <article className="grid gap-8 border-t border-gold-400/20 py-12 lg:grid-cols-12 lg:py-16">
+                <div className="flex gap-6 lg:col-span-3 lg:flex-col lg:gap-4">
+                  <span className="text-sm font-semibold text-gold-400">
+                    {entry.number}
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold uppercase text-gold-100/60">
+                      {entry.sector}
+                    </p>
+                    <p className="mt-2 inline-flex items-center gap-2 text-sm text-gold-300">
+                      <span className="h-1.5 w-1.5 rounded-full bg-gold-400 animate-subtle-pulse" />
+                      {entry.status}
+                    </p>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </FadeIn>
+                </div>
+                <div className="lg:col-span-6">
+                  <h3 className="font-display text-3xl font-semibold text-gold-50">
+                    {entry.name}
+                  </h3>
+                  <p className="mt-2 text-lg text-gold-200">{entry.headline}</p>
+                  <p className="mt-6 text-base leading-7 text-gold-100/70">
+                    {entry.description}
+                  </p>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    {entry.actions.map((action) => (
+                      <Link
+                        key={action.label}
+                        href={action.href}
+                        {...(action.external
+                          ? { target: '_blank', rel: 'noopener noreferrer' }
+                          : {})}
+                        className={
+                          action.primary
+                            ? 'inline-flex items-center gap-2 bg-gold-400 px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-gold-300'
+                            : 'inline-flex items-center gap-2 border border-gold-400/40 px-6 py-3 text-sm font-semibold text-gold-100 transition-colors hover:border-gold-300 hover:bg-gold-400/10'
+                        }
+                      >
+                        {action.label}
+                        {action.external && (
+                          <ArrowUpRightIcon className="h-4 w-4" />
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <ul className="space-y-3 text-sm text-gold-100/70 lg:col-span-3 lg:justify-self-end">
+                  {entry.scope.map((item) => (
+                    <li key={item} className="flex items-center gap-3">
+                      <span className="h-px w-4 bg-gold-400" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </FadeIn>
+          ))}
+        </FadeInStagger>
 
-        {/* Product 2: Wulo-X */}
         <FadeIn>
-          <div className="mt-10 border border-neutral-200 bg-white p-10 sm:p-14">
-            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
-              <div className="lg:max-w-xl">
-                <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 mb-6 border border-blue-200">
-                  <ShieldCheckIcon className="h-4 w-4" />
-                  Safe Healthcare Communication
-                </div>
-                <h3 className="font-display text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">
-                  Wulo-X
-                </h3>
-                <p className="mt-2 text-lg text-neutral-500 font-medium">AI-native communication operating system for healthcare</p>
-                <p className="mt-6 text-neutral-600 leading-relaxed text-base">
-                  Wulo-X is a safe, AI-native communication operating system for healthcare, powered by workflow automation 
-                  and multi-channel agents across voice, SMS, WhatsApp, and email to streamline appointment logistics and 
-                  patient recall.
-                </p>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">Voice / SMS / WhatsApp / Email</span>
-                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">Workflow Automation</span>
-                  <span className="bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">Appointment Recall</span>
-                </div>
-                <div className="mt-8">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center justify-center bg-neutral-950 px-7 py-3.5 text-sm font-semibold text-white hover:bg-neutral-800 transition-colors duration-200"
-                  >
-                    Talk to us about Wulo-X
-                  </Link>
-                </div>
-              </div>
-              <div className="grid gap-5 sm:grid-cols-1 lg:max-w-sm">
-                {wuloXFeatures.map((f) => (
-                  <div key={f.title} className="flex gap-4">
-                    <f.icon className="w-5 h-5 flex-none text-neutral-950 mt-0.5" />
-                    <div>
-                      <h4 className="font-display text-sm font-semibold text-neutral-950">{f.title}</h4>
-                      <p className="mt-1 text-sm text-neutral-600 leading-relaxed">{f.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="flex flex-wrap items-center justify-between gap-6 border-t border-gold-400/20 pt-10">
+            <p className="text-base text-gold-100/70">
+              Want the detail — architecture, guardrails, and outcomes?
+            </p>
+            <Link
+              href="/work"
+              className="group inline-flex items-center gap-2 text-sm font-semibold text-gold-300 transition-colors hover:text-gold-200"
+            >
+              Read the case studies
+              <ArrowUpRightIcon className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </Link>
           </div>
         </FadeIn>
       </Container>

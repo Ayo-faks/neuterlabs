@@ -19,8 +19,8 @@ export function Button({
     'inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold tracking-wide transition-colors duration-200',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
     invert
-      ? 'bg-white text-neutral-950 hover:bg-neutral-200 focus-visible:ring-white'
-      : 'bg-neutral-950 text-white hover:bg-neutral-800 focus-visible:ring-neutral-950',
+      ? 'bg-gold-400 text-black hover:bg-gold-300 focus-visible:ring-gold-300'
+      : 'bg-neutral-950 text-gold-50 hover:bg-neutral-800 focus-visible:ring-gold-400',
   )
 
   let inner = <span className="relative">{children}</span>

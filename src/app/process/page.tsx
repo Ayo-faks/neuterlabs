@@ -228,11 +228,11 @@ function Values() {
 export const metadata: Metadata = {
   title: 'Our Process | NeuterLabs',
   description:
-    'How NeuterLabs builds AI for healthcare — from research and clinical validation to deployment and ongoing improvement.',
+    'How NeuterLabs delivers AI engagements — from discovery and validation to production deployment and continuous improvement.',
   keywords: [
     'AI development process',
-    'healthcare AI methodology',
-    'clinical validation',
+    'AI agency methodology',
+    'AI validation',
     'AI safety',
     'responsible AI development',
   ],
@@ -241,9 +241,9 @@ export const metadata: Metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we build AI for healthcare">
+      <PageIntro eyebrow="Our process" title="How we take AI into production">
         <p>
-          Our research-driven approach ensures that every product is safe, clinically validated, and built to deliver real outcomes.
+          Our research-driven approach ensures that every system we ship is safe, validated, and built to deliver real outcomes.
         </p>
       </PageIntro>
 

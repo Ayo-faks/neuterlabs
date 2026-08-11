@@ -16,7 +16,7 @@ export function Logomark({
     <Image
       src={logoPng}
       alt="Neuter Labs"
-      className={clsx('h-8 w-auto select-none', invert && 'dark:invert', className)}
+      className={clsx('h-8 w-auto select-none', invert && 'invert', className)}
       priority
     />
   )
@@ -38,7 +38,7 @@ export function Logo({
     <Image
       src={logoPng}
       alt="Neuter Labs"
-      className={clsx('h-8 w-auto select-none', invert && 'dark:invert', className)}
+      className={clsx('h-8 w-auto select-none', invert && 'invert', className)}
       priority
     />
   )

@@ -138,16 +138,16 @@ function Clients() {
 }
 
 export const metadata: Metadata = {
-  title: 'Case Studies | AI Speech Therapy Outcomes',
+  title: 'Portfolio | AI Products & Case Studies',
   description:
-    'Discover how children and families benefit from WULO AI speech therapy. Real-world stories of articulation improvement, phonology progress, and consistent at-home practice.',
+    'Selected work from NeuterLabs — live AI products like WULO Academy and Wulo-X, plus client case studies in AI strategy, agents, and production engineering.',
   keywords: [
-    'speech therapy case studies',
-    'articulation improvement results',
-    'AI speech therapy outcomes',
-    'WULO success stories',
-    'pediatric speech progress',
-    'speech therapy at home',
+    'AI agency portfolio',
+    'AI case studies',
+    'AI product engineering examples',
+    'WULO Academy',
+    'Wulo-X',
+    'agentic systems case study',
   ],
 }
 
@@ -157,13 +157,14 @@ export default async function Work() {
   return (
     <>
       <PageIntro
-        eyebrow="Case Studies"
-        title="Real progress through consistent practice"
+        eyebrow="Portfolio"
+        title="Work that ships and stays shipped"
       >
         <p>
-          Families and therapists are seeing faster speech development when children
-          use WULO for daily practice between therapy sessions. Explore how AI-guided
-          exercises are making a difference.
+          Our portfolio spans our own live products — WULO Academy and Wulo-X —
+          and client engagements in AI strategy, agents, and production
+          engineering. Every case study below is a system that had to survive
+          real users.
         </p>
       </PageIntro>
 

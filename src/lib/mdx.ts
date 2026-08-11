@@ -1,44 +1,7 @@
 import type { ImageProps } from 'next/image'
-import glob from 'fast-glob'
 
 import { getArticles } from '../app/blog/articles'
 import { getCaseStudies } from '../app/work/case-studies'
-
-async function loadEntries<T extends { date: string }>(
-  directory: string,
-  metaName: string,
-): Promise<Array<MDXEntry<T>>> {
-  const filenames = await glob('**/page.mdx', { cwd: `src/app/${directory}` })
-
-  const results = await Promise.allSettled(
-    filenames.map(async (filename) => {
-      const modulePath = `../app/${directory}/${filename}`
-      const metadata = (await import(modulePath))[metaName] as T
-      return {
-        ...metadata,
-        metadata,
-        href: `/${directory}/${filename.replace(/\/page\.mdx$/, '')}`,
-      }
-    }),
-  )
-
-  const entries: Array<MDXEntry<T>> = []
-  for (let i = 0; i < results.length; i++) {
-    const result = results[i]
-    if (result.status === 'fulfilled') {
-      entries.push(result.value)
-      continue
-    }
-
-    const filename = filenames[i]
-    console.warn(
-      `[mdx] Skipping ${directory}/${filename} due to import error:`,
-      result.reason,
-    )
-  }
-
-  return entries.sort((a, b) => b.date.localeCompare(a.date))
-}
 
 type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
 
@@ -53,7 +16,7 @@ export interface Article {
   author: {
     name: string
     role: string
-    image: ImagePropsWithOptionalAlt
+    image?: ImagePropsWithOptionalAlt
   }
 }
 

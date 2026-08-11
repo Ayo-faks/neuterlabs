@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="optimizeLegibility">
+  <title id="title">Agentic System Shift</title>
+  <desc id="desc">A monochrome comparison between static software workflows and adaptive agentic decision-making systems.</desc>
+  <defs>
+    <style>
+      .font { font-family: Manrope, Arial, sans-serif; }
+      .title { fill: #f5f5f7; font-size: 48px; font-weight: 800; }
+      .subtitle { fill: #9a9aa3; font-size: 22px; font-weight: 500; }
+      .eyebrow { fill: #8d8d94; font-size: 16px; font-weight: 800; letter-spacing: 3px; }
+      .label { fill: #f5f5f7; font-size: 23px; font-weight: 800; }
+      .small { fill: #a6a6ad; font-size: 15px; font-weight: 500; }
+      .line { fill: none; stroke: #f5f5f7; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030303"/>
+      <stop offset="1" stop-color="#141415"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-18%" width="124%" height="136%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#f5f5f7"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g class="font">
+    <text x="110" y="108" class="title">Agentic System Shift</text>
+    <text x="110" y="150" class="subtitle">The architecture moves from fixed execution paths to governed adaptive decision loops.</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="100" y="214" width="650" height="564" rx="8" fill="#0d0d0e" stroke="#ffffff" stroke-opacity="0.12"/>
+    <rect x="850" y="214" width="650" height="564" rx="8" fill="#0d0d0e" stroke="#ffffff" stroke-opacity="0.12"/>
+  </g>
+  <g class="font">
+    <text x="150" y="272" class="eyebrow">TRADITIONAL SOFTWARE</text>
+    <text x="900" y="272" class="eyebrow">AGENTIC SYSTEMS</text>
+    <text x="150" y="318" class="label">Static applications</text>
+    <text x="900" y="318" class="label">Adaptive decision agents</text>
+  </g>
+  <g class="font" text-anchor="middle">
+    <g transform="translate(210 382)">
+      <rect x="0" y="0" width="430" height="72" rx="8" fill="#181819" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="215" y="45" class="small">Input form</text>
+      <path d="M215 72 V112" class="line" stroke-width="2" stroke-opacity="0.42" marker-end="url(#arrow)"/>
+    </g>
+    <g transform="translate(210 506)">
+      <rect x="0" y="0" width="430" height="72" rx="8" fill="#181819" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="215" y="45" class="small">Fixed workflow</text>
+      <path d="M215 72 V112" class="line" stroke-width="2" stroke-opacity="0.42" marker-end="url(#arrow)"/>
+    </g>
+    <g transform="translate(210 630)">
+      <rect x="0" y="0" width="430" height="72" rx="8" fill="#181819" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="215" y="45" class="small">Predictable output</text>
+    </g>
+  </g>
+  <g class="font" text-anchor="middle">
+    <circle cx="1175" cy="512" r="132" fill="#f5f5f7"/>
+    <circle cx="1175" cy="512" r="92" fill="#0b0b0c"/>
+    <text x="1175" y="500" fill="#f5f5f7" font-size="24" font-weight="800">Decision</text>
+    <text x="1175" y="532" fill="#b7b7be" font-size="16" font-weight="500">loop</text>
+    <g fill="#181819" stroke="#ffffff" stroke-opacity="0.14">
+      <rect x="948" y="374" width="164" height="72" rx="8"/>
+      <rect x="1238" y="374" width="164" height="72" rx="8"/>
+      <rect x="948" y="580" width="164" height="72" rx="8"/>
+      <rect x="1238" y="580" width="164" height="72" rx="8"/>
+    </g>
+    <text x="1030" y="418" class="small">Goal context</text>
+    <text x="1320" y="418" class="small">Plan</text>
+    <text x="1030" y="624" class="small">Observe</text>
+    <text x="1320" y="624" class="small">Tool use</text>
+    <path d="M1115 410 C1178 366 1240 382 1272 430" class="line" stroke-width="2" stroke-opacity="0.55" marker-end="url(#arrow)"/>
+    <path d="M1320 446 C1378 490 1378 560 1328 585" class="line" stroke-width="2" stroke-opacity="0.55" marker-end="url(#arrow)"/>
+    <path d="M1238 621 C1176 666 1112 650 1078 603" class="line" stroke-width="2" stroke-opacity="0.55" marker-end="url(#arrow)"/>
+    <path d="M1030 580 C972 536 972 466 1022 441" class="line" stroke-width="2" stroke-opacity="0.55" marker-end="url(#arrow)"/>
+  </g>
+  <path d="M778 496 H822" class="line" stroke-width="2" stroke-opacity="0.55" marker-end="url(#arrow)"/>
+  <g class="font">
+    <rect x="920" y="706" width="510" height="56" rx="8" fill="#f5f5f7"/>
+    <text x="956" y="742" fill="#0b0b0c" font-size="18" font-weight="800">Outcome adapts to live context, policy, and tool results.</text>
+  </g>
+</svg>

@@ -110,11 +110,12 @@ function Team() {
 export const metadata: Metadata = {
   title: 'About | NeuterLabs',
   description:
-    'NeuterLabs is an AI research company building intelligent systems for the future of humanity — led by WULO Academy, an AI tutor and guidance counsellor.',
+    'NeuterLabs is an applied AI studio — an AI service agency for strategy, agents, and product engineering, founded by the team behind WULO Academy and Wulo-X.',
   keywords: [
-    'AI research company',
-    'AI for humanity',
+    'AI agency',
+    'applied AI studio',
     'NeuterLabs team',
+    'AI consultancy',
     'AI safety',
     'WULO Academy',
   ],
@@ -125,24 +126,24 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="AI research for the future of humanity">
+      <PageIntro eyebrow="About us" title="An applied AI studio that ships">
         <p>
-          We build intelligent systems that expand human potential — shipping products that learners, families, and clinicians can rely on.
+          We help ambitious teams turn AI from a slide into a system — strategy, agents, and product engineering from one senior team.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            NeuterLabs was founded to apply AI research to humanity&apos;s hardest problems. Our flagship product, WULO Academy, is an always-available AI tutor and guidance counsellor that helps every learner diagnose their gaps, study smarter, and choose the right path. We&apos;re also building Wulo-X, an AI-native communication operating system for healthcare.
+            NeuterLabs began by building its own products. WULO Academy, our always-available AI tutor and guidance counsellor, and Wulo-X, an AI-native communication OS for healthcare, taught us what it takes to run AI in production — evaluation, guardrails, uptime, and trust. Today we put that same team to work for clients as an AI service agency.
           </p>
           <p>
-            Our work spans speech recognition, natural language processing, and adaptive learning — always grounded in evidence and built with safety as the top priority.
+            Our work spans AI strategy, agentic systems, speech and language AI, and full-stack product engineering — always grounded in evidence and built with safety as the top priority.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="2" label="Products" />
-          <StatListItem value="6" label="Research areas" />
-          <StatListItem value="2026" label="Founded" />
+          <StatListItem value="2" label="Live products" />
+          <StatListItem value="3" label="Service lines" />
+          <StatListItem value="2026" label="Agency launch" />
         </StatList>
       </Container>
 

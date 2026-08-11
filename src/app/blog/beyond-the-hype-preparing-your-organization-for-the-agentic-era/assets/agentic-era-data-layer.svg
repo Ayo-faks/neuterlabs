@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="optimizeLegibility">
+  <title id="title">Data Layer</title>
+  <desc id="desc">A layered business data foundation connecting systems of record, knowledge sources, permissions, memory, and retrieval for agentic AI.</desc>
+  <defs>
+    <style>
+      .font { font-family: Manrope, Arial, sans-serif; }
+      .title { fill: #f5f5f7; font-size: 50px; font-weight: 800; }
+      .subtitle { fill: #9a9aa3; font-size: 22px; font-weight: 500; }
+      .eyebrow { fill: #8d8d94; font-size: 15px; font-weight: 800; letter-spacing: 3px; }
+      .label { fill: #f5f5f7; font-size: 21px; font-weight: 800; }
+      .small { fill: #a6a6ad; font-size: 15px; font-weight: 500; }
+      .line { fill: none; stroke: #f5f5f7; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030303"/>
+      <stop offset="1" stop-color="#141415"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-18%" width="124%" height="136%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#f5f5f7"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g class="font">
+    <text x="108" y="108" class="title">Data Layer</text>
+    <text x="108" y="150" class="subtitle">A governed foundation for retrieval, memory, permissions, and business knowledge.</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="420" y="220" width="740" height="520" rx="8" fill="#0d0d0e" stroke="#ffffff" stroke-opacity="0.12"/>
+  </g>
+  <g class="font">
+    <text x="460" y="270" class="eyebrow">LAYERED FOUNDATION</text>
+    <g transform="translate(470 314)">
+      <rect x="0" y="0" width="640" height="60" rx="8" fill="#f5f5f7"/>
+      <text x="28" y="38" fill="#0b0b0c" font-size="19" font-weight="800">Agent Access Boundary</text>
+    </g>
+    <g transform="translate(470 392)">
+      <rect x="0" y="0" width="640" height="60" rx="8" fill="#19191a" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="28" y="38" class="label">Retrieval and Ranking</text>
+    </g>
+    <g transform="translate(470 470)">
+      <rect x="0" y="0" width="640" height="60" rx="8" fill="#19191a" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="28" y="38" class="label">Working Memory</text>
+    </g>
+    <g transform="translate(470 548)">
+      <rect x="0" y="0" width="640" height="60" rx="8" fill="#19191a" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="28" y="38" class="label">Permissions and Policy</text>
+    </g>
+    <g transform="translate(470 626)">
+      <rect x="0" y="0" width="640" height="60" rx="8" fill="#19191a" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="28" y="38" class="label">Knowledge Sources</text>
+    </g>
+  </g>
+  <g class="font" text-anchor="middle" filter="url(#shadow)">
+    <rect x="104" y="298" width="210" height="86" rx="8" fill="#171718" stroke="#ffffff" stroke-opacity="0.14"/>
+    <rect x="104" y="430" width="210" height="86" rx="8" fill="#171718" stroke="#ffffff" stroke-opacity="0.14"/>
+    <rect x="104" y="562" width="210" height="86" rx="8" fill="#171718" stroke="#ffffff" stroke-opacity="0.14"/>
+    <text x="209" y="336" class="label">CRM</text>
+    <text x="209" y="361" class="small">systems of record</text>
+    <text x="209" y="468" class="label">ERP</text>
+    <text x="209" y="493" class="small">transactions</text>
+    <text x="209" y="600" class="label">Docs</text>
+    <text x="209" y="625" class="small">knowledge base</text>
+  </g>
+  <g class="line" stroke-width="2" stroke-opacity="0.45" marker-end="url(#arrow)">
+    <path d="M314 341 C358 341 372 626 430 626"/>
+    <path d="M314 473 C362 473 374 646 430 646"/>
+    <path d="M314 605 H430"/>
+  </g>
+  <g class="font" text-anchor="middle" filter="url(#shadow)">
+    <rect x="1260" y="350" width="236" height="252" rx="8" fill="#f5f5f7"/>
+    <circle cx="1378" cy="428" r="44" fill="#0b0b0c"/>
+    <path d="M1356 428 H1400 M1378 406 V450" stroke="#f5f5f7" stroke-width="7" stroke-linecap="round"/>
+    <text x="1378" y="516" fill="#0b0b0c" font-size="25" font-weight="800">Agent Runtime</text>
+    <text x="1378" y="548" fill="#5f5f66" font-size="15" font-weight="500">retrieves only what</text>
+    <text x="1378" y="572" fill="#5f5f66" font-size="15" font-weight="500">policy permits</text>
+  </g>
+  <path d="M1160 438 H1240" class="line" stroke-width="2" stroke-opacity="0.55" marker-end="url(#arrow)"/>
+  <g class="font">
+    <text x="112" y="764" class="eyebrow">DATA READINESS</text>
+    <text x="294" y="764" class="small">Ownership, freshness, permissions, memory, and retrieval are explicit before agents act.</text>
+  </g>
+</svg>

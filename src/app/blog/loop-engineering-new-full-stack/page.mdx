@@ -1,0 +1,156 @@
+import { AnimatedImage } from '@/components/AnimatedImage'
+
+export const article = {
+  date: '2026-07-09',
+  title: 'Loop Engineering + System Design Is Becoming the New Full Stack',
+  description:
+    'AI made it easy to turn an idea into an app, but the real product engineering stack is now specs, evals, agent loops, and the system boundaries that keep them safe.',
+  readingTime: '5 min read',
+  slug: 'loop-engineering-new-full-stack',
+  category: 'AI Engineering',
+  canonicalUrl: 'https://neuterlabs.com/blog/loop-engineering-new-full-stack',
+  toc: [
+    {
+      title: 'What the loop looks like',
+      href: '#what-the-loop-looks-like',
+    },
+    {
+      title: 'A real example',
+      href: '#a-real-example',
+    },
+    {
+      title: 'The new meaning of full stack',
+      href: '#why-this-changes-the-meaning-of-full-stack',
+    },
+    {
+      title: 'Evals are the floor',
+      href: '#evals-are-the-floor-not-the-finish-line',
+    },
+    {
+      title: 'The takeaway',
+      href: '#the-takeaway',
+    },
+  ],
+  author: {
+    name: 'Ayoola Fakoya',
+    role: 'NeuterLabs',
+  },
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+  authors: [{ name: article.author.name }],
+  category: article.category,
+  alternates: {
+    canonical: article.canonicalUrl,
+  },
+  openGraph: {
+    type: 'article',
+    url: article.canonicalUrl,
+    title: article.title,
+    description: article.description,
+    publishedTime: article.date,
+    authors: [article.author.name],
+    section: article.category,
+  },
+  twitter: {
+    card: 'summary',
+    title: article.title,
+    description: article.description,
+  },
+}
+
+The job is changing fast.
+
+Product managers are building agents. Backend engineers are shipping UI. Designers are wiring up workflows. Founders with clear specs are moving faster than teams waiting for perfect handoffs.
+
+AI made it easier to turn an idea into an app. It did not make product judgment optional. It also did not make system design optional. If anything, those two things matter more now, because the machine will happily produce a lot of code for the wrong target.
+
+That is why I keep coming back to loop engineering.
+
+<figure className="my-12 sm:my-16">
+  <div className="mx-auto max-w-xl overflow-hidden rounded border border-neutral-200 bg-neutral-100">
+    <AnimatedImage
+      src="/videos/agent-loop.gif"
+      alt="Animated diagram showing an AI agent moving through a build, test, fail, fix, and repeat loop."
+      width={640}
+      height={360}
+    />
+  </div>
+  <figcaption className="mx-auto mt-3 max-w-xl text-base leading-7 text-neutral-600">
+    The agent builds inside the loop. The human designs the loop.
+  </figcaption>
+</figure>
+
+## What the loop looks like
+
+The workflow is simple on the surface.
+
+First, **write the spec**. Not a vague prompt. A product spec. What should happen? What should never happen? What does the system do when it is unsure? Which actions are allowed? Which actions require code, approval, or a human handoff?
+
+Second, **write the evals**. These are test cases that define what "good" means. A good eval is not just "does the answer sound nice?" It checks the actual behavior you care about: did the agent solve the task, stay inside policy, handle refusal, respect opt-out, avoid invented facts, and stop when it should stop?
+
+Third, **let the coding agent run the loop**. It builds, tests itself against the evals, fails, fixes, and repeats. It stops when the evals pass or when it hits a wall.
+
+The AI builds inside the loop. The human designs the loop.
+
+That difference matters.
+
+## A real example
+
+In one product I'm building, an AI agent calls patients about missed appointments and helps rebook them. It is healthcare-adjacent, so the safety bar is high: no medical advice, no invented prices, no self-authorized booking confirmations.
+
+The agent's behavior lives in a versioned prompt file, changed through reviewed diffs. Every change runs through a gate: quality evals, a behavior safety suite, and an automated red team that tries to break the agent with adversarial inputs. If the gate fails, the change does not ship.
+
+No green gate, no merge.
+
+That sounds like an AI process, but the most important decisions are actually system-design decisions.
+
+The rule is simple: **AI can talk, but code owns consequences.**
+
+Bookings are deterministic code. Money is deterministic code. Anything clinical stops the call path and escalates to a human. The model handles language; the system handles decisions.
+
+That boundary is the product.
+
+If you get it wrong, the agent may still sound confident. It may even pass shallow demos. But it will be unsafe, unreliable, or just wrong at scale.
+
+## Why this changes the meaning of full stack
+
+Full stack used to mean you could move between frontend, backend, database, and deployment. That still matters. But in AI-native products, another stack is appearing on top of it:
+
+Spec. Evals. Agent loop. Deterministic system boundary. Human feedback. Safety gate.
+
+You need enough product sense to describe the goal clearly. Enough engineering judgment to draw the boundary between language and consequence. Enough system design to know what breaks when APIs fail, users behave strangely, data is missing, or the model is uncertain.
+
+This is why system design matters more in the loop era, not less.
+
+Otherwise your agent will happily loop forever, building the wrong thing very fast.
+
+## Evals are the floor, not the finish line
+
+There is one more trap: treating a green eval run like proof that the product is ready.
+
+It is not.
+
+Evals are the minimum bar. They tell you the system behaves well inside the world you imagined. Real users test the world you did not imagine.
+
+The loop only gets stronger when real feedback goes back into it: new edge cases, new failure modes, new test rows, tighter gates, stricter fakes, clearer policies.
+
+That is the loop people miss. It is not just agent writes code, tests pass, ship it. It is reality finds a gap, the team turns that gap into a better eval or a better boundary, and the system becomes harder to break next time.
+
+## The takeaway
+
+Going AI-native is cognitively heavier upfront. You are learning agents, evals, product judgment, and architecture at the same time.
+
+But it compounds.
+
+If you are building anything serious right now, learn specs, evals, and system design together.
+
+That is the new product engineering stack.
+
+Not prompting alone. Not coding alone.
+
+The loop, plus the judgment to design it.
+
+In the next post, I'll share the bug that taught me this the hard way: all my tests were green for seven days, and the feature never ran once.

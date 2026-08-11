@@ -1,101 +1,100 @@
+import Link from 'next/link'
+
 import { Container } from './Container'
 import { FadeIn, FadeInStagger } from './FadeIn'
-import { SectionIntro } from './SectionIntro'
-import { MicrophoneIcon, MagnifyingGlassIcon, CpuChipIcon, ChartBarIcon, ShieldCheckIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline'
 
-const researchAreas = [
+const engagements = [
   {
-    title: 'Speech Recognition',
-    description: 'Building ASR models for underserved populations — children, accented speakers, clinical settings — where off-the-shelf models fall short.',
-    Icon: MicrophoneIcon,
+    title: 'AI Opportunity Sprint',
+    duration: '2–3 weeks',
+    description:
+      'A focused diagnostic across your workflows and data. You leave with a ranked opportunity map, a costed architecture, and a build-ready recommendation.',
   },
   {
-    title: 'Clinical NLP',
-    description: 'Extracting structured clinical information from unstructured conversations, enabling ambient documentation and decision support.',
-    Icon: MagnifyingGlassIcon,
+    title: 'Pilot to Production',
+    duration: '6–12 weeks',
+    description:
+      'We build the first system end to end — model, product surface, evaluation harness, and deployment — and prove it against agreed success criteria.',
   },
   {
-    title: 'Adaptive Systems',
-    description: 'Creating AI that adjusts in real time to user performance, context, and goals — from learning paths to clinical workflows.',
-    Icon: CpuChipIcon,
-  },
-  {
-    title: 'Evaluation & Scoring',
-    description: 'Real-time diagnostic assessment, output quality scoring, and validation for high-stakes learning and healthcare applications.',
-    Icon: ChartBarIcon,
-  },
-  {
-    title: 'Safety & Privacy',
-    description: 'Ensuring AI systems for vulnerable populations meet the highest standards of safeguarding, privacy, and age-appropriate design.',
-    Icon: ShieldCheckIcon,
-  },
-  {
-    title: 'Validation & Outcomes',
-    description: 'Partnering with educators and clinicians to validate AI outputs against established practices and measure real-world outcomes.',
-    Icon: ClipboardDocumentCheckIcon,
+    title: 'Embedded AI Team',
+    duration: 'Ongoing',
+    description:
+      'A senior NeuterLabs pod operates inside your organisation, shipping AI capability continuously while upskilling your engineers along the way.',
   },
 ]
 
 const principles = [
   {
     number: '01',
-    title: 'Safety First',
-    description: 'Every system we build is designed with safety as the top priority — especially when serving children, patients, and other vulnerable populations.',
+    title: 'Production or it doesn\u2019t count',
+    description:
+      'Demos are cheap. We measure our work by what survives real users, real data, and real operational load.',
   },
   {
     number: '02',
-    title: 'Evidence-Based',
-    description: 'Our products are grounded in peer-reviewed research and validated with practicing clinicians before reaching users.',
+    title: 'Evaluation before enthusiasm',
+    description:
+      'Every system ships with an evaluation harness, so quality is a number you can watch — not a feeling.',
   },
   {
     number: '03',
-    title: 'Augment, Not Replace',
-    description: 'We build AI that makes teachers, counsellors, and clinicians more effective — not tools that try to replace human expertise.',
+    title: 'Humans stay in command',
+    description:
+      'Agents act within explicit boundaries. Sensitive decisions escalate to people, by design and by default.',
   },
   {
     number: '04',
-    title: 'Inclusive Design',
-    description: 'We build for diverse populations, ensuring our systems work across accents, ages, languages, and learning contexts.',
+    title: 'Safety is architecture',
+    description:
+      'Guardrails, privacy, and compliance are engineered into the system\u2019s structure, never patched on after launch.',
   },
   {
     number: '05',
-    title: 'Privacy by Default',
-    description: 'We process data in real time and minimize storage. We collect only what is necessary and discard the rest.',
+    title: 'Senior hands only',
+    description:
+      'The people who scope your engagement are the people who build it. No handoffs to a bench.',
   },
   {
     number: '06',
-    title: 'Rigorous Evaluation',
-    description: 'We test against diverse data, measure real-world outcomes, and iterate continuously to improve accuracy and fairness.',
+    title: 'Leave teams stronger',
+    description:
+      'We document, instrument, and transfer knowledge so your organisation owns the system after we step back.',
   },
 ]
 
 export default function ResearchPrinciples() {
   return (
-    <section id="research" className="bg-neutral-950 py-24 sm:py-32">
+    <section id="approach" className="bg-gold-50 py-24 text-neutral-950 sm:py-32 lg:py-40">
       <Container>
-        {/* Research Areas */}
-        <SectionIntro
-          eyebrow="Our Research"
-          title="Advancing AI for the future of humanity"
-          invert
-        >
-          <p className="text-neutral-300">
-            We conduct applied research across speech recognition, natural language understanding, and adaptive systems — 
-            focused on the hardest problems where accuracy and safety are non-negotiable.
+        <FadeIn className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase text-gold-700">
+            How we engage
           </p>
-        </SectionIntro>
+          <h2 className="mt-5 font-display text-4xl font-medium leading-tight sm:text-5xl">
+            Three ways to work with us.
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-neutral-600">
+            Every engagement is scoped around one question: what is the fastest
+            responsible path to an AI system that earns its keep?
+          </p>
+        </FadeIn>
 
         <FadeInStagger className="mt-16" faster>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {researchAreas.map((area) => (
-              <FadeIn key={area.title}>
-                <div className="group border border-white/10 bg-white/5 p-8 hover:bg-white/10 transition-colors duration-200">
-                  <area.Icon className="w-6 h-6 text-white mb-4" />
-                  <h3 className="font-display text-xl font-semibold text-white mb-3">
-                    {area.title}
-                  </h3>
-                  <p className="text-neutral-300 leading-relaxed">
-                    {area.description}
+          <div className="grid gap-px bg-neutral-950/15 sm:grid-cols-3">
+            {engagements.map((engagement) => (
+              <FadeIn key={engagement.title} className="bg-gold-50">
+                <div className="flex h-full flex-col justify-between gap-10 border-t-2 border-gold-500 bg-neutral-950 p-8 text-gold-50">
+                  <div>
+                    <h3 className="font-display text-xl font-semibold">
+                      {engagement.title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-6 text-gold-100/70">
+                      {engagement.description}
+                    </p>
+                  </div>
+                  <p className="text-sm font-semibold text-gold-300">
+                    {engagement.duration}
                   </p>
                 </div>
               </FadeIn>
@@ -103,34 +102,29 @@ export default function ResearchPrinciples() {
           </div>
         </FadeInStagger>
 
-        {/* Divider */}
-        <div className="my-24 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-
-        {/* AI Safety Principles */}
         <FadeIn>
-          <div className="mx-auto max-w-3xl text-center mb-16">
-            <h2 className="font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              Our Principles
-            </h2>
-            <p className="mt-6 text-lg text-neutral-300 leading-relaxed">
-              These principles guide how we build AI — ensuring safety, clinical rigor, 
-              and genuine value in everything we ship.
+          <div className="mt-24 max-w-3xl sm:mt-32">
+            <p className="text-sm font-semibold uppercase text-gold-700">
+              Our principles
             </p>
+            <h2 className="mt-5 font-display text-4xl font-medium leading-tight sm:text-5xl">
+              The standards behind every build.
+            </h2>
           </div>
         </FadeIn>
 
         <FadeInStagger className="mt-12" faster>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {principles.map((principle) => (
               <FadeIn key={principle.number}>
-                <div className="group relative border border-white/10 bg-gradient-to-br from-white/5 to-white/0 p-8 hover:border-white/20 hover:from-white/10 hover:to-white/5 transition-colors duration-200">
-                  <div className="text-5xl font-display font-bold text-white/10 mb-3">
+                <div className="border-t border-neutral-950/20 pt-6">
+                  <span className="text-sm font-semibold text-gold-600">
                     {principle.number}
-                  </div>
-                  <h3 className="font-display text-xl font-semibold text-white mb-3">
+                  </span>
+                  <h3 className="mt-3 font-display text-xl font-semibold">
                     {principle.title}
                   </h3>
-                  <p className="text-neutral-300 text-sm leading-relaxed">
+                  <p className="mt-3 text-sm leading-6 text-neutral-600">
                     {principle.description}
                   </p>
                 </div>
@@ -139,19 +133,18 @@ export default function ResearchPrinciples() {
           </div>
         </FadeInStagger>
 
-        {/* Call to Action */}
         <FadeIn>
-          <div className="mt-20 text-center">
-            <p className="text-neutral-300 text-lg mb-8">
-              Interested in collaborating on healthcare AI research?
+          <div className="mt-20 flex flex-wrap items-center gap-6 border-t border-neutral-950/20 pt-10">
+            <p className="text-lg text-neutral-600">
+              Have a workflow that deserves better than a chatbot?
             </p>
-            <a
+            <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-white px-8 py-4 text-base font-semibold text-neutral-950 hover:bg-neutral-200 transition-colors duration-200"
+              className="inline-flex items-center justify-center bg-neutral-950 px-8 py-4 text-sm font-semibold text-gold-50 transition-colors hover:bg-neutral-800"
             >
-              Get in Touch
-              <span className="ml-2">→</span>
-            </a>
+              Get in touch
+              <span className="ml-2 text-gold-300">→</span>
+            </Link>
           </div>
         </FadeIn>
       </Container>

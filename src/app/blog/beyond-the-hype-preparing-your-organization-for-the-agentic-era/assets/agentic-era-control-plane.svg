@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="optimizeLegibility">
+  <title id="title">Control Plane</title>
+  <desc id="desc">A monochrome governance and orchestration control plane for AI agents, showing policy, observability, evaluation, permissions, audit trails, and deployment controls.</desc>
+  <defs>
+    <style>
+      .font { font-family: Manrope, Arial, sans-serif; }
+      .title { fill: #f5f5f7; font-size: 50px; font-weight: 800; }
+      .subtitle { fill: #9a9aa3; font-size: 22px; font-weight: 500; }
+      .eyebrow { fill: #8d8d94; font-size: 15px; font-weight: 800; letter-spacing: 3px; }
+      .label { fill: #f5f5f7; font-size: 21px; font-weight: 800; }
+      .small { fill: #a6a6ad; font-size: 15px; font-weight: 500; }
+      .line { fill: none; stroke: #f5f5f7; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030303"/>
+      <stop offset="1" stop-color="#141415"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-18%" width="124%" height="136%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#f5f5f7"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g class="font">
+    <text x="108" y="108" class="title">Control Plane</text>
+    <text x="108" y="150" class="subtitle">Governance, orchestration, and observability wrapped around every agent execution path.</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="110" y="220" width="1380" height="500" rx="8" fill="#0d0d0e" stroke="#ffffff" stroke-opacity="0.12"/>
+    <rect x="160" y="286" width="1280" height="130" rx="8" fill="#f5f5f7"/>
+    <rect x="160" y="462" width="1280" height="190" rx="8" fill="#161617" stroke="#ffffff" stroke-opacity="0.14"/>
+  </g>
+  <g class="font">
+    <text x="160" y="266" class="eyebrow">CENTRAL GOVERNANCE FABRIC</text>
+    <text x="210" y="337" fill="#0b0b0c" font-size="24" font-weight="800">Policy</text>
+    <text x="410" y="337" fill="#0b0b0c" font-size="24" font-weight="800">Permissions</text>
+    <text x="660" y="337" fill="#0b0b0c" font-size="24" font-weight="800">Evaluation</text>
+    <text x="900" y="337" fill="#0b0b0c" font-size="24" font-weight="800">Observability</text>
+    <text x="1180" y="337" fill="#0b0b0c" font-size="24" font-weight="800">Audit</text>
+    <path d="M352 306 V394 M602 306 V394 M842 306 V394 M1122 306 V394 M1328 306 V394" stroke="#0b0b0c" stroke-opacity="0.18" stroke-width="2"/>
+    <text x="210" y="370" fill="#5f5f66" font-size="15" font-weight="600">rules</text>
+    <text x="410" y="370" fill="#5f5f66" font-size="15" font-weight="600">scope</text>
+    <text x="660" y="370" fill="#5f5f66" font-size="15" font-weight="600">tests</text>
+    <text x="900" y="370" fill="#5f5f66" font-size="15" font-weight="600">traces</text>
+    <text x="1180" y="370" fill="#5f5f66" font-size="15" font-weight="600">records</text>
+  </g>
+  <g class="font" text-anchor="middle">
+    <text x="800" y="512" class="eyebrow">ORCHESTRATION BUS</text>
+    <path d="M300 558 H1300" class="line" stroke-width="3" stroke-opacity="0.58" marker-end="url(#arrow)"/>
+    <g transform="translate(250 584)">
+      <rect x="0" y="0" width="232" height="70" rx="8" fill="#202021" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="116" y="43" class="small">Planning runtime</text>
+    </g>
+    <g transform="translate(684 584)">
+      <rect x="0" y="0" width="232" height="70" rx="8" fill="#202021" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="116" y="43" class="small">Tool execution</text>
+    </g>
+    <g transform="translate(1118 584)">
+      <rect x="0" y="0" width="232" height="70" rx="8" fill="#202021" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="116" y="43" class="small">Deployment controls</text>
+    </g>
+  </g>
+  <g class="line" stroke-width="2" stroke-opacity="0.42" marker-end="url(#arrow)">
+    <path d="M366 584 V422"/>
+    <path d="M800 584 V422"/>
+    <path d="M1234 584 V422"/>
+  </g>
+  <g class="font">
+    <rect x="472" y="764" width="656" height="58" rx="8" fill="#f5f5f7"/>
+    <text x="512" y="801" fill="#0b0b0c" font-size="18" font-weight="800">Agents can act only inside observable, permissioned, interruptible boundaries.</text>
+  </g>
+</svg>

@@ -22,12 +22,22 @@ const navigation = [
   //   ],
   // },
   {
-    title: 'Company',
+    title: 'Studio',
     links: [
+      { title: 'Work', href: '/work' },
+      { title: 'Services', href: '/#services' },
       { title: 'About', href: '/about' },
       { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
+      { title: 'Insights', href: '/blog' },
       { title: 'Contact us', href: '/contact' },
+    ],
+  },
+  {
+    title: 'Products',
+    links: [
+      { title: 'WULO Academy', href: 'https://academy.wulo.ai' },
+      { title: 'WULO', href: 'https://wulo.ai' },
+      { title: 'Wulo-X', href: '/contact' },
     ],
   },
   // {
@@ -84,8 +94,8 @@ function NewsletterForm() {
         Sign up for our newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+        Practical thinking on AI strategy, agents, and production
+        engineering — straight from our build log.
       </p>
       <div className="relative mt-6">
         <input

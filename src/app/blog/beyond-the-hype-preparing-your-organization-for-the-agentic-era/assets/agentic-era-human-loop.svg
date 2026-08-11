@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="optimizeLegibility">
+  <title id="title">Human In The Loop</title>
+  <desc id="desc">A monochrome operating model showing humans supervising agentic workflows through approvals, exceptions, feedback, escalation, and continuous improvement.</desc>
+  <defs>
+    <style>
+      .font { font-family: Manrope, Arial, sans-serif; }
+      .title { fill: #f5f5f7; font-size: 50px; font-weight: 800; }
+      .subtitle { fill: #9a9aa3; font-size: 22px; font-weight: 500; }
+      .eyebrow { fill: #8d8d94; font-size: 15px; font-weight: 800; letter-spacing: 3px; }
+      .label { fill: #f5f5f7; font-size: 21px; font-weight: 800; }
+      .small { fill: #a6a6ad; font-size: 15px; font-weight: 500; }
+      .line { fill: none; stroke: #f5f5f7; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030303"/>
+      <stop offset="1" stop-color="#141415"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-18%" width="124%" height="136%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#f5f5f7"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g class="font">
+    <text x="108" y="108" class="title">Human In The Loop</text>
+    <text x="108" y="150" class="subtitle">Human supervision designed as a continuous operating layer, not a launch checklist.</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="150" y="228" width="1300" height="168" rx="8" fill="#f5f5f7"/>
+    <rect x="150" y="482" width="1300" height="188" rx="8" fill="#0d0d0e" stroke="#ffffff" stroke-opacity="0.12"/>
+  </g>
+  <g class="font">
+    <text x="200" y="284" fill="#0b0b0c" font-size="25" font-weight="800">Human Review Layer</text>
+    <text x="200" y="322" fill="#5f5f66" font-size="16" font-weight="600">Approvals, exceptions, feedback, escalation, and continuous improvement sit above the agent workflow.</text>
+  </g>
+  <g class="font" text-anchor="middle">
+    <g transform="translate(650 272)">
+      <rect x="0" y="0" width="132" height="70" rx="8" fill="#0b0b0c"/>
+      <text x="66" y="43" class="small">Approvals</text>
+    </g>
+    <g transform="translate(806 272)">
+      <rect x="0" y="0" width="132" height="70" rx="8" fill="#0b0b0c"/>
+      <text x="66" y="43" class="small">Exceptions</text>
+    </g>
+    <g transform="translate(962 272)">
+      <rect x="0" y="0" width="132" height="70" rx="8" fill="#0b0b0c"/>
+      <text x="66" y="43" class="small">Feedback</text>
+    </g>
+    <g transform="translate(1118 272)">
+      <rect x="0" y="0" width="132" height="70" rx="8" fill="#0b0b0c"/>
+      <text x="66" y="43" class="small">Escalation</text>
+    </g>
+    <g transform="translate(1274 272)">
+      <rect x="0" y="0" width="132" height="70" rx="8" fill="#0b0b0c"/>
+      <text x="66" y="43" class="small">Improve</text>
+    </g>
+  </g>
+  <g class="font" text-anchor="middle">
+    <text x="200" y="532" class="eyebrow" text-anchor="start">AGENTIC WORKFLOW</text>
+    <g transform="translate(210 560)">
+      <rect x="0" y="0" width="210" height="72" rx="8" fill="#181819" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="105" y="44" class="small">Request</text>
+    </g>
+    <g transform="translate(510 560)">
+      <rect x="0" y="0" width="210" height="72" rx="8" fill="#181819" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="105" y="44" class="small">Agent Work</text>
+    </g>
+    <g transform="translate(810 560)">
+      <rect x="0" y="0" width="210" height="72" rx="8" fill="#f5f5f7"/>
+      <text x="105" y="44" fill="#0b0b0c" font-size="15" font-weight="800">Review Gate</text>
+    </g>
+    <g transform="translate(1110 560)">
+      <rect x="0" y="0" width="210" height="72" rx="8" fill="#181819" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="105" y="44" class="small">Outcome</text>
+    </g>
+  </g>
+  <g class="line" stroke-width="2" stroke-opacity="0.55" marker-end="url(#arrow)">
+    <path d="M420 596 H510"/>
+    <path d="M720 596 H810"/>
+    <path d="M1020 596 H1110"/>
+    <path d="M915 560 V360"/>
+    <path d="M1215 560 C1215 448 1328 438 1340 360"/>
+    <path d="M1215 632 C1136 758 614 758 610 646"/>
+  </g>
+  <g class="font">
+    <rect x="420" y="724" width="760" height="58" rx="8" fill="#171718" stroke="#ffffff" stroke-opacity="0.14"/>
+    <text x="470" y="761" class="small">Every approval, exception, and correction becomes measurable feedback for the next workflow cycle.</text>
+  </g>
+</svg>
