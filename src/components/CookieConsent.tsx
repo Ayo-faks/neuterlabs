@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 const CONSENT_KEY = 'neuterlabs-cookie-consent'
+const OPEN_EVENT = 'neuterlabs:cookie-settings'
 
 type ConsentValue = 'accepted' | 'essential-only'
 
@@ -16,11 +17,29 @@ function readConsent(): ConsentValue | null {
   }
 }
 
+export function CookieSettingsButton({ className }: { className?: string }) {
+  return (
+    <button
+      type="button"
+      onClick={() => window.dispatchEvent(new CustomEvent(OPEN_EVENT))}
+      className={className}
+    >
+      Cookie settings
+    </button>
+  )
+}
+
 export function CookieConsent() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     if (!readConsent()) setVisible(true)
+
+    function onOpen() {
+      setVisible(true)
+    }
+    window.addEventListener(OPEN_EVENT, onOpen)
+    return () => window.removeEventListener(OPEN_EVENT, onOpen)
   }, [])
 
   function decide(value: ConsentValue) {
@@ -48,9 +67,10 @@ export function CookieConsent() {
             Your privacy
           </p>
           <p className="mt-2 text-sm leading-6 text-gold-100/70">
-            We use essential cookies to make this site work. With your consent,
-            we also use analytics cookies to understand how the site is used and
-            improve it. You can change your choice at any time. See our{' '}
+            We use essential storage to make this site work. No analytics
+            cookies are set unless you choose &ldquo;Accept all&rdquo; — and you
+            can change your choice any time via &ldquo;Cookie settings&rdquo; in
+            the footer. See our{' '}
             <Link
               href="/privacy"
               className="font-semibold text-gold-300 underline underline-offset-4 transition-colors hover:text-gold-200"

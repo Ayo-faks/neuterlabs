@@ -127,6 +127,14 @@ function ContactForm() {
         <Button type="submit" className="mt-10 w-full sm:w-auto" disabled={state.submitting}>
           {state.submitting ? 'Sending...' : 'Start the conversation'}
         </Button>
+        <p className="mt-4 text-xs leading-5 text-neutral-500">
+          By submitting this form you agree to us processing your details to
+          respond to your enquiry, as described in our{' '}
+          <Link href="/privacy" className="underline underline-offset-2 hover:text-neutral-950">
+            Privacy Policy
+          </Link>
+          . Your message is delivered via Formspree.
+        </p>
       </form>
     </FadeIn>
   )

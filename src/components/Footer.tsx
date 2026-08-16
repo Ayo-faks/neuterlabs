@@ -1,8 +1,10 @@
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
+import { CookieSettingsButton } from '@/components/CookieConsent'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
+import { NewsletterForm } from '@/components/NewsletterForm'
 
 const navigation = [
   // {
@@ -75,51 +77,6 @@ function Navigation() {
   )
 }
 
-function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 16 6" aria-hidden="true" {...props}>
-      <path
-        fill="currentColor"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16 3 10 .5v2H0v1h10v2L16 3Z"
-      />
-    </svg>
-  )
-}
-
-function NewsletterForm() {
-  return (
-    <form className="max-w-sm">
-      <h2 className="font-display text-sm font-semibold tracking-widest text-neutral-950 uppercase">
-        Sign up for our newsletter
-      </h2>
-      <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
-        Practical thinking on AI strategy, agents, and production
-        engineering — straight from our build log.
-      </p>
-      <div className="relative mt-6">
-        <input
-          type="email"
-          placeholder="Email address"
-          autoComplete="email"
-          aria-label="Email address"
-          className="block w-full border border-neutral-200 bg-white py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition-colors duration-200 placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 hover:border-neutral-300"
-        />
-        <div className="absolute inset-y-1 right-1 flex justify-end">
-          <button
-            type="submit"
-            aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center bg-neutral-950 text-white transition-colors duration-200 hover:bg-neutral-800"
-          >
-            <ArrowIcon className="w-4" />
-          </button>
-        </div>
-      </div>
-    </form>
-  )
-}
-
 export function Footer() {
   return (
     <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
@@ -134,9 +91,12 @@ export function Footer() {
           <Link href="/" aria-label="Home">
             <Logo className="h-8" fillOnHover />
           </Link>
-          <p className="text-sm text-neutral-600">
-            © Neuter Labs. {new Date().getFullYear()}
-          </p>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <CookieSettingsButton className="text-sm text-neutral-600 transition-colors duration-300 hover:text-neutral-950" />
+            <p className="text-sm text-neutral-600">
+              © Neuter Labs. {new Date().getFullYear()}
+            </p>
+          </div>
         </div>
       </FadeIn>
     </Container>

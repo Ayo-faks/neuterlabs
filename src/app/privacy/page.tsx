@@ -23,7 +23,7 @@ const sections = [
     title: '2. What data we collect',
     body: [
       'Contact form data: when you submit our contact form we collect your name, email address, organisation, phone number (optional), your message, and the service you are interested in. This is processed by our form provider, Formspree, and delivered to us by email.',
-      'Newsletter data: if you subscribe to our newsletter, we collect your email address.',
+      'Newsletter data: if you subscribe to our newsletter, we collect your email address. Subscriptions are processed by Formspree and you can withdraw at any time.',
       'Usage data (only with your consent): if you accept analytics cookies, we collect anonymised information about how you use the site — pages visited, approximate location (country/city level), device and browser type, and referral source.',
       'Server logs: our hosting infrastructure records standard technical logs (IP address, request time, user agent) for security and reliability purposes.',
     ],
@@ -37,18 +37,18 @@ const sections = [
     ],
   },
   {
-    title: '4. Cookies',
+    title: '4. Cookies and local storage',
     body: [
-      'Essential cookies: strictly necessary for the site to function (for example, remembering your cookie preference). These do not require consent and cannot be switched off.',
-      'Analytics cookies: set only if you choose "Accept all" in our consent banner. They help us understand which pages are useful so we can improve the site. Declining them does not change your experience of the site.',
-      'Your choice is stored locally in your browser under the key "neuterlabs-cookie-consent". To change your decision, clear this site\'s data in your browser settings and the banner will reappear on your next visit.',
+      'Essential storage: strictly necessary for the site to function — currently a single localStorage entry ("neuterlabs-cookie-consent") that remembers your consent choice. This does not require consent and identifies nothing about you.',
+      'Analytics cookies: none are currently set. If we introduce analytics in future, they will load only after you choose "Accept all" in our consent banner. Declining never changes your experience of the site.',
+      'Changing your mind: select "Cookie settings" in the footer of any page to reopen the consent banner and change your choice at any time — withdrawing consent is as easy as giving it.',
     ],
   },
   {
     title: '5. Who we share data with',
     body: [
-      'We do not sell personal data. We share it only with service providers who help us operate: Formspree (contact form processing), Microsoft Azure (website hosting, UK/EU regions), and Cloudflare (content delivery and security). Each provider processes data under a data processing agreement and appropriate safeguards.',
-      'Where a transfer outside the UK or EEA occurs, it is protected by adequacy decisions or Standard Contractual Clauses.',
+      'We do not sell personal data. We share it only with service providers who help us operate: Formspree, Inc. (contact form and newsletter processing, USA — certified under the EU-U.S. and UK Extension to the Data Privacy Framework), Microsoft Azure (website hosting, UK South region), and Cloudflare (content delivery and security). Each provider processes data under a data processing agreement.',
+      'Where any other transfer outside the UK or EEA occurs, it is protected by an adequacy decision, the Data Privacy Framework, or Standard Contractual Clauses.',
     ],
   },
   {
