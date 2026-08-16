@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { ContactSection } from '@/components/ContactSection'
+import Faq from '@/components/Faq'
 import HeroPage from '@/components/heropage'
 import Intro from '@/components/intro'
 import WuloProduct from '@/components/WuloProduct'
@@ -55,6 +56,9 @@ export default async function Home() {
       
       {/* Engagement model & principles */}
       <ResearchPrinciples/>
+
+      {/* FAQ */}
+      <Faq />
 
       {/* Contact Section */}
       <ContactSection />

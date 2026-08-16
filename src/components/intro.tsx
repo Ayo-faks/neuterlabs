@@ -5,6 +5,9 @@ import { FadeIn, FadeInStagger } from './FadeIn'
 import imageHumanCenteredAgents from '@/images/Human-Centered AI Agents.png'
 import imageMultiAgentOrchestration from '@/images/Multi-Agent Orchestration.png'
 import imageSafetyFirstAutomation from '@/images/Safety-First Automation.png'
+import imageLaptop from '@/images/laptop.jpg'
+import imageMeeting from '@/images/meeting.jpg'
+import imageWhiteboard from '@/images/whiteboard.jpg'
 
 type Service = {
     number: string
@@ -14,30 +17,72 @@ type Service = {
     deliverables: string[]
 }
 
-const services: Service[] = [
+type ServiceGroup = {
+    label: string
+    tagline: string
+    services: Service[]
+}
+
+const serviceGroups: ServiceGroup[] = [
     {
-        number: '01',
-        title: 'AI product strategy',
-        description:
-            'We turn an ambitious brief into a focused AI roadmap, grounded in user value, technical feasibility, and a business case that can survive scrutiny.',
-        image: imageHumanCenteredAgents,
-        deliverables: ['Opportunity mapping', 'Prototype definition', 'Data and model strategy'],
+        label: 'Production AI',
+        tagline: 'Take AI from idea to a system that carries real workload.',
+        services: [
+            {
+                number: '01',
+                title: 'AI Strategy',
+                description:
+                    'We align leadership on where AI genuinely pays off — filtering vague ideas into a prioritised roadmap grounded in technical feasibility, data readiness, and business outcomes that survive scrutiny.',
+                image: imageHumanCenteredAgents,
+                deliverables: ['Use-case prioritisation', 'AI roadmap & business case', 'Data readiness assessment'],
+            },
+            {
+                number: '02',
+                title: 'AI Workshops',
+                description:
+                    'A focused one-to-three-day sprint that condenses months of internal debate. Your team leaves with a validated, build-ready AI plan — and the shared understanding and governance guardrails to act on it.',
+                image: imageMultiAgentOrchestration,
+                deliverables: ['1–3 day strategic sprint', 'Validated production roadmap', 'Team enablement & governance'],
+            },
+            {
+                number: '03',
+                title: 'AI Automation',
+                description:
+                    'We engineer reasoning agents that go beyond scripted RPA — planning and executing multi-step processes inside your existing systems, with human control at the moments that matter.',
+                image: imageSafetyFirstAutomation,
+                deliverables: ['Reasoning-driven agents', 'System & workflow integration', 'MLOps · LLMOps · guardrails'],
+            },
+        ],
     },
     {
-        number: '02',
-        title: 'Agents and automation',
-        description:
-            'We design dependable agents that reason across real workflows, call the right tools, and hand control back to people at the moments that matter.',
-        image: imageMultiAgentOrchestration,
-        deliverables: ['Voice and chat agents', 'Workflow orchestration', 'Human-in-the-loop controls'],
-    },
-    {
-        number: '03',
-        title: 'AI product engineering',
-        description:
-            'From interface to infrastructure, we build production systems with evaluation, observability, security, and responsible AI engineered in from day one.',
-        image: imageSafetyFirstAutomation,
-        deliverables: ['Full-stack delivery', 'Evaluation and guardrails', 'Cloud deployment'],
+        label: 'Analytics',
+        tagline: 'Turn scattered data into decisions people trust.',
+        services: [
+            {
+                number: '04',
+                title: 'Data Analytics',
+                description:
+                    'We consolidate fragmented data into a stable, governed foundation and apply advanced and predictive analytics — so strategic decisions replace guesswork with evidence.',
+                image: imageLaptop,
+                deliverables: ['Data platform & pipelines', 'Predictive modelling', 'Single source of truth'],
+            },
+            {
+                number: '05',
+                title: 'Business Intelligence',
+                description:
+                    'We design BI that teams actually use — trusted metrics, automated reporting, and dashboards that surface bottlenecks and opportunities the moment they appear.',
+                image: imageWhiteboard,
+                deliverables: ['KPI & metric design', 'Automated reporting', 'Interactive dashboards'],
+            },
+            {
+                number: '06',
+                title: 'Data Visualization',
+                description:
+                    'We turn complex datasets into clear visual stories — decision-ready dashboards and executive narratives that make the state of the business obvious at a glance.',
+                image: imageMeeting,
+                deliverables: ['Dashboard design systems', 'Visual data storytelling', 'Executive reporting'],
+            },
+        ],
     },
 ]
 
@@ -61,51 +106,62 @@ export default function Intro() {
                     </p>
                 </FadeIn>
 
-                <FadeInStagger
-                    className="mt-16 grid border-y border-neutral-950/20 lg:mt-24 lg:grid-cols-3"
-                    faster
-                >
-                    {services.map((service) => (
-                        <FadeIn
-                            key={service.title}
-                            className="group border-b border-neutral-950/20 py-8 last:border-b-0 lg:border-b-0 lg:border-l lg:px-8 lg:first:border-l-0 lg:first:pl-0 lg:last:pr-0"
-                        >
-                            <article>
-                                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-950">
-                                    <Image
-                                        src={service.image}
-                                        alt=""
-                                        fill
-                                        sizes="(min-width: 1024px) 33vw, 100vw"
-                                        className="object-cover opacity-80 grayscale transition duration-700 group-hover:scale-[1.03] group-hover:opacity-100 group-hover:grayscale-0"
-                                    />
-                                    <div className="absolute inset-0 bg-gold-400/10 mix-blend-color" />
-                                </div>
-                                <div className="mt-8 flex items-start justify-between gap-6">
-                                    <div>
-                                        <h3 className="font-display text-2xl font-semibold">
-                                            {service.title}
-                                        </h3>
-                                        <p className="mt-4 text-base leading-7 text-neutral-600">
-                                            {service.description}
-                                        </p>
-                                    </div>
-                                    <span className="text-sm font-semibold text-gold-700">
-                                        {service.number}
-                                    </span>
-                                </div>
-                                <ul className="mt-8 space-y-3 border-t border-neutral-950/15 pt-6 text-sm text-neutral-700">
-                                    {service.deliverables.map((deliverable) => (
-                                        <li key={deliverable} className="flex items-center gap-3">
-                                            <span className="h-px w-4 bg-gold-600" />
-                                            {deliverable}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </article>
+                {serviceGroups.map((group) => (
+                    <div key={group.label} className="mt-16 lg:mt-24">
+                        <FadeIn className="flex flex-wrap items-baseline gap-x-6 gap-y-2">
+                            <h3 className="font-display text-2xl font-semibold text-neutral-950">
+                                {group.label}
+                            </h3>
+                            <p className="text-base text-neutral-600">{group.tagline}</p>
                         </FadeIn>
-                    ))}
-                </FadeInStagger>
+
+                        <FadeInStagger
+                            className="mt-8 grid border-y border-neutral-950/20 lg:grid-cols-3"
+                            faster
+                        >
+                            {group.services.map((service) => (
+                                <FadeIn
+                                    key={service.title}
+                                    className="group border-b border-neutral-950/20 py-8 last:border-b-0 lg:border-b-0 lg:border-l lg:px-8 lg:first:border-l-0 lg:first:pl-0 lg:last:pr-0"
+                                >
+                                    <article>
+                                        <div className="relative aspect-[4/3] overflow-hidden bg-neutral-950">
+                                            <Image
+                                                src={service.image}
+                                                alt=""
+                                                fill
+                                                sizes="(min-width: 1024px) 33vw, 100vw"
+                                                className="object-cover opacity-80 grayscale transition duration-700 group-hover:scale-[1.03] group-hover:opacity-100 group-hover:grayscale-0"
+                                            />
+                                            <div className="absolute inset-0 bg-gold-400/10 mix-blend-color" />
+                                        </div>
+                                        <div className="mt-8 flex items-start justify-between gap-6">
+                                            <div>
+                                                <h4 className="font-display text-2xl font-semibold">
+                                                    {service.title}
+                                                </h4>
+                                                <p className="mt-4 text-base leading-7 text-neutral-600">
+                                                    {service.description}
+                                                </p>
+                                            </div>
+                                            <span className="text-sm font-semibold text-gold-700">
+                                                {service.number}
+                                            </span>
+                                        </div>
+                                        <ul className="mt-8 space-y-3 border-t border-neutral-950/15 pt-6 text-sm text-neutral-700">
+                                            {service.deliverables.map((deliverable) => (
+                                                <li key={deliverable} className="flex items-center gap-3">
+                                                    <span className="h-px w-4 bg-gold-600" />
+                                                    {deliverable}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </article>
+                                </FadeIn>
+                            ))}
+                        </FadeInStagger>
+                    </div>
+                ))}
             </Container>
         </section>
     )

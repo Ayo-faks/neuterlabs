@@ -15,6 +15,7 @@ import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { CookieConsent } from '@/components/CookieConsent'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
@@ -268,6 +269,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           <Footer />
         </motion.div>
       </motion.div>
+
+      <CookieConsent />
     </MotionConfig>
   )
 }

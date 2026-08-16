@@ -30,6 +30,7 @@ const navigation = [
       { title: 'Process', href: '/process' },
       { title: 'Insights', href: '/blog' },
       { title: 'Contact us', href: '/contact' },
+      { title: 'Privacy & Cookies', href: '/privacy' },
     ],
   },
   {
